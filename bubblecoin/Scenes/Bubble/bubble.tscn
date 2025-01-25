@@ -4,37 +4,114 @@
 [ext_resource type="Script" path="res://Scenes/Bubble/bubble.gd" id="1_rmvf7"]
 
 [node name="Bubble" type="Control"]
+custom_minimum_size = Vector2(436, 136)
 layout_mode = 3
-anchors_preset = 0
+anchor_right = 0.378
+anchor_bottom = 0.21
+offset_right = 0.543976
+offset_bottom = -0.0800018
 script = ExtResource("1_rmvf7")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.264698, 0.464787, 1, 1)
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
 offset_right = 136.0
 offset_bottom = 136.0
-text = "fdskjfkjf"
 icon = ExtResource("1_fwkws")
 
-[node name="BuyPrice" type="Label" parent="."]
-layout_mode = 0
-offset_left = 278.0
-offset_top = 97.0
-offset_right = 390.0
-offset_bottom = 120.0
-text = "Buy: 23.4 bubs"
-
-[node name="SellPrice" type="Label" parent="."]
-layout_mode = 0
-offset_left = -126.0
-offset_top = 104.0
-offset_right = -16.0
-offset_bottom = 127.0
-text = "Sell: 25.6 bubs"
-
 [node name="ModifierDescription" type="Label" parent="."]
-layout_mode = 0
-offset_left = 279.0
-offset_top = 24.0
-offset_right = 368.0
-offset_bottom = 47.0
-text = "x2 modifier"
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.313
+anchor_right = 1.0
+anchor_bottom = 0.346
+offset_left = 9.53198
+offset_top = 18.0
+offset_right = -16.0
+offset_bottom = -6.056
+text = "x2 contador"
+horizontal_alignment = 1
+
+[node name="name" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.787
+anchor_right = 0.31
+anchor_bottom = 1.0
+offset_top = -0.0320053
+offset_right = -0.160004
+grow_vertical = 0
+horizontal_alignment = 1
+
+[node name="BuyBtn" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.655
+anchor_top = 0.75
+anchor_right = 0.655
+anchor_bottom = 0.75
+offset_left = -144.58
+offset_top = -27.0
+offset_right = 144.42
+offset_bottom = 27.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="BuyPrice" type="Label" parent="BuyBtn"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = -11.5
+offset_right = 56.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Buy price: ฿ 1.00"
+horizontal_alignment = 1
+
+[node name="SellBtn" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.655
+anchor_top = 0.75
+anchor_right = 0.655
+anchor_bottom = 0.75
+offset_left = -144.58
+offset_top = -27.0
+offset_right = 144.42
+offset_bottom = 27.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="SellPrice" type="Label" parent="SellBtn"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -55.0
+offset_top = -11.5
+offset_right = 55.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Sell: 25.6 bubs"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="BuyBtn" to="." method="buy"]
+[connection signal="pressed" from="SellBtn" to="." method="sell"]
