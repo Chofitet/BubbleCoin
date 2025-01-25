@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Calidad" load_steps=4 format=3 uid="uid://d2qmkpv5e2382"]
+
+[ext_resource type="Texture2D" uid="uid://b3xgr8i5keodn" path="res://Sprites/BurbujaCuerpos/burbuja.png" id="1_ptprb"]
+[ext_resource type="Script" path="res://Scenes/Bubble/Bonificadores.gd" id="2_lqw4n"]
+[ext_resource type="Script" path="res://Scenes/Bubble/CalidadData.gd" id="3_4ha8n"]
+
+[resource]
+script = ExtResource("3_4ha8n")
+Nombre = Array[String](["Alador", "Trinkanar"])
+Apellido = Array[String](["Ralstak", "kune"])
+Titulo = Array[String](["el Enjabonado", "el Volador"])
+BurbujasCuerpo = ExtResource("1_ptprb")
+Barbas = Array[Texture]([])
+Lentes = Array[Texture]([])
+Gorros = Array[Texture]([])
+Level = 0
+minPrice = 5
+maxPrice = 10
+modificador = Array[ExtResource("2_lqw4n")]([])
