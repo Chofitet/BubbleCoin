@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://65w1bax7wqlj"]
+[gd_scene load_steps=6 format=3 uid="uid://65w1bax7wqlj"]
 
 [ext_resource type="Texture2D" uid="uid://be37561hvnr5h" path="res://Scenes/Web_Window/tab.jpg" id="1_ag27l"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/Tab_Group_Controller.gd" id="1_ms467"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/TabController.gd" id="2_v1c5a"]
+[ext_resource type="Script" path="res://Scenes/Web_Window/WebSpawner.gd" id="4_cnpws"]
+[ext_resource type="PackedScene" uid="uid://enowhwvjxhkg" path="res://Scenes/Web_Window/Webs/trade_web.tscn" id="5_dalg5"]
 
 [node name="Web_Window" type="Control"]
 layout_mode = 3
@@ -25,14 +27,13 @@ grow_horizontal = 2
 [node name="Tab_Bar" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.496
 anchor_top = 0.066
-anchor_right = 0.496
-anchor_bottom = 0.066
-offset_left = -571.392
+anchor_right = 0.991
+anchor_bottom = 0.142
+offset_left = -6.10352e-05
 offset_top = 3.232
-offset_right = 580.608
-offset_bottom = 49.232
+offset_right = 10.3679
+offset_bottom = -0.0160065
 grow_horizontal = 2
 
 [node name="Tab_Controller" type="HBoxContainer" parent="Tab_Bar"]
@@ -45,11 +46,11 @@ grow_vertical = 2
 script = ExtResource("1_ms467")
 
 [node name="Tab" type="TextureRect" parent="Tab_Bar/Tab_Controller"]
-self_modulate = Color(0.745098, 0.745098, 0.745098, 0.980392)
 layout_mode = 2
 texture = ExtResource("1_ag27l")
 expand_mode = 3
 script = ExtResource("2_v1c5a")
+Web = ExtResource("5_dalg5")
 
 [node name="button" type="Button" parent="Tab_Bar/Tab_Controller/Tab"]
 layout_mode = 1
@@ -61,11 +62,11 @@ grow_vertical = 2
 flat = true
 
 [node name="Tab2" type="TextureRect" parent="Tab_Bar/Tab_Controller"]
-self_modulate = Color(0.745098, 0.745098, 0.745098, 0.980392)
 layout_mode = 2
 texture = ExtResource("1_ag27l")
 expand_mode = 3
 script = ExtResource("2_v1c5a")
+Web = ExtResource("5_dalg5")
 
 [node name="button" type="Button" parent="Tab_Bar/Tab_Controller/Tab2"]
 layout_mode = 1
@@ -77,11 +78,11 @@ grow_vertical = 2
 flat = true
 
 [node name="Tab3" type="TextureRect" parent="Tab_Bar/Tab_Controller"]
-self_modulate = Color(0.745098, 0.745098, 0.745098, 0.980392)
 layout_mode = 2
 texture = ExtResource("1_ag27l")
 expand_mode = 3
 script = ExtResource("2_v1c5a")
+Web = ExtResource("5_dalg5")
 
 [node name="button" type="Button" parent="Tab_Bar/Tab_Controller/Tab3"]
 layout_mode = 1
@@ -93,11 +94,11 @@ grow_vertical = 2
 flat = true
 
 [node name="Tab4" type="TextureRect" parent="Tab_Bar/Tab_Controller"]
-self_modulate = Color(0.745098, 0.745098, 0.745098, 0.980392)
 layout_mode = 2
 texture = ExtResource("1_ag27l")
 expand_mode = 3
 script = ExtResource("2_v1c5a")
+Web = ExtResource("5_dalg5")
 
 [node name="button" type="Button" parent="Tab_Bar/Tab_Controller/Tab4"]
 layout_mode = 1
@@ -108,7 +109,7 @@ grow_horizontal = 2
 grow_vertical = 2
 flat = true
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Web_Conteiner" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -121,3 +122,7 @@ offset_right = 576.0
 offset_bottom = 555.984
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("4_cnpws")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="OpenTab" from="Tab_Bar/Tab_Controller" to="Web_Conteiner" method="SetWebWindow"]
