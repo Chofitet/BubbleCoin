@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdnr74tow1gdm"]
+
+[ext_resource type="Texture2D" uid="uid://5ht62s4o5388" path="res://icon.svg" id="1_fwkws"]
+[ext_resource type="Script" path="res://Scenes/Bubble/bubble.gd" id="1_rmvf7"]
+
+[node name="Bubble" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_rmvf7")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 136.0
+offset_bottom = 136.0
+text = "fdskjfkjf"
+icon = ExtResource("1_fwkws")
+
+[node name="BuyPrice" type="Label" parent="."]
+layout_mode = 0
+offset_left = 278.0
+offset_top = 97.0
+offset_right = 390.0
+offset_bottom = 120.0
+text = "Buy: 23.4 bubs"
+
+[node name="SellPrice" type="Label" parent="."]
+layout_mode = 0
+offset_left = -126.0
+offset_top = 104.0
+offset_right = -16.0
+offset_bottom = 127.0
+text = "Sell: 25.6 bubs"
+
+[node name="ModifierDescription" type="Label" parent="."]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 24.0
+offset_right = 368.0
+offset_bottom = 47.0
+text = "x2 modifier"
