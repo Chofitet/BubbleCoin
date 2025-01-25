@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://enowhwvjxhkg"]
+[gd_scene load_steps=11 format=3 uid="uid://enowhwvjxhkg"]
 
 [ext_resource type="Script" path="res://Scenes/Web_Window/Tab_Group_Controller.gd" id="1_nodkm"]
 [ext_resource type="Texture2D" uid="uid://be37561hvnr5h" path="res://Scenes/Web_Window/tab.jpg" id="2_8gyiu"]
@@ -8,13 +8,21 @@
 [ext_resource type="Script" path="res://Scenes/Web_Window/WebSpawner.gd" id="6_2p82q"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/MarketManager.gd" id="7_suktn"]
 [ext_resource type="Resource" uid="uid://d2qmkpv5e2382" path="res://Resources/calidades/CalidadComunsub1.tres" id="8_j5c35"]
+[ext_resource type="Script" path="res://Scenes/Bubble/CalidadData.gd" id="8_th6xu"]
 [ext_resource type="Script" path="res://Scenes/RefreshBTN/refresh_btn.gd" id="9_nrrwf"]
 
 [node name="Trade_Web" type="Panel"]
-offset_left = 20.0
-offset_top = 20.0
-offset_right = 1124.0
-offset_bottom = 525.0
+anchors_preset = -1
+anchor_left = 0.017
+anchor_top = 0.031
+anchor_right = 0.976
+anchor_bottom = 0.81
+offset_left = 0.415998
+offset_top = -0.0880013
+offset_right = -0.352051
+offset_bottom = 0.119934
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="WebConteiner" type="Panel" parent="."]
 self_modulate = Color(1, 1, 1, 0)
@@ -32,10 +40,14 @@ script = ExtResource("6_2p82q")
 
 [node name="Tabs" type="Panel" parent="."]
 layout_mode = 2
-offset_left = 20.0
-offset_top = 20.0
-offset_right = 1084.0
-offset_bottom = 55.0
+anchor_left = 0.018
+anchor_top = 0.04
+anchor_right = 0.982
+anchor_bottom = 0.109
+offset_left = 0.127998
+offset_top = -0.200001
+offset_right = -0.128052
+offset_bottom = -0.045002
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Tabs"]
 layout_mode = 0
@@ -83,49 +95,50 @@ text = "Venta"
 
 [node name="MarketManager" type="Node" parent="."]
 script = ExtResource("7_suktn")
+CalidadesBubble = Array[ExtResource("8_th6xu")]([ExtResource("8_j5c35"), ExtResource("8_j5c35"), ExtResource("8_j5c35"), ExtResource("8_j5c35"), ExtResource("8_j5c35"), ExtResource("8_j5c35"), ExtResource("8_j5c35"), ExtResource("8_j5c35"), ExtResource("8_j5c35")])
 ComunCalidad = ExtResource("8_j5c35")
 
 [node name="RigthPanel" type="Panel" parent="."]
 layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -217.0
-offset_top = -198.5
-offset_right = -23.0
-offset_bottom = 237.5
+anchors_preset = -1
+anchor_left = 0.803
+anchor_top = 0.107
+anchor_right = 0.979
+anchor_bottom = 0.97
+offset_left = 0.487976
+offset_top = -0.0350037
+offset_right = 0.18396
+offset_bottom = 0.149994
 grow_horizontal = 0
 grow_vertical = 2
 
 [node name="RefresBtn" type="Button" parent="RigthPanel"]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -96.0
+anchors_preset = -1
+anchor_left = 0.005
+anchor_right = 1.0
+anchor_bottom = 0.239
+offset_left = 0.0299999
 offset_top = 29.0
-offset_right = 97.0
-offset_bottom = 104.0
+offset_bottom = -0.204002
 grow_horizontal = 2
 script = ExtResource("9_nrrwf")
 web = ExtResource("4_oqvlr")
 
 [node name="Label" type="Label" parent="RigthPanel/RefresBtn"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -69.5
-offset_top = -19.5
-offset_right = 69.5
-offset_bottom = 19.5
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 27.0
+offset_top = 18.0
+offset_right = -27.0
+offset_bottom = -18.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="OpenTab" from="Tabs/HBoxContainer" to="WebConteiner" method="SetWebWindow"]
 [connection signal="pressed" from="RigthPanel/RefresBtn" to="MarketManager" method="CompleteWithRandomBubbles"]
