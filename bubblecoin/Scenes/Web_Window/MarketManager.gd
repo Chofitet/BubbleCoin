@@ -6,12 +6,13 @@ extends Node
 
 func _ready() -> void:
 	CompleteWithRandomBubbles()
-	MarketVariables.Set_Bubbles_Of_Day(BubblesDay1)
 
 func CompleteWithRandomBubbles():
-	for i in randi_range(0,6):
+	var playerBubbleLevel = PlayerVariables.MaxBubbleLevel
+	BubblesDay1.clear()
+	for i in range(0,6):
 		BubblesDay1.append(BubbleResourceCreate())
-
+	MarketVariables.Set_Bubbles_Of_Day(BubblesDay1)
 
 func BubbleResourceCreate() -> BubbleData:
 	var bubble = BubbleData.new()
@@ -20,7 +21,6 @@ func BubbleResourceCreate() -> BubbleData:
 	calidadData.PicRandomBubble()
 	
 	bubble.bubbleCalidad = calidadData
-	
 	
 	return bubble
 

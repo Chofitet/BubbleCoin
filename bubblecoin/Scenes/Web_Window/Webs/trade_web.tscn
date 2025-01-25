@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://enowhwvjxhkg"]
+[gd_scene load_steps=10 format=3 uid="uid://enowhwvjxhkg"]
 
 [ext_resource type="Script" path="res://Scenes/Web_Window/Tab_Group_Controller.gd" id="1_nodkm"]
 [ext_resource type="Texture2D" uid="uid://be37561hvnr5h" path="res://Scenes/Web_Window/tab.jpg" id="2_8gyiu"]
@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://bih2hluw54uxj" path="res://Scenes/Web_Window/Webs/Buy_web.tscn" id="4_oqvlr"]
 [ext_resource type="PackedScene" uid="uid://c5u82qfxqdit3" path="res://Scenes/Web_Window/Webs/Sell_web.tscn" id="5_ei5bm"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/WebSpawner.gd" id="6_2p82q"]
+[ext_resource type="Script" path="res://Scenes/Web_Window/MarketManager.gd" id="7_suktn"]
+[ext_resource type="Resource" uid="uid://d2qmkpv5e2382" path="res://Resources/calidades/CalidadComunsub1.tres" id="8_j5c35"]
+[ext_resource type="Script" path="res://Scenes/RefreshBTN/refresh_btn.gd" id="9_nrrwf"]
 
 [node name="Trade_Web" type="Panel"]
 offset_left = 20.0
@@ -21,7 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 20.0
 offset_top = 20.0
-offset_right = 20.0
+offset_right = -191.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -78,4 +81,52 @@ grow_vertical = 2
 rotation = -0.00323179
 text = "Venta"
 
+[node name="MarketManager" type="Node" parent="."]
+script = ExtResource("7_suktn")
+ComunCalidad = ExtResource("8_j5c35")
+
+[node name="RigthPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -217.0
+offset_top = -198.5
+offset_right = -23.0
+offset_bottom = 237.5
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="RefresBtn" type="Button" parent="RigthPanel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -96.0
+offset_top = 29.0
+offset_right = 97.0
+offset_bottom = 104.0
+grow_horizontal = 2
+script = ExtResource("9_nrrwf")
+web = ExtResource("4_oqvlr")
+
+[node name="Label" type="Label" parent="RigthPanel/RefresBtn"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -69.5
+offset_top = -19.5
+offset_right = 69.5
+offset_bottom = 19.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "10"
+
 [connection signal="OpenTab" from="Tabs/HBoxContainer" to="WebConteiner" method="SetWebWindow"]
+[connection signal="pressed" from="RigthPanel/RefresBtn" to="MarketManager" method="CompleteWithRandomBubbles"]
+[connection signal="webResearch" from="RigthPanel/RefresBtn" to="WebConteiner" method="SetWebWindow"]

@@ -2,7 +2,9 @@ extends Node
 
 var BubbleCoins : float
 
-var fame : float = 1
+var fame : float = 0
+
+var MaxBubbleLevel : int
 
 var BubbleInventory: Array[BubbleData]  = []
 
@@ -11,3 +13,6 @@ func AddBubble(bubbleData):
 
 func RemoveBubble(bubbleData):
 	BubbleInventory.erase(bubbleData)
+
+func SetBubbleLevel(x):
+	MaxBubbleLevel = x
