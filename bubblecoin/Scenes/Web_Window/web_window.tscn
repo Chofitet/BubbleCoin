@@ -1,4 +1,8 @@
-[gd_scene format=3 uid="uid://65w1bax7wqlj"]
+[gd_scene load_steps=4 format=3 uid="uid://65w1bax7wqlj"]
+
+[ext_resource type="Texture2D" uid="uid://be37561hvnr5h" path="res://Scenes/Web_Window/tab.jpg" id="1_ag27l"]
+[ext_resource type="Script" path="res://Scenes/Web_Window/Tab_Group_Controller.gd" id="1_ms467"]
+[ext_resource type="Script" path="res://Scenes/Web_Window/TabController.gd" id="2_v1c5a"]
 
 [node name="Web_Window" type="Control"]
 layout_mode = 3
@@ -18,7 +22,7 @@ offset_right = 576.0
 offset_bottom = 46.0
 grow_horizontal = 2
 
-[node name="HigthBar2" type="Panel" parent="."]
+[node name="Tab_Bar" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.496
@@ -31,13 +35,89 @@ offset_right = 580.608
 offset_bottom = 49.232
 grow_horizontal = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="HigthBar2"]
+[node name="Tab_Controller" type="HBoxContainer" parent="Tab_Bar"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ms467")
 
-[node name="Tab" type="Button" parent="HigthBar2/HBoxContainer"]
+[node name="Tab" type="TextureRect" parent="Tab_Bar/Tab_Controller"]
+self_modulate = Color(0.745098, 0.745098, 0.745098, 0.980392)
 layout_mode = 2
+texture = ExtResource("1_ag27l")
+expand_mode = 3
+script = ExtResource("2_v1c5a")
+
+[node name="button" type="Button" parent="Tab_Bar/Tab_Controller/Tab"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="Tab2" type="TextureRect" parent="Tab_Bar/Tab_Controller"]
+self_modulate = Color(0.745098, 0.745098, 0.745098, 0.980392)
+layout_mode = 2
+texture = ExtResource("1_ag27l")
+expand_mode = 3
+script = ExtResource("2_v1c5a")
+
+[node name="button" type="Button" parent="Tab_Bar/Tab_Controller/Tab2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="Tab3" type="TextureRect" parent="Tab_Bar/Tab_Controller"]
+self_modulate = Color(0.745098, 0.745098, 0.745098, 0.980392)
+layout_mode = 2
+texture = ExtResource("1_ag27l")
+expand_mode = 3
+script = ExtResource("2_v1c5a")
+
+[node name="button" type="Button" parent="Tab_Bar/Tab_Controller/Tab3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="Tab4" type="TextureRect" parent="Tab_Bar/Tab_Controller"]
+self_modulate = Color(0.745098, 0.745098, 0.745098, 0.980392)
+layout_mode = 2
+texture = ExtResource("1_ag27l")
+expand_mode = 3
+script = ExtResource("2_v1c5a")
+
+[node name="button" type="Button" parent="Tab_Bar/Tab_Controller/Tab4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.142
+anchor_right = 0.5
+anchor_bottom = 0.142
+offset_left = -576.0
+offset_top = -0.0160065
+offset_right = 576.0
+offset_bottom = 555.984
+grow_horizontal = 2
+grow_vertical = 2
