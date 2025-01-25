@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0oscsn87yjd7"
-path="res://.godot/imported/Button_01.png-b55193cff3aa1a28ebf10214277d94f5.ctex"
+uid="uid://dkxqbscn4skfr"
+path="res://.godot/imported/Gorro Lvl 1_01.png-fc37ece7f51408db2e33c4f738b05339.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Button_01.png"
-dest_files=["res://.godot/imported/Button_01.png-b55193cff3aa1a28ebf10214277d94f5.ctex"]
+source_file="res://Sprites/gorros/Gorro Lvl 1_01.png"
+dest_files=["res://.godot/imported/Gorro Lvl 1_01.png-fc37ece7f51408db2e33c4f738b05339.ctex"]
 
 [params]
 

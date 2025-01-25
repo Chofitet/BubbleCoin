@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Modificador" load_steps=2 format=3 uid="uid://bvyjn3a7rdv6e"]
+
+[ext_resource type="Script" path="res://Scenes/Bubble/Bonificadores.gd" id="1_ue7s0"]
+
+[resource]
+script = ExtResource("1_ue7s0")
+ModifyDescription = "+10 burbujas por Click"
+MultiplicadorIdle = 1
+AdicionadorIdle = 1
+MultiplicadorClick = 1
+AdicionadorClick = 10

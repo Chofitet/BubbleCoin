@@ -9,6 +9,7 @@ static func new_bubble(_bubbleData : BubbleData, in_inventory: bool) -> Bubble:
 	var bubble: Bubble = bubbleScene.instantiate()
 	bubble.set_bubble_data(_bubbleData)
 	bubble.set_in_inventory(in_inventory)
+	
 	return bubble
 
 func set_in_inventory(in_inventory: bool) -> void:
@@ -19,7 +20,8 @@ func set_bubble_data(bubbleData : BubbleData) -> void:
 	bubble_data = bubbleData
 	set_buy_price(bubbleData.bubbleCalidad.price)
 	set_sell_price(bubbleData.bubbleCalidad.price)
-	set_name_description(bubbleData.bubbleCalidad.name, bubbleData.modifier_description)
+	set_name_description(bubbleData.bubbleCalidad.name, bubbleData.bubbleCalidad.modificador.ModifyDescription)
+	Set_Estetica(bubbleData.bubbleCalidad)
 
 func set_buy_price(price) -> void:
 	bubble_data.buy_price = price
@@ -38,13 +40,20 @@ func update_sell_price() -> void:
 func set_name_description(_name, description):
 	bubble_data.bubble_name = _name
 	bubble_data.modifier_description = description
-	$name.text = bubble_data.bubble_name
-	$ModifierDescription.text = bubble_data.modifier_description
+	$name.text = _name
+	$ModifierDescription.text = description
+
+func Set_Estetica(BubbleEstetica):
+	$Panel/TextureRect.texture = BubbleEstetica.BurbujasCuerpo
+	$Panel/Lente.texture = BubbleEstetica.lente
+	$Panel/Gorro.texture = BubbleEstetica.gorro
+	$Panel/Barba.texture = BubbleEstetica.barba
 
 func buy() -> void:
 	PlayerVariables.AddBubble(bubble_data)
 	PlayerVariables.SetBubbleLevel(bubble_data.bubbleCalidad.Level)
 	MarketVariables.Remove_Bubble(bubble_data)
+	PlayerVariables.Modifies(bubble_data.bubbleCalidad.modificador)
 	queue_free()
 
 func sell() -> void:

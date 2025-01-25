@@ -6,7 +6,6 @@ extends Node
 @export var ComunCalidad : Calidad
 
 @export var probabilidades_nueva_calidad : Array[float]
-@export var PLACEHOLDER_calidad_referencia := 5
 
 func _ready() -> void:
 	CompleteWithRandomBubbles()
@@ -15,13 +14,12 @@ func CompleteWithRandomBubbles():
 	var playerBubbleLevel = PlayerVariables.MaxBubbleLevel
 	BubblesDay1.clear()
 	for i in range(0,6):
-		BubblesDay1.append(BubbleResourceCreate(PLACEHOLDER_calidad_referencia))
+		BubblesDay1.append(BubbleResourceCreate(PlayerVariables.MaxBubbleLevel))
 		
 	MarketVariables.Set_Bubbles_Of_Day(BubblesDay1)
 
 func BubbleResourceCreate(calidad_referencia : int) -> BubbleData:
 	var bubble = BubbleData.new()
-	
 	var calidadData = CalidadesBubble[calcular_calidad(calidad_referencia)].duplicate()
 	calidadData.PicRandomBubble()
 	
@@ -34,6 +32,7 @@ func _process(delta: float) -> void:
 		bubble_data.increase_sell_price(PlayerVariables.fame, delta)
 
 func calcular_calidad(calidad_referencia : int):
+	print(str(calidad_referencia) + "refes")
 	var suma_chances : float
 	for chances in probabilidades_nueva_calidad.size():
 		suma_chances += probabilidades_nueva_calidad[chances]
@@ -43,6 +42,7 @@ func calcular_calidad(calidad_referencia : int):
 	for chances in probabilidades_nueva_calidad.size():
 		if resultado <= probabilidades_nueva_calidad[chances] + n:
 			valor_return = calidad_referencia + chances - 2
+			print(str(valor_return))
 			return clampi(valor_return, 0, 8)
 		else:
 			n += probabilidades_nueva_calidad[chances]

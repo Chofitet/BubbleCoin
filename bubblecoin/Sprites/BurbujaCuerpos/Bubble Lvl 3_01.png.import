@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0oscsn87yjd7"
-path="res://.godot/imported/Button_01.png-b55193cff3aa1a28ebf10214277d94f5.ctex"
+uid="uid://bk7if3ep150hn"
+path="res://.godot/imported/Bubble Lvl 3_01.png-b80e637c33bf5179cb379989b57895eb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Button_01.png"
-dest_files=["res://.godot/imported/Button_01.png-b55193cff3aa1a28ebf10214277d94f5.ctex"]
+source_file="res://Sprites/BurbujaCuerpos/Bubble Lvl 3_01.png"
+dest_files=["res://.godot/imported/Bubble Lvl 3_01.png-b80e637c33bf5179cb379989b57895eb.ctex"]
 
 [params]
 

@@ -6,6 +6,7 @@ var barba
 var lente
 var gorro
 var price
+var modificador
 
 @export var Nombre : Array[String] = []
 @export var Apellido : Array[String] = []
@@ -21,11 +22,14 @@ var price
 @export var minPrice : int
 @export var maxPrice : int
 
+@export var Modificadores : Array[Modificador] = []
+
 func PicRandomBubble():
 	
 	name = Nombre[randf_range(0,Nombre.size())] + " " + Apellido[randf_range(0,Nombre.size())] + " " + Titulo[randf_range(0,Nombre.size())]
 	price = randi_range(minPrice,maxPrice)
+	if Modificadores.size() != 0 : modificador = Modificadores[randf_range(0,Modificadores.size())]
 	if Barbas.size() != 0: barba = Barbas[randf_range(0,Barbas.size())]
 	if Lentes.size() != 0: lente = Lentes[randf_range(0,Lentes.size())]
-	if Gorros.size() != 0: gorro = Gorros[randf_range(0,gorro.size())]
+	if Gorros.size() != 0: gorro = Gorros[randf_range(0,Gorros.size())]
 	
