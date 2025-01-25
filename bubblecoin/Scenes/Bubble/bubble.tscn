@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://5ht62s4o5388" path="res://icon.svg" id="1_fwkws"]
 [ext_resource type="Script" path="res://Scenes/Bubble/bubble.gd" id="1_rmvf7"]
-[ext_resource type="Texture2D" uid="uid://bcjofafna63db" path="res://Sprites/Button_01.png" id="3_tmfj8"]
+[ext_resource type="Texture2D" uid="uid://c0oscsn87yjd7" path="res://Sprites/Button_01.png" id="3_tmfj8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1rjgv"]
 texture = ExtResource("3_tmfj8")

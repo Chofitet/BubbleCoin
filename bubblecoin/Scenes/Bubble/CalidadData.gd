@@ -21,6 +21,8 @@ var price
 @export var minPrice : int
 @export var maxPrice : int
 
+@export var modificador : Array[Modificador]
+
 func PicRandomBubble():
 	
 	name = Nombre[randf_range(0,Nombre.size())] + " " + Apellido[randf_range(0,Nombre.size())] + " " + Titulo[randf_range(0,Nombre.size())]
