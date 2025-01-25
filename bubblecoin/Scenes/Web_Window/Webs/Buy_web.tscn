@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://d0wwgjq8w8t0q"]
+[gd_scene load_steps=2 format=3 uid="uid://bih2hluw54uxj"]
 
 [ext_resource type="Script" path="res://Scenes/Web_Window/Webs/GridBubbleBuySpawner.gd" id="1_m3hxi"]
 

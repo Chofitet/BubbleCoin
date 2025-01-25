@@ -12,6 +12,7 @@ class_name BubbleData
 @export var multiplier : float = 2.0
 @export var addition : float = 0
 
+@export var bubbleCalidad : Calidad
 
 func increase_sell_price(fame: float, delta: float):
 	#sell_price *= ((100.0 + fame) / 100.0)

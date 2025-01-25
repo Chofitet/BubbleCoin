@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://wgm44wfwm1tu"]
+[gd_scene load_steps=2 format=3 uid="uid://c5u82qfxqdit3"]
 
 [ext_resource type="Script" path="res://Scenes/Web_Window/Webs/grid_bubbles_Setter.gd" id="1_08fnr"]
 

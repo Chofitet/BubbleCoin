@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://Scenes/Web_Window/Tab_Group_Controller.gd" id="1_nodkm"]
 [ext_resource type="Texture2D" uid="uid://be37561hvnr5h" path="res://Scenes/Web_Window/tab.jpg" id="2_8gyiu"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/TabController.gd" id="3_yhvqc"]
-[ext_resource type="PackedScene" uid="uid://d0wwgjq8w8t0q" path="res://Scenes/Web_Window/Webs/Buy_web.tscn" id="4_oqvlr"]
-[ext_resource type="PackedScene" uid="uid://wgm44wfwm1tu" path="res://Scenes/Web_Window/Webs/Sell_web.tscn" id="5_ei5bm"]
+[ext_resource type="PackedScene" uid="uid://bih2hluw54uxj" path="res://Scenes/Web_Window/Webs/Buy_web.tscn" id="4_oqvlr"]
+[ext_resource type="PackedScene" uid="uid://c5u82qfxqdit3" path="res://Scenes/Web_Window/Webs/Sell_web.tscn" id="5_ei5bm"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/WebSpawner.gd" id="6_2p82q"]
 
 [node name="Trade_Web" type="Panel"]
