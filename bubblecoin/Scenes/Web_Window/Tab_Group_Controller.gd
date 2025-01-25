@@ -9,9 +9,16 @@ func _ready() -> void:
 			tab.TabPress.connect(tabPressed)
 			tabsArray.append(tab)
 			tab.visible = false
-	for i in range(0,TabEnables):
+	for i in PlayerVariables.unlocked_tabs:
 		EnableTabs(i)
 	
+
+func open_article(article_to_open):
+	if article_to_open not in PlayerVariables.unlocked_tabs:
+		PlayerVariables.unlocked_tabs.append(article_to_open)
+		EnableTabs(article_to_open)
+		
+	OpenTab.emit(tabsArray[article_to_open].Web)
 
 func tabPressed(tab):
 	OpenTab.emit(tab.Web)
@@ -24,5 +31,5 @@ func AppearTab():
 	EnableTabs(TabEnables)
 	TabEnables += 1
 
-func EnableTabs(TabEnables):
-	tabsArray[TabEnables].visible = true
+func EnableTabs(tabToEnable : int):
+	tabsArray[tabToEnable].visible = true

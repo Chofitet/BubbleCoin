@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqtgr0yw0e6yh"]
+
+[ext_resource type="Texture2D" uid="uid://be37561hvnr5h" path="res://Scenes/Web_Window/tab.jpg" id="1_thyw4"]
+[ext_resource type="Script" path="res://Scenes/Web_Window/ravenmail_email_button.gd" id="2_32p88"]
+
+[node name="estimadoArkhar" type="TextureRect"]
+self_modulate = Color(0.662745, 0.662745, 0.662745, 1)
+custom_minimum_size = Vector2(0, 50)
+texture = ExtResource("1_thyw4")
+expand_mode = 2
+script = ExtResource("2_32p88")
+
+[node name="button" type="Button" parent="."]
+custom_minimum_size = Vector2(218, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
