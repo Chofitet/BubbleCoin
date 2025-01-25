@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="BubbleData" load_steps=3 format=3 uid="uid://dsgdg2w8ox2sj"]
 
 [ext_resource type="Script" path="res://Scenes/Bubble/BubbleData.gd" id="1_kax5n"]
-[ext_resource type="Resource" uid="uid://d2qmkpv5e2382" path="res://Resources/calidades/Calidad1.tres" id="1_qsqwx"]
+[ext_resource type="Resource" uid="uid://d2qmkpv5e2382" path="res://Resources/calidades/Calidad0.tres" id="1_qsqwx"]
 
 [resource]
 script = ExtResource("1_kax5n")
