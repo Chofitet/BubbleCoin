@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Calidad" load_steps=7 format=3 uid="uid://d2qmkpv5e2382"]
+[gd_resource type="Resource" script_class="Calidad" load_steps=7 format=3 uid="uid://cwjabv40jnwuk"]
 
 [ext_resource type="Texture2D" uid="uid://cahqy66xmwj0l" path="res://Sprites/BurbujaCuerpos/Simple Bubble_01.png" id="1_15m8p"]
 [ext_resource type="Texture2D" uid="uid://bmni1c5jck0mf" path="res://Sprites/Lentes/Lentes Lvl 1_01.png" id="2_mrhbv"]
