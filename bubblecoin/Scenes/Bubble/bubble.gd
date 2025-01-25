@@ -17,9 +17,9 @@ func set_in_inventory(in_inventory: bool) -> void:
 
 func set_bubble_data(bubbleData : BubbleData) -> void:
 	bubble_data = bubbleData
-	set_buy_price(bubbleData.buy_price)
-	set_sell_price(bubbleData.sell_price)
-	set_name_description(bubbleData.bubble_name, bubbleData.modifier_description)
+	set_buy_price(bubbleData.bubbleCalidad.price)
+	set_sell_price(bubbleData.bubbleCalidad.price)
+	set_name_description(bubbleData.bubbleCalidad.name, bubbleData.modifier_description)
 
 func set_buy_price(price) -> void:
 	bubble_data.buy_price = price
@@ -43,6 +43,7 @@ func set_name_description(_name, description):
 
 func buy() -> void:
 	PlayerVariables.AddBubble(bubble_data)
+	PlayerVariables.SetBubbleLevel(bubble_data.bubbleCalidad.Level)
 	MarketVariables.Remove_Bubble(bubble_data)
 	queue_free()
 

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://c33ccqr16lmft"]
+
+[ext_resource type="Script" path="res://Scenes/Escenario/3D GUI/Sprite3DGUI.gd" id="1_ooby4"]
+[ext_resource type="PackedScene" uid="uid://c2qsixqmh4b60" path="res://Scenes/Escenario/test_3dgui.tscn" id="2_gjqt5"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_drcs2"]
+viewport_path = NodePath("Sprite GUI/SubViewport")
+
+[node name="Sprite GUI" type="Node3D"]
+script = ExtResource("1_ooby4")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(-3.85097e-08, -0.516594, 0.638313, 0, 0.713647, 0.462061, -0.881, 2.2581e-08, -2.79015e-08, 0.0531957, 0.0164269, -0.0389113)
+texture = SubResource("ViewportTexture_drcs2")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+
+[node name="Test 3DGUI" parent="SubViewport" instance=ExtResource("2_gjqt5")]
