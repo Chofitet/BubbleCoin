@@ -13,9 +13,10 @@ signal TabPress
 		TabPress.emit(self)
 
 func _ready() -> void:
-	self_modulate = Color.DARK_GRAY
-	$button.text = email_subject
-	$button.pressed.connect(TabEnter)
+	if not Engine.is_editor_hint():
+		self_modulate = Color.DARK_GRAY
+		$button.text = email_subject
+		$button.pressed.connect(TabEnter)
 
 func TabEnter():
 	self_modulate = Color.WHITE

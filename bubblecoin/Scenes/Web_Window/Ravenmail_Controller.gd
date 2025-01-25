@@ -9,8 +9,10 @@ func _ready() -> void:
 			tab.TabPress.connect(tabPressed)
 			tabsArray.append(tab)
 			tab.visible = false
-	for unlocked_email in PlayerVariables.unlocked_emails:
-		EnableTabs(unlocked_email)
+	# so we can use this as a tool
+	if not Engine.is_editor_hint():
+		for unlocked_email in PlayerVariables.unlocked_emails:
+			EnableTabs(unlocked_email)
 
 
 

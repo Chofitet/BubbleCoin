@@ -31,6 +31,5 @@ func AppearTab():
 	EnableTabs(TabEnables)
 	TabEnables += 1
 
-func EnableTabs(TabEnables : int):
-	print("tabEnables", TabEnables)
-	tabsArray[TabEnables].visible = true
+func EnableTabs(tabToEnable : int):
+	tabsArray[tabToEnable].visible = true
