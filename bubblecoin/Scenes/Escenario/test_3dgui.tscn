@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2qsixqmh4b60"]
+
+[ext_resource type="Script" path="res://Scenes/Escenario/testbutton.gd" id="1_rqawp"]
+[ext_resource type="Texture2D" uid="uid://5ht62s4o5388" path="res://icon.svg" id="2_kram2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ewg1i"]
+font_size = 24
+
+[node name="Test 3DGUI" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+mouse_filter = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -28.0
+offset_right = 96.0
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rqawp")
+
+[node name="Label" type="Label" parent="Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Click!"
+label_settings = SubResource("LabelSettings_ewg1i")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(0, 124)
+rotation = -0.0041127
+texture = ExtResource("2_kram2")
+
+[connection signal="button_down" from="Button" to="Button" method="_on_button_down"]
