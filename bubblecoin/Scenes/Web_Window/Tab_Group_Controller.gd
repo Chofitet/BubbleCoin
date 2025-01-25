@@ -1,7 +1,7 @@
 extends HBoxContainer
 
 var tabsArray =[]
-var TabEnables = 0
+@export var TabEnables = 0
 signal OpenTab
 func _ready() -> void:
 	for tab in get_children():
@@ -9,8 +9,9 @@ func _ready() -> void:
 			tab.TabPress.connect(tabPressed)
 			tabsArray.append(tab)
 			tab.visible = false
+	for i in range(0,TabEnables):
+		EnableTabs(i)
 	
-	AppearTab()
 
 func tabPressed(tab):
 	OpenTab.emit(tab.Web)
@@ -20,5 +21,8 @@ func tabPressed(tab):
 			t.TabExit()
 
 func AppearTab():
-	tabsArray[TabEnables].visible = true
+	EnableTabs(TabEnables)
 	TabEnables += 1
+
+func EnableTabs(TabEnables):
+	tabsArray[TabEnables].visible = true
