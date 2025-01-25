@@ -33,6 +33,7 @@ func set_name_description(_name, description):
 
 func buy() -> void:
 	PlayerVariables.AddBubble(bubble_data)
+	MarketVariables.Remove_Bubble(bubble_data)
 	queue_free()
 
 func sell() -> void:
