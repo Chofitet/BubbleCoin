@@ -8,7 +8,7 @@
 [ext_resource type="Script" path="res://Scenes/Web_Window/MarketManager.gd" id="6_8bldg"]
 [ext_resource type="Script" path="res://Scenes/Bubble/BubbleData.gd" id="7_66img"]
 [ext_resource type="Resource" uid="uid://cq5nr75gusck6" path="res://Resources/BubblesTypes/Bubbletastica.tres" id="8_ucrfs"]
-[ext_resource type="Resource" uid="uid://dsgdg2w8ox2sj" path="res://Resources/BubblesTypes/Bubbleman.tres" id="9_2lqsx"]
+[ext_resource type="Resource" path="res://Resources/BubblesTypes/Bubbleman.tres" id="9_2lqsx"]
 
 [node name="Web_Window" type="Control"]
 layout_mode = 3
