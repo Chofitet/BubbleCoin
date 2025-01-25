@@ -125,4 +125,11 @@ grow_vertical = 2
 script = ExtResource("4_cnpws")
 metadata/_edit_use_anchors_ = true
 
+[node name="Trade_Web" parent="Web_Conteiner" instance=ExtResource("5_dalg5")]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1104.0
+offset_bottom = 505.0
+
 [connection signal="OpenTab" from="Tab_Bar/Tab_Controller" to="Web_Conteiner" method="SetWebWindow"]

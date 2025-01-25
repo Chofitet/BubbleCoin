@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="BubbleData" load_steps=2 format=3 uid="uid://cq5nr75gusck6"]
+
+[ext_resource type="Script" path="res://Scenes/Bubble/BubbleData.gd" id="1_paqmo"]
+
+[resource]
+script = ExtResource("1_paqmo")
+bubble_name = "Bubletastica"
+init_sell_price = 1.0
+init_buy_price = 1.0
+modifier_description = "x2 contador"
+multiplier = 8.0
+addition = 0.0
