@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://cdnr74tow1gdm"]
+[gd_scene load_steps=8 format=3 uid="uid://cdnr74tow1gdm"]
 
-[ext_resource type="Texture2D" uid="uid://5ht62s4o5388" path="res://icon.svg" id="1_fwkws"]
 [ext_resource type="Script" path="res://Scenes/Bubble/bubble.gd" id="1_rmvf7"]
+[ext_resource type="Texture2D" uid="uid://cahqy66xmwj0l" path="res://Sprites/BurbujaCuerpos/Simple Bubble_01.png" id="3_aomck"]
 [ext_resource type="Texture2D" uid="uid://c0oscsn87yjd7" path="res://Sprites/Button_01.png" id="3_tmfj8"]
+[ext_resource type="Texture2D" uid="uid://bmni1c5jck0mf" path="res://Sprites/Lentes/Lentes Lvl 1_01.png" id="4_kffpe"]
+[ext_resource type="Texture2D" uid="uid://dkxqbscn4skfr" path="res://Sprites/gorros/Gorro Lvl 1_01.png" id="5_0xfdh"]
+[ext_resource type="Texture2D" uid="uid://bs8yftn2u1xoe" path="res://Sprites/barbas/Bigote Lvl 1_01.png" id="6_snhdu"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1rjgv"]
 texture = ExtResource("3_tmfj8")
@@ -25,17 +28,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.264698, 0.464787, 1, 1)
-
-[node name="Button" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -68.0
-offset_right = 136.0
-offset_bottom = 68.0
-grow_vertical = 2
-icon = ExtResource("1_fwkws")
 
 [node name="ModifierDescription" type="Label" parent="."]
 layout_mode = 1
@@ -123,6 +115,67 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Sell: 25.6 bubs"
 horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.319
+anchor_bottom = 1.0
+offset_right = -0.0839996
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_aomck")
+expand_mode = 2
+
+[node name="Lente" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.493
+anchor_top = 0.386
+anchor_right = 0.493
+anchor_bottom = 0.386
+offset_left = -65.527
+offset_top = -7.496
+offset_right = 61.473
+offset_bottom = 35.504
+texture = ExtResource("4_kffpe")
+expand_mode = 2
+
+[node name="Gorro" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.464
+anchor_top = 0.132
+anchor_right = 0.464
+anchor_bottom = 0.132
+offset_left = -63.496
+offset_top = -45.952
+offset_right = 63.504
+offset_bottom = 26.048
+texture = ExtResource("5_0xfdh")
+expand_mode = 2
+
+[node name="Barba" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.464
+anchor_top = 0.132
+anchor_right = 0.464
+anchor_bottom = 0.132
+offset_left = -61.496
+offset_top = 48.048
+offset_right = 65.504
+offset_bottom = 82.048
+texture = ExtResource("6_snhdu")
+expand_mode = 2
 
 [connection signal="pressed" from="BuyBtn" to="." method="buy"]
 [connection signal="pressed" from="SellBtn" to="." method="sell"]
