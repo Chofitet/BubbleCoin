@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b43amscl2xy2c"]
+
+[ext_resource type="Script" path="res://Scenes/Contador/ContadorCoins.gd" id="1_mdkp7"]
+[ext_resource type="PackedScene" uid="uid://b8tlqr6cl0jac" path="res://Scenes/Contador/Clicker/clicker.tscn" id="2_cynuy"]
+[ext_resource type="PackedScene" uid="uid://dp83p1usertis" path="res://Scenes/Contador/Clicker/burbujero.tscn" id="3_3h8o3"]
+
+[node name="Contador_Bubbles" type="Node2D" node_paths=PackedStringArray("label")]
+script = ExtResource("1_mdkp7")
+label = NodePath("Label")
+
+[node name="Clicker" parent="." instance=ExtResource("2_cynuy")]
+
+[node name="Burbujero" parent="." instance=ExtResource("3_3h8o3")]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "NUMERO
+"
+
+[connection signal="click" from="Clicker" to="." method="_on_clicker_click"]
+[connection signal="generar_burbujas" from="Burbujero" to="." method="_on_burbujero_generar_burbujas"]
