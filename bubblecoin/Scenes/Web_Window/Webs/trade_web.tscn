@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://enowhwvjxhkg"]
+[gd_scene load_steps=7 format=3 uid="uid://enowhwvjxhkg"]
 
-[ext_resource type="Script" path="res://Scenes/Web_Window/Webs/grid_bubbles_Setter.gd" id="1_bwsau"]
-[ext_resource type="PackedScene" uid="uid://cdnr74tow1gdm" path="res://Scenes/Bubble/bubble.tscn" id="1_m5ngj"]
-[ext_resource type="Resource" uid="uid://cq5nr75gusck6" path="res://Resources/BubblesTypes/Bubbletastica.tres" id="3_ny5tu"]
+[ext_resource type="Script" path="res://Scenes/Web_Window/Tab_Group_Controller.gd" id="1_nodkm"]
+[ext_resource type="Texture2D" uid="uid://be37561hvnr5h" path="res://Scenes/Web_Window/tab.jpg" id="2_8gyiu"]
+[ext_resource type="Script" path="res://Scenes/Web_Window/TabController.gd" id="3_yhvqc"]
+[ext_resource type="PackedScene" uid="uid://bih2hluw54uxj" path="res://Scenes/Web_Window/Webs/Buy_web.tscn" id="4_oqvlr"]
+[ext_resource type="PackedScene" uid="uid://c5u82qfxqdit3" path="res://Scenes/Web_Window/Webs/Sell_web.tscn" id="5_ei5bm"]
+[ext_resource type="Script" path="res://Scenes/Web_Window/WebSpawner.gd" id="6_2p82q"]
 
 [node name="Trade_Web" type="Panel"]
 offset_left = 20.0
@@ -10,30 +13,69 @@ offset_top = 20.0
 offset_right = 1124.0
 offset_bottom = 525.0
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="WebConteiner" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("6_2p82q")
+
+[node name="Tabs" type="Panel" parent="."]
+layout_mode = 2
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 1084.0
+offset_bottom = 55.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Tabs"]
+layout_mode = 0
+offset_right = 436.0
+offset_bottom = 40.0
+script = ExtResource("1_nodkm")
+TabEnables = 2
+
+[node name="CompraBTN" type="TextureRect" parent="Tabs/HBoxContainer"]
+custom_minimum_size = Vector2(218, 0)
+layout_mode = 2
+texture = ExtResource("2_8gyiu")
+expand_mode = 2
+script = ExtResource("3_yhvqc")
+Web = ExtResource("4_oqvlr")
+
+[node name="button" type="Button" parent="Tabs/HBoxContainer/CompraBTN"]
+custom_minimum_size = Vector2(218, 0)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
+text = "Compra"
 
-[node name="GridBubbles" type="GridContainer" parent="MarginContainer"]
+[node name="VentaBTN" type="TextureRect" parent="Tabs/HBoxContainer"]
+custom_minimum_size = Vector2(218, 0)
 layout_mode = 2
-theme_override_constants/h_separation = 16
-theme_override_constants/v_separation = 16
-columns = 2
-script = ExtResource("1_bwsau")
+texture = ExtResource("2_8gyiu")
+expand_mode = 2
+script = ExtResource("3_yhvqc")
+Web = ExtResource("5_ei5bm")
 
-[node name="Bubble" parent="MarginContainer/GridBubbles" instance=ExtResource("1_m5ngj")]
-layout_mode = 2
-bubble_data = ExtResource("3_ny5tu")
+[node name="button" type="Button" parent="Tabs/HBoxContainer/VentaBTN"]
+custom_minimum_size = Vector2(218, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.00323179
+text = "Venta"
 
-[node name="BuyPrice" parent="MarginContainer/GridBubbles/Bubble/BuyBtn" index="0"]
-visible = true
-
-[editable path="MarginContainer/GridBubbles/Bubble"]
+[connection signal="OpenTab" from="Tabs/HBoxContainer" to="WebConteiner" method="SetWebWindow"]
