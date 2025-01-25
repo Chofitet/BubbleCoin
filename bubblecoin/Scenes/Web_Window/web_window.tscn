@@ -1,15 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://65w1bax7wqlj"]
+[gd_scene load_steps=6 format=3 uid="uid://65w1bax7wqlj"]
 
 [ext_resource type="Texture2D" uid="uid://be37561hvnr5h" path="res://Scenes/Web_Window/tab.jpg" id="1_ag27l"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/Tab_Group_Controller.gd" id="1_ms467"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/TabController.gd" id="2_v1c5a"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/WebSpawner.gd" id="4_cnpws"]
 [ext_resource type="PackedScene" uid="uid://enowhwvjxhkg" path="res://Scenes/Web_Window/Webs/trade_web.tscn" id="5_dalg5"]
-[ext_resource type="Script" path="res://Scenes/Web_Window/MarketManager.gd" id="6_8bldg"]
-[ext_resource type="Script" path="res://Scenes/Bubble/BubbleData.gd" id="7_66img"]
-[ext_resource type="Resource" uid="uid://d2qmkpv5e2382" path="res://Resources/calidades/CalidadComunsub1.tres" id="7_epu77"]
-[ext_resource type="Resource" uid="uid://cq5nr75gusck6" path="res://Resources/BubblesTypes/Bubbletastica.tres" id="8_ucrfs"]
-[ext_resource type="Resource" uid="uid://dsgdg2w8ox2sj" path="res://Resources/BubblesTypes/Bubbleman.tres" id="9_2lqsx"]
 
 [node name="Web_Window" type="Control"]
 layout_mode = 3
@@ -131,10 +126,5 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("4_cnpws")
 metadata/_edit_use_anchors_ = true
-
-[node name="MarketManager" type="Node" parent="."]
-script = ExtResource("6_8bldg")
-BubblesDay1 = Array[ExtResource("7_66img")]([ExtResource("8_ucrfs"), ExtResource("9_2lqsx")])
-ComunCalidad = ExtResource("7_epu77")
 
 [connection signal="OpenTab" from="Tab_Bar/Tab_Controller" to="Web_Conteiner" method="SetWebWindow"]

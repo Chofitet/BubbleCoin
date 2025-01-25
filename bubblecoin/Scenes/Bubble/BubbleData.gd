@@ -16,4 +16,4 @@ class_name BubbleData
 
 func increase_sell_price(fame: float, delta: float):
 	#sell_price *= ((100.0 + fame) / 100.0)
-	sell_price += fame + increment_amount
+	sell_price += (fame + increment_amount) * delta
