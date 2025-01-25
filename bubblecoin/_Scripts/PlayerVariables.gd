@@ -8,7 +8,9 @@ var MaxBubbleLevel : int
 
 var BubbleInventory: Array[BubbleData]  = []
 
-var unlocked_emails: Array[int] = [0]
+const unlocked_emails: Array[int] = [0]
+
+var unlocked_tabs: Array[int] = [0]
 
 func AddBubble(bubbleData):
 	BubbleInventory.append(bubbleData)

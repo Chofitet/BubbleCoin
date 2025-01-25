@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://qlbjd1hi37g0"]
+[gd_scene load_steps=4 format=3 uid="uid://qlbjd1hi37g0"]
 
+[ext_resource type="PackedScene" uid="uid://bqtgr0yw0e6yh" path="res://Scenes/Web_Window/Webs/ravenmail_email_button.tscn" id="2_hwebp"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/Ravenmail_Controller.gd" id="2_p8nkq"]
-[ext_resource type="Texture2D" uid="uid://be37561hvnr5h" path="res://Scenes/Web_Window/tab.jpg" id="3_jg7nx"]
-[ext_resource type="Script" path="res://Scenes/Web_Window/SingleEmailController.gd" id="4_xqfyf"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/EmailSpawner.gd" id="5_yfui4"]
 
 [node name="Ravenmail_Web" type="Panel"]
@@ -28,49 +27,27 @@ offset_bottom = 440.0
 grow_horizontal = 2
 script = ExtResource("2_p8nkq")
 
-[node name="estimadoArkhar" type="TextureRect" parent="Tabs/VBoxContainer"]
-custom_minimum_size = Vector2(0, 50)
+[node name="estimadoArkhar" parent="Tabs/VBoxContainer" instance=ExtResource("2_hwebp")]
 layout_mode = 2
-texture = ExtResource("3_jg7nx")
-expand_mode = 2
-script = ExtResource("4_xqfyf")
+email_subject = "Estimado Arkhar"
+article = 1
 email = "Estimado Arkhar, 
 Ha llegado a mis oídos la terrible noticia de que injustamente te han echado de la Universidad de Hechicería. ¡Por la barba de Merlín, qué infortunio! 
 Pero calma, no has de entrar en angustia y desesperación, porque te traigo buenos augurios. En las Tierras Lejanas de Valhan-Gün descubrieron una nueva magia, la llaman Bubble Coin, una fuerza extraña e intangible que te permite ganar más, más y [b]MÁS![/b]
 Tus problemas están resueltos con esta magia, hazme caso, no dudes en aprenderla.
 Sinceramente, tu amigo, Berker"
 
-[node name="button" type="Button" parent="Tabs/VBoxContainer/estimadoArkhar"]
-custom_minimum_size = Vector2(218, 0)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "[NO ES SPAM] Estimado Arkhar"
-metadata/_edit_lock_ = true
-
-[node name="Bienvenido Arkhar" type="TextureRect" parent="Tabs/VBoxContainer"]
-custom_minimum_size = Vector2(218, 50)
+[node name="bienvenido" parent="Tabs/VBoxContainer" instance=ExtResource("2_hwebp")]
+visible = false
 layout_mode = 2
-texture = ExtResource("3_jg7nx")
-expand_mode = 2
-script = ExtResource("4_xqfyf")
+email_subject = "bienvenido"
 email = "Estimado Arkhar, 
+Ha llegado a mis oídos la terrible noticia de que injustamente te han Estimado Arkhar, 
 He recibido tu carta, y me llena de regocijo saber que te has sumergido en este maravilloso mundo mágico de las Bubble Coins. No olvides que puedes gastar Bubble Coins en conseguir Potenciadores Bubbles de Magia. Espero noticias de tus avances.
+Sinceramente, tu amigo, Berkerechado de la Universidad de Hechicería. ¡Por la barba de Merlín, qué infortunio! 
+Pero calma, no has de entrar en angustia y desesperación, porque te traigo buenos augurios. En las Tierras Lejanas de Valhan-Gün descubrieron una nueva magia, la llaman Bubble Coin, una fuerza extraña e intangible que te permite ganar más, más y [b]MÁS![/b]
+Tus problemas están resueltos con esta magia, hazme caso, no dudes en aprenderla.
 Sinceramente, tu amigo, Berker"
-
-[node name="button" type="Button" parent="Tabs/VBoxContainer/Bienvenido Arkhar"]
-custom_minimum_size = Vector2(218, 0)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-rotation = -0.00323179
-text = "Bienvenido Arkhar"
 
 [node name="EmailContainer" type="Panel" parent="."]
 layout_mode = 0
@@ -81,12 +58,27 @@ offset_bottom = 446.0
 script = ExtResource("5_yfui4")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="EmailContainer"]
+visible = false
 layout_mode = 0
 offset_left = 24.0
 offset_top = 29.0
 offset_right = 726.0
 offset_bottom = 421.0
 bbcode_enabled = true
-text = "[font_size=40][b]Hola[/b], esto es una prueba de [img=100]res://Scenes/Web_Window/tab.jpg[/img]Correo electrónico[/font_size]"
+text = "Estimado Arkhar, 
+He recibido tu carta, y me llena de regocijo saber que te has sumergido en este maravilloso mundo mágico de las Bubble Coins. No olvides que puedes gastar Bubble Coins en conseguir Potenciadores Bubbles de Magia. Espero noticias de tus avances.
+Sinceramente, tu amigo, Berker"
+
+[node name="Button" type="Button" parent="EmailContainer"]
+visible = false
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -59.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "¡Click aquí!"
 
 [connection signal="OpenTab" from="Tabs/VBoxContainer" to="EmailContainer" method="SetEmail"]

@@ -1,3 +1,4 @@
+@tool
 extends VBoxContainer
 
 var tabsArray =[]
@@ -14,7 +15,7 @@ func _ready() -> void:
 
 
 func tabPressed(tab):
-	OpenTab.emit(tab.email)
+	OpenTab.emit(tab)
 	print(tab.get_node("button").text)
 	for t in tabsArray:
 		if t != tab: 
