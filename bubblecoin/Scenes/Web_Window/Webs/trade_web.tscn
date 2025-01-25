@@ -7,11 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://c5u82qfxqdit3" path="res://Scenes/Web_Window/Webs/Sell_web.tscn" id="5_ei5bm"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/WebSpawner.gd" id="6_2p82q"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/MarketManager.gd" id="7_suktn"]
-[ext_resource type="Resource" uid="uid://d2qmkpv5e2382" path="res://Resources/calidades/Calidad0.tres" id="8_j5c35"]
+[ext_resource type="Resource" uid="uid://d2qmkpv5e2382" path="res://Resources/calidades/Calidad1.tres" id="8_j5c35"]
 [ext_resource type="Script" path="res://Scenes/Bubble/CalidadData.gd" id="8_th6xu"]
+[ext_resource type="Resource" uid="uid://cwjabv40jnwuk" path="res://Resources/calidades/Calidad0.tres" id="9_io2ks"]
 [ext_resource type="Script" path="res://Scenes/RefreshBTN/refresh_btn.gd" id="9_nrrwf"]
-[ext_resource type="Resource" uid="uid://b0p7g3r3kxe7l" path="res://Resources/calidades/Calidad1.tres" id="10_2iqod"]
-[ext_resource type="Resource" uid="uid://b1vp177e1vlb3" path="res://Resources/calidades/Calidad2.tres" id="11_tl6if"]
+[ext_resource type="Resource" uid="uid://t7oom3us4qjd" path="res://Resources/calidades/Calidad2.tres" id="11_tl6if"]
 
 [node name="Trade_Web" type="Panel"]
 anchors_preset = -1
@@ -97,7 +97,7 @@ text = "Venta"
 
 [node name="MarketManager" type="Node" parent="."]
 script = ExtResource("7_suktn")
-CalidadesBubble = Array[ExtResource("8_th6xu")]([ExtResource("8_j5c35"), ExtResource("10_2iqod"), ExtResource("11_tl6if"), ExtResource("11_tl6if"), ExtResource("11_tl6if"), ExtResource("11_tl6if"), ExtResource("11_tl6if"), ExtResource("11_tl6if"), ExtResource("11_tl6if")])
+CalidadesBubble = Array[ExtResource("8_th6xu")]([ExtResource("9_io2ks"), ExtResource("8_j5c35"), ExtResource("11_tl6if"), ExtResource("11_tl6if"), ExtResource("11_tl6if"), ExtResource("11_tl6if"), ExtResource("11_tl6if"), ExtResource("11_tl6if"), ExtResource("11_tl6if")])
 ComunCalidad = ExtResource("8_j5c35")
 probabilidades_nueva_calidad = Array[float]([25.0, 42.0, 20.0, 10.0, 3.0])
 

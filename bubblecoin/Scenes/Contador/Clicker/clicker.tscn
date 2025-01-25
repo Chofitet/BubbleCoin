@@ -1,6 +1,5 @@
-[gd_scene load_steps=4 format=3 uid="uid://b8tlqr6cl0jac"]
+[gd_scene load_steps=3 format=3 uid="uid://b8tlqr6cl0jac"]
 
-[ext_resource type="Texture2D" uid="uid://5ht62s4o5388" path="res://icon.svg" id="1_o63fi"]
 [ext_resource type="Script" path="res://Scenes/Contador/Clicker/clicker.gd" id="1_o65wa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n0tym"]
@@ -8,9 +7,6 @@ size = Vector2(128, 128)
 
 [node name="Clicker" type="Area2D"]
 script = ExtResource("1_o65wa")
-
-[node name="Icon" type="Sprite2D" parent="."]
-texture = ExtResource("1_o63fi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_n0tym")

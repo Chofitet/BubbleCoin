@@ -34,3 +34,9 @@ func Modifies(Modi : Modificador):
 	AdicionClicker += Modi.AdicionadorClick
 	
 	print(MultiplicadorClicker + MultiplicadorIdle + MultiplicadorIdle + AdicionIdle)
+
+func RemoveModifies(Modi : Modificador):
+	MultiplicadorClicker -= Modi.MultiplicadorClick
+	MultiplicadorIdle -= Modi.MultiplicadorIdle
+	AdicionIdle -= Modi.AdicionadorIdle
+	AdicionClicker -= Modi.AdicionadorClick

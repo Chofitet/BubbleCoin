@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_yc6om")
 ModifyDescription = "x5 burbujas por Click"
-MultiplicadorIdle = 1
-AdicionadorIdle = 1
-MultiplicadorClick = 4
-AdicionadorClick = 1
+MultiplicadorIdle = 0
+AdicionadorIdle = 0
+MultiplicadorClick = 5
+AdicionadorClick = 0

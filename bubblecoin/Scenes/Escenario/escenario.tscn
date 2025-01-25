@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://twbqfw2t33fc"]
+[gd_scene load_steps=7 format=3 uid="uid://twbqfw2t33fc"]
 
 [ext_resource type="PackedScene" uid="uid://c67qgy87faygx" path="res://Models/dispositivo_low.fbx" id="1_u5wgd"]
-[ext_resource type="PackedScene" path="res://Scenes/Escenario/test_3dgui.tscn" id="2_be5tl"]
+[ext_resource type="PackedScene" uid="uid://c2qsixqmh4b60" path="res://Scenes/Escenario/test_3dgui.tscn" id="2_be5tl"]
 [ext_resource type="PackedScene" uid="uid://65w1bax7wqlj" path="res://Scenes/Web_Window/web_window.tscn" id="3_eqm8y"]
 [ext_resource type="Texture2D" uid="uid://drgbcysfs5kii" path="res://Scenes/Escenario/CapturaEscenario.png" id="3_kyd6h"]
 [ext_resource type="PackedScene" uid="uid://b8tlqr6cl0jac" path="res://Scenes/Contador/Clicker/clicker.tscn" id="5_wa8sw"]
+[ext_resource type="PackedScene" uid="uid://b43amscl2xy2c" path="res://Scenes/Contador/contador_coins.tscn" id="6_xe3vo"]
 
 [node name="Escenario" type="Node3D"]
 
@@ -76,3 +77,5 @@ offset_bottom = -0.112
 
 [node name="Clicker" parent="Control2" instance=ExtResource("5_wa8sw")]
 position = Vector2(2, -3)
+
+[node name="Contador_Bubbles" parent="." instance=ExtResource("6_xe3vo")]
