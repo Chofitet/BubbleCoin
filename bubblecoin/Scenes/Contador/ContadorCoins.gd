@@ -1,6 +1,9 @@
-extends Node2D
+extends Control
 
 @export var label : Label
+
+func _ready() -> void:
+	$Clicker.pressed.connect(_on_clicker_click)
 
 func obtener_coins(valor : float):
 	PlayerVariables.BubbleCoins += valor
@@ -14,6 +17,7 @@ func hay_suficientes_bubbles(valor : float) -> bool:
 	return valor >= PlayerVariables.BubbleCoins
  
 func _on_clicker_click() -> void:
+	print("click")
 	var coins_por_click = PlayerVariables.AdicionClicker * PlayerVariables.MultiplicadorClicker
 	obtener_coins(coins_por_click)
 

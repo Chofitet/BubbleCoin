@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Calidad" load_steps=8 format=3 uid="uid://d2qmkpv5e2382"]
+[gd_resource type="Resource" script_class="Calidad" load_steps=8 format=3 uid="uid://b0p7g3r3kxe7l"]
 
 [ext_resource type="Texture2D" uid="uid://bs8yftn2u1xoe" path="res://Sprites/barbas/Bigote Lvl 1_01.png" id="1_1m4ig"]
 [ext_resource type="Texture2D" uid="uid://bmni1c5jck0mf" path="res://Sprites/Lentes/Lentes Lvl 1_01.png" id="2_4b1qq"]
