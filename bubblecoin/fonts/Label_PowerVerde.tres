@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cyyj8a73p00c7"]
+
+[ext_resource type="FontFile" uid="uid://cjd8dv46xld8k" path="res://fonts/FONT_POWEROFDRAGON.otf" id="1_iwn47"]
+
+[resource]
+font = ExtResource("1_iwn47")
+font_color = Color(0.988235, 0.94902, 0.603922, 1)
