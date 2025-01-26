@@ -14,7 +14,7 @@ func _process(delta: float) -> void:
 	if not PlayerVariables.final_activo:
 		if PlayerVariables.compro_burbuja_final:# or Input.is_action_just_pressed('ui_accept'):
 			llamar_final_burbuja()
-		if PlayerVariables.dia == 4 or Input.is_action_just_pressed('ui_accept'):
+		if PlayerVariables.dia == 4: # or Input.is_action_just_pressed('ui_accept'):
 			llamar_final_desplome()
 #region Final Burbuja
 func llamar_final_burbuja():
