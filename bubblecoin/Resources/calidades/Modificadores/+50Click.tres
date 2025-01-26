@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Modificador" load_steps=2 format=3 uid="uid://b7a4bge1ekey7"]
+
+[ext_resource type="Script" path="res://Scenes/Bubble/Bonificadores.gd" id="1_dvigl"]
+
+[resource]
+script = ExtResource("1_dvigl")
+ModifyDescription = "+50 click"
+ModifierType = "Adicionador Click"
+minimumValue = 50
+maximumValue = 70

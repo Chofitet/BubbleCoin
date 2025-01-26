@@ -1,23 +1,24 @@
-[gd_resource type="Resource" script_class="Calidad" load_steps=10 format=3 uid="uid://b1vp177e1vlb3"]
+[gd_resource type="Resource" script_class="Calidad" load_steps=11 format=3 uid="uid://badtg2g0xsfsg"]
 
-[ext_resource type="Texture2D" uid="uid://bs8yftn2u1xoe" path="res://Sprites/barbas/Bigote Lvl 1_01.png" id="1_8osha"]
-[ext_resource type="Script" path="res://Scenes/Bubble/Bonificadores.gd" id="1_lf46a"]
-[ext_resource type="Script" path="res://Scenes/Bubble/CalidadData.gd" id="2_2qwjl"]
-[ext_resource type="Texture2D" uid="uid://iiqqwrhn3ygr" path="res://Sprites/barbas/Bigote Lvl 2_01.png" id="2_syies"]
-[ext_resource type="Texture2D" uid="uid://bk7if3ep150hn" path="res://Sprites/BurbujaCuerpos/Bubble Lvl 3_01.png" id="3_si8be"]
-[ext_resource type="Texture2D" uid="uid://dkxqbscn4skfr" path="res://Sprites/gorros/Gorro Lvl 1_01.png" id="4_wstv7"]
-[ext_resource type="Resource" uid="uid://bvyjn3a7rdv6e" path="res://Resources/calidades/Modificadores/+10Click.tres" id="6_bcktl"]
-[ext_resource type="Resource" uid="uid://xorvx1fvf5xy" path="res://Resources/calidades/Modificadores/x5Click.tres" id="7_r742e"]
-[ext_resource type="Resource" uid="uid://b075xlx1s5hop" path="res://Resources/Nombres Aleatorios/PackNombres.tres" id="8_7pqsr"]
+[ext_resource type="Script" path="res://Scenes/Bubble/Bonificadores.gd" id="1_d7vnk"]
+[ext_resource type="Texture2D" uid="uid://cahqy66xmwj0l" path="res://Sprites/BurbujaCuerpos/Simple Bubble_01.png" id="1_dl4pt"]
+[ext_resource type="Texture2D" uid="uid://ccimvtqe22gge" path="res://Sprites/SKINS/SP_HATS_4.png" id="2_p4seb"]
+[ext_resource type="Script" path="res://Scenes/Bubble/CalidadData.gd" id="2_slyjs"]
+[ext_resource type="Texture2D" uid="uid://i81olyfca1m4" path="res://Sprites/SKINS/SP_HAT_1.png" id="3_efr7o"]
+[ext_resource type="Texture2D" uid="uid://cewjamhxgpdku" path="res://Sprites/SKINS/SP_HATS_5.png" id="4_e0cib"]
+[ext_resource type="Resource" uid="uid://b075xlx1s5hop" path="res://Resources/Nombres Aleatorios/PackNombres.tres" id="6_8ert7"]
+[ext_resource type="Resource" uid="uid://bvyjn3a7rdv6e" path="res://Resources/calidades/Modificadores/+10Click.tres" id="6_kgyie"]
+[ext_resource type="Resource" uid="uid://gv16jq6h4m2m" path="res://Resources/calidades/Modificadores/x2Idle.tres" id="7_qe3u0"]
+[ext_resource type="Resource" uid="uid://xorvx1fvf5xy" path="res://Resources/calidades/Modificadores/x5Click.tres" id="8_33ymg"]
 
 [resource]
-script = ExtResource("2_2qwjl")
-BurbujasCuerpo = ExtResource("3_si8be")
-Barbas = Array[Texture]([ExtResource("1_8osha"), ExtResource("2_syies")])
+script = ExtResource("2_slyjs")
+BurbujasCuerpo = ExtResource("1_dl4pt")
+Barbas = Array[Texture]([])
 Lentes = Array[Texture]([])
-Gorros = Array[Texture]([ExtResource("4_wstv7")])
+Gorros = Array[Texture]([ExtResource("2_p4seb"), ExtResource("3_efr7o"), ExtResource("4_e0cib")])
 Level = 2
-minPrice = 10000
-maxPrice = 50000
-Modificadores = Array[ExtResource("1_lf46a")]([ExtResource("6_bcktl"), ExtResource("7_r742e")])
-Nombres = ExtResource("8_7pqsr")
+minPrice = 40
+maxPrice = 100
+Modificadores = Array[ExtResource("1_d7vnk")]([ExtResource("6_kgyie"), ExtResource("7_qe3u0"), ExtResource("8_33ymg")])
+Nombres = ExtResource("6_8ert7")

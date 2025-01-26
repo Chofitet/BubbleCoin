@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://c5kcn8mj8vbmc"]
+[gd_scene load_steps=41 format=3 uid="uid://c5kcn8mj8vbmc"]
 
 [ext_resource type="Script" path="res://Scenes/Web_Window/web_window_Controller.gd" id="1_fpikt"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/BuySellTabGroup.gd" id="2_a3upk"]
@@ -17,13 +17,40 @@
 [ext_resource type="StyleBox" uid="uid://bfeo3sqrlhulw" path="res://BTNStyles/btnmORADO.tres" id="11_aiupu"]
 [ext_resource type="Texture2D" uid="uid://4xxtfst5ufmt" path="res://Sprites/Ads/Saborcitos.png" id="11_gij4k"]
 [ext_resource type="LabelSettings" uid="uid://csxcrfeu5xt16" path="res://fonts/Label_GamebubleBlue.tres" id="11_qtywl"]
-[ext_resource type="Resource" uid="uid://b1vp177e1vlb3" path="res://Resources/calidades/Calidad2.tres" id="11_tl6if"]
 [ext_resource type="StyleBox" uid="uid://bjkb8dpkdorao" path="res://BTNStyles/btnmORADODisable.tres" id="11_unytb"]
 [ext_resource type="Texture2D" uid="uid://cd5wprb2wco6" path="res://Sprites/Ads/Vote por Rahamaraán Tercero.png" id="12_a6cmn"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/Webs/ads.gd" id="12_ieh81"]
 [ext_resource type="Texture2D" uid="uid://c23dxwbodfc41" path="res://Sprites/Ads/Malakala.png" id="13_4v0y7"]
 [ext_resource type="Texture2D" uid="uid://rbtstejg77l" path="res://Sprites/Ads/Escoba 0 km.png" id="14_a2q43"]
-[ext_resource type="Resource" uid="uid://d2qmkpv5e2382" path="res://Resources/calidades/Calidad1.tres" id="16_xt3bv"]
+[ext_resource type="Texture2D" uid="uid://bs8yftn2u1xoe" path="res://Sprites/barbas/Bigote Lvl 1_01.png" id="23_n0744"]
+[ext_resource type="Resource" uid="uid://blngjimdhdbef" path="res://Resources/calidades/calidad0.tres" id="23_xq5im"]
+[ext_resource type="Texture2D" uid="uid://iiqqwrhn3ygr" path="res://Sprites/barbas/Bigote Lvl 2_01.png" id="24_emmkv"]
+[ext_resource type="Resource" uid="uid://dbgtoy8y1cqx2" path="res://Resources/calidades/calidad1.tres" id="24_gd1mq"]
+[ext_resource type="Texture2D" uid="uid://igeygl0aekvf" path="res://Sprites/BurbujaCuerpos/Bubble Lvl 2_01.png" id="25_4ddg4"]
+[ext_resource type="Resource" uid="uid://badtg2g0xsfsg" path="res://Resources/calidades/calidad2.tres" id="25_n752t"]
+[ext_resource type="Texture2D" uid="uid://bmni1c5jck0mf" path="res://Sprites/Lentes/Lentes Lvl 1_01.png" id="26_dh836"]
+[ext_resource type="Resource" uid="uid://cek1qx0h7jwjy" path="res://Resources/calidades/calidad3.tres" id="26_s5dor"]
+[ext_resource type="Resource" uid="uid://dv5n3jj8g71em" path="res://Resources/calidades/calidad4.tres" id="27_e8f0q"]
+[ext_resource type="Script" path="res://Scenes/Bubble/Bonificadores.gd" id="27_h4qh0"]
+[ext_resource type="Resource" uid="uid://d370p8cteweo3" path="res://Resources/calidades/calidad5.tres" id="28_ble5m"]
+[ext_resource type="Resource" uid="uid://bnl47mcdxki0k" path="res://Resources/calidades/Modificadores/+2Idle.tres" id="28_g480n"]
+[ext_resource type="Resource" uid="uid://b4171cciqfs71" path="res://Resources/calidades/calidad6.tres" id="29_ieri0"]
+[ext_resource type="Resource" uid="uid://gv16jq6h4m2m" path="res://Resources/calidades/Modificadores/x2Idle.tres" id="29_qg5qg"]
+[ext_resource type="Resource" uid="uid://b075xlx1s5hop" path="res://Resources/Nombres Aleatorios/PackNombres.tres" id="30_xaou1"]
+[ext_resource type="Resource" uid="uid://crsmqulmebdp0" path="res://Resources/calidades/calidad7.tres" id="30_xr0ar"]
+[ext_resource type="Resource" uid="uid://c6wgj37re2of3" path="res://Resources/calidades/calidad8.tres" id="31_qat1q"]
+
+[sub_resource type="Resource" id="Resource_q5fkn"]
+script = ExtResource("8_th6xu")
+BurbujasCuerpo = ExtResource("25_4ddg4")
+Barbas = Array[Texture]([ExtResource("23_n0744"), ExtResource("24_emmkv")])
+Lentes = Array[Texture]([ExtResource("26_dh836")])
+Gorros = Array[Texture]([])
+Level = 1
+minPrice = 50
+maxPrice = 500
+Modificadores = Array[ExtResource("27_h4qh0")]([ExtResource("28_g480n"), ExtResource("29_qg5qg")])
+Nombres = ExtResource("30_xaou1")
 
 [node name="Trade_Web" type="Panel"]
 self_modulate = Color(1, 1, 1, 0)
@@ -234,8 +261,8 @@ size_flags_stretch_ratio = 0.05
 
 [node name="MarketManager" type="Node" parent="."]
 script = ExtResource("7_suktn")
-CalidadesBubble = Array[ExtResource("8_th6xu")]([ExtResource("16_xt3bv"), ExtResource("16_xt3bv"), ExtResource("11_tl6if"), ExtResource("11_tl6if"), ExtResource("11_tl6if"), ExtResource("11_tl6if"), ExtResource("11_tl6if"), ExtResource("11_tl6if"), ExtResource("11_tl6if")])
-ComunCalidad = ExtResource("16_xt3bv")
+CalidadesBubble = Array[ExtResource("8_th6xu")]([ExtResource("23_xq5im"), ExtResource("24_gd1mq"), ExtResource("25_n752t"), ExtResource("26_s5dor"), ExtResource("27_e8f0q"), ExtResource("28_ble5m"), ExtResource("29_ieri0"), ExtResource("30_xr0ar"), ExtResource("31_qat1q")])
+ComunCalidad = SubResource("Resource_q5fkn")
 probabilidades_nueva_calidad = Array[float]([25.0, 42.0, 20.0, 10.0, 3.0])
 
 [connection signal="OpenTab" from="VBoxContainer/HBoxContainer2/Tabs/HBoxContainer" to="VBoxContainer/HBoxContainer/WebConteiner" method="SetWebWindow"]
