@@ -39,9 +39,9 @@ func _process(delta: float) -> void:
 	update_sell_price()
 	var coins = PlayerVariables.BubbleCoins
 	if coins >= bubble_data.buy_price:
-		$BuyBtn.disabled = false
+		$HBoxContainer/MarginContainer/Control/BuyBtn.disabled = false
 	else:
-		$BuyBtn.disabled = true
+		$HBoxContainer/MarginContainer/Control/BuyBtn.disabled = true
 
 func update_sell_price() -> void:
 	$HBoxContainer/MarginContainer/Control/SellBtn/SellPrice.text = "Sell price: ฿ %.2f" % bubble_data.sell_price

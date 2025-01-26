@@ -1,5 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://enowhwvjxhkg"]
+[gd_scene load_steps=18 format=3 uid="uid://enowhwvjxhkg"]
 
+[ext_resource type="Script" path="res://Scenes/Web_Window/web_window_Controller.gd" id="1_fpikt"]
 [ext_resource type="Texture2D" uid="uid://be37561hvnr5h" path="res://Scenes/Web_Window/tab.jpg" id="2_8gyiu"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/BuySellTabGroup.gd" id="2_a3upk"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/TabController.gd" id="3_yhvqc"]
@@ -7,14 +8,15 @@
 [ext_resource type="PackedScene" uid="uid://c5u82qfxqdit3" path="res://Scenes/Web_Window/Webs/Sell_web.tscn" id="5_ei5bm"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/WebSpawner.gd" id="6_2p82q"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/MarketManager.gd" id="7_suktn"]
-[ext_resource type="Resource" uid="uid://d2qmkpv5e2382" path="res://Resources/calidades/Calidad1.tres" id="8_j5c35"]
+[ext_resource type="Resource" uid="uid://d2qmkpv5e2382" path="res://Resources/calidades/Calidad0.tres" id="8_j5c35"]
 [ext_resource type="Script" path="res://Scenes/Bubble/CalidadData.gd" id="8_th6xu"]
 [ext_resource type="Script" path="res://Scenes/RefreshBTN/refresh_btn.gd" id="9_nrrwf"]
-[ext_resource type="Resource" uid="uid://t7oom3us4qjd" path="res://Resources/calidades/Calidad2.tres" id="11_tl6if"]
+[ext_resource type="Resource" uid="uid://b1vp177e1vlb3" path="res://Resources/calidades/Calidad2.tres" id="11_tl6if"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/Webs/ads.gd" id="12_ieh81"]
 [ext_resource type="Texture2D" uid="uid://dkxqbscn4skfr" path="res://Sprites/gorros/Gorro Lvl 1_01.png" id="13_atrak"]
 [ext_resource type="Texture2D" uid="uid://bpor5fkrue1ht" path="res://Sprites/gorros/Gorro Lvl 2_02.png" id="14_fftlv"]
 [ext_resource type="Texture2D" uid="uid://bx8i824n5tqvo" path="res://Sprites/gorros/Gorro Lvl 3_02.png" id="15_202fp"]
+[ext_resource type="Resource" uid="uid://d2qmkpv5e2382" path="res://Resources/calidades/Calidad1.tres" id="16_xt3bv"]
 
 [node name="Trade_Web" type="Panel"]
 anchors_preset = 15
@@ -22,6 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_fpikt")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -51,6 +54,7 @@ texture = ExtResource("2_8gyiu")
 expand_mode = 2
 script = ExtResource("3_yhvqc")
 Web = ExtResource("4_oqvlr")
+nameWeb = "compra"
 
 [node name="button" type="Button" parent="VBoxContainer/Tabs/HBoxContainer/CompraBTN"]
 layout_mode = 1
@@ -68,6 +72,7 @@ texture = ExtResource("2_8gyiu")
 expand_mode = 2
 script = ExtResource("3_yhvqc")
 Web = ExtResource("5_ei5bm")
+nameWeb = "venta"
 
 [node name="button" type="Button" parent="VBoxContainer/Tabs/HBoxContainer/VentaBTN"]
 layout_mode = 1
@@ -137,8 +142,8 @@ autostart = true
 
 [node name="MarketManager" type="Node" parent="."]
 script = ExtResource("7_suktn")
-CalidadesBubble = Array[ExtResource("8_th6xu")]([ExtResource("8_j5c35"), ExtResource("8_j5c35"), ExtResource("11_tl6if"), ExtResource("11_tl6if"), ExtResource("11_tl6if"), ExtResource("11_tl6if"), ExtResource("11_tl6if"), ExtResource("11_tl6if"), ExtResource("11_tl6if")])
-ComunCalidad = ExtResource("8_j5c35")
+CalidadesBubble = Array[ExtResource("8_th6xu")]([ExtResource("8_j5c35"), ExtResource("16_xt3bv"), ExtResource("11_tl6if"), ExtResource("11_tl6if"), ExtResource("11_tl6if"), ExtResource("11_tl6if"), ExtResource("11_tl6if"), ExtResource("11_tl6if"), ExtResource("11_tl6if")])
+ComunCalidad = ExtResource("16_xt3bv")
 probabilidades_nueva_calidad = Array[float]([25.0, 42.0, 20.0, 10.0, 3.0])
 
 [connection signal="OpenTab" from="VBoxContainer/Tabs/HBoxContainer" to="VBoxContainer/HBoxContainer/WebConteiner" method="SetWebWindow"]
