@@ -28,6 +28,7 @@ grow_horizontal = 2
 script = ExtResource("2_p8nkq")
 
 [node name="estimadoArkhar" parent="Tabs/VBoxContainer" instance=ExtResource("2_hwebp")]
+visible = false
 layout_mode = 2
 email_subject = "Estimado Arkhar"
 article = 1

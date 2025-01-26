@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://enowhwvjxhkg"]
 
-[ext_resource type="Script" path="res://Scenes/Web_Window/Tab_Group_Controller.gd" id="1_nodkm"]
 [ext_resource type="Texture2D" uid="uid://be37561hvnr5h" path="res://Scenes/Web_Window/tab.jpg" id="2_8gyiu"]
+[ext_resource type="Script" path="res://Scenes/Web_Window/BuySellTabGroup.gd" id="2_a3upk"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/TabController.gd" id="3_yhvqc"]
 [ext_resource type="PackedScene" uid="uid://bih2hluw54uxj" path="res://Scenes/Web_Window/Webs/Buy_web.tscn" id="4_oqvlr"]
 [ext_resource type="PackedScene" uid="uid://c5u82qfxqdit3" path="res://Scenes/Web_Window/Webs/Sell_web.tscn" id="5_ei5bm"]
@@ -55,8 +55,7 @@ offset_bottom = -0.045002
 layout_mode = 0
 offset_right = 436.0
 offset_bottom = 40.0
-script = ExtResource("1_nodkm")
-TabEnables = 2
+script = ExtResource("2_a3upk")
 
 [node name="CompraBTN" type="TextureRect" parent="Tabs/HBoxContainer"]
 custom_minimum_size = Vector2(218, 0)
