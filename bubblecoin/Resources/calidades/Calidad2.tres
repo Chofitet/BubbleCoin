@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Calidad" load_steps=9 format=3 uid="uid://t7oom3us4qjd"]
+[gd_resource type="Resource" script_class="Calidad" load_steps=9 format=3 uid="uid://b1vp177e1vlb3"]
 
 [ext_resource type="Texture2D" uid="uid://bs8yftn2u1xoe" path="res://Sprites/barbas/Bigote Lvl 1_01.png" id="1_8osha"]
 [ext_resource type="Script" path="res://Scenes/Bubble/Bonificadores.gd" id="1_lf46a"]
