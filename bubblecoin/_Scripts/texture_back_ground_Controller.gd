@@ -10,5 +10,7 @@ func _process(delta: float) -> void:
 		texture = TextureAnimCompra
 	elif  web == "venta":
 		texture = TextureAnimVenta
+	elif web == "trade":
+		texture = TextureAnimVenta
 	elif web == "mail":
 		texture = TextureAnimMail
