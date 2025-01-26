@@ -60,7 +60,6 @@ Sinceramente, tu amigo, Berker"
 
 [node name="amigo1" parent="HBoxContainer/Tabs/VBoxContainer" instance=ExtResource("2_hwebp")]
 visible = false
-self_modulate = Color(0.662745, 0.662745, 0.662745, 1)
 layout_mode = 2
 texture = ExtResource("4_61rpa")
 email_subject = "Mi amigo Arkhar"
@@ -71,7 +70,6 @@ day = 1
 
 [node name="amigo2" parent="HBoxContainer/Tabs/VBoxContainer" instance=ExtResource("2_hwebp")]
 visible = false
-self_modulate = Color(0.662745, 0.662745, 0.662745, 1)
 layout_mode = 2
 texture = ExtResource("4_61rpa")
 email_subject = "Estimadísimo amigo mío"
@@ -85,7 +83,6 @@ day = 2
 
 [node name="amigo3" parent="HBoxContainer/Tabs/VBoxContainer" instance=ExtResource("2_hwebp")]
 visible = false
-self_modulate = Color(0.662745, 0.662745, 0.662745, 1)
 layout_mode = 2
 texture = ExtResource("4_61rpa")
 email_subject = "Arkhar."
@@ -97,7 +94,6 @@ day = 3
 
 [node name="amigo4" parent="HBoxContainer/Tabs/VBoxContainer" instance=ExtResource("2_hwebp")]
 visible = false
-self_modulate = Color(0.662745, 0.662745, 0.662745, 1)
 layout_mode = 2
 texture = ExtResource("4_61rpa")
 email_subject = "Querida Rata Inmunda"

@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://b7glujwfx7i8h" path="res://Sprites/UI/BBL6000/TX_BBL6000_BASE_F1.png" id="5_gf27b"]
 [ext_resource type="PackedScene" uid="uid://b43amscl2xy2c" path="res://Scenes/Contador/contador_coins.tscn" id="5_p1l58"]
 [ext_resource type="Texture2D" uid="uid://ccluc68tek0og" path="res://Sprites/UI/BBL6000/TX_BBL6000_BASE_F2.png" id="6_l12kk"]
-[ext_resource type="Texture2D" uid="uid://trlp1po4mxbh" path="res://Sprites/Placeholders y guias/REF_PAUSA.png" id="6_po5de"]
+[ext_resource type="Texture2D" path="res://Sprites/Placeholders y guias/REF_PAUSA.png" id="6_po5de"]
 [ext_resource type="PackedScene" uid="uid://umo188trkdoi" path="res://Scenes/Dormir/Transicion/transition.tscn" id="6_xp8mb"]
 [ext_resource type="Texture2D" uid="uid://b6bgjq7kjt5tg" path="res://Sprites/UI/PAUSA/TX_PAUSA_BASE_F1.png" id="7_dbtmg"]
 [ext_resource type="PackedScene" uid="uid://c0j8un1yi7won" path="res://Scenes/Dormir/dormir_manager.tscn" id="7_tgfjh"]
@@ -157,22 +157,18 @@ offset_bottom = -209.0
 
 [node name="Transition" parent="." instance=ExtResource("6_xp8mb")]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
 
 [node name="DormirManager" parent="." instance=ExtResource("7_tgfjh")]
 unique_name_in_owner = true
-visible = false
 mouse_filter = 1
 
 [node name="FinalManager" parent="." instance=ExtResource("10_ad8x7")]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
 
 [node name="PantallaInicio" parent="." instance=ExtResource("11_6riax")]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
 
 [node name="PantallaFinal" parent="." instance=ExtResource("12_dsira")]
