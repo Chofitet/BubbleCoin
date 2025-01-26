@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://qlbjd1hi37g0"]
 
 [ext_resource type="Script" path="res://Scenes/Web_Window/Webs/ravenmail_web.gd" id="1_nyxuh"]
-[ext_resource type="PackedScene" uid="uid://bqtgr0yw0e6yh" path="res://Scenes/Web_Window/Webs/ravenmail_email_button.tscn" id="2_hwebp"]
+[ext_resource type="PackedScene" path="res://Scenes/Web_Window/Webs/ravenmail_email_button.tscn" id="2_hwebp"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/Ravenmail_Controller.gd" id="2_p8nkq"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/EmailSpawner.gd" id="5_yfui4"]
 
@@ -38,7 +38,6 @@ grow_horizontal = 2
 script = ExtResource("2_p8nkq")
 
 [node name="estimadoArkhar" parent="HBoxContainer/Tabs/VBoxContainer" instance=ExtResource("2_hwebp")]
-visible = false
 layout_mode = 2
 email_subject = "Estimado Arkhar"
 article = 1
@@ -49,7 +48,6 @@ Tus problemas están resueltos con esta magia, hazme caso, no dudes en aprenderl
 Sinceramente, tu amigo, Berker"
 
 [node name="bienvenido" parent="HBoxContainer/Tabs/VBoxContainer" instance=ExtResource("2_hwebp")]
-visible = false
 layout_mode = 2
 email_subject = "bienvenido"
 email = "Estimado Arkhar, 
@@ -59,6 +57,7 @@ Sinceramente, tu amigo, Berkerechado de la Universidad de Hechicería. ¡Por la 
 Pero calma, no has de entrar en angustia y desesperación, porque te traigo buenos augurios. En las Tierras Lejanas de Valhan-Gün descubrieron una nueva magia, la llaman Bubble Coin, una fuerza extraña e intangible que te permite ganar más, más y [b]MÁS![/b]
 Tus problemas están resueltos con esta magia, hazme caso, no dudes en aprenderla.
 Sinceramente, tu amigo, Berker"
+day = null
 
 [node name="EmailContainer" type="Panel" parent="HBoxContainer"]
 layout_mode = 2
@@ -67,7 +66,6 @@ size_flags_stretch_ratio = 3.0
 script = ExtResource("5_yfui4")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/EmailContainer"]
-visible = false
 layout_mode = 0
 offset_left = 24.0
 offset_top = 29.0

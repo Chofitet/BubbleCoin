@@ -8,7 +8,13 @@ extends Node
 @export var probabilidades_nueva_calidad : Array[float]
 
 func _ready() -> void:
+	PlayerVariables.nuevo_dia.connect(AumentoDeNuevoDia)
 	CompleteWithRandomBubbles()
+
+func AumentoDeNuevoDia():
+	for bubble_data in PlayerVariables.BubbleInventory:
+		bubble_data.night_increase_sell_price()
+	pass
 
 func CompleteWithRandomBubbles():
 	var playerBubbleLevel = PlayerVariables.MaxBubbleLevel

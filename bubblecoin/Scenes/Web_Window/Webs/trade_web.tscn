@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://enowhwvjxhkg"]
+[gd_scene load_steps=19 format=3 uid="uid://enowhwvjxhkg"]
 
 [ext_resource type="Script" path="res://Scenes/Web_Window/web_window_Controller.gd" id="1_fpikt"]
 [ext_resource type="Texture2D" uid="uid://be37561hvnr5h" path="res://Scenes/Web_Window/tab.jpg" id="2_8gyiu"]
@@ -8,14 +8,15 @@
 [ext_resource type="PackedScene" uid="uid://c5u82qfxqdit3" path="res://Scenes/Web_Window/Webs/Sell_web.tscn" id="5_ei5bm"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/WebSpawner.gd" id="6_2p82q"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/MarketManager.gd" id="7_suktn"]
-[ext_resource type="Resource" uid="uid://d2qmkpv5e2382" path="res://Resources/calidades/Calidad0.tres" id="8_j5c35"]
 [ext_resource type="Script" path="res://Scenes/Bubble/CalidadData.gd" id="8_th6xu"]
 [ext_resource type="Script" path="res://Scenes/RefreshBTN/refresh_btn.gd" id="9_nrrwf"]
+[ext_resource type="Texture2D" uid="uid://ciu7621gbjhoh" path="res://Sprites/Ads/Wizard Forbes_no text.png" id="10_7uib5"]
+[ext_resource type="Texture2D" uid="uid://4xxtfst5ufmt" path="res://Sprites/Ads/Saborcitos.png" id="11_gij4k"]
 [ext_resource type="Resource" uid="uid://b1vp177e1vlb3" path="res://Resources/calidades/Calidad2.tres" id="11_tl6if"]
+[ext_resource type="Texture2D" uid="uid://cd5wprb2wco6" path="res://Sprites/Ads/Vote por Rahamaraán Tercero.png" id="12_a6cmn"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/Webs/ads.gd" id="12_ieh81"]
-[ext_resource type="Texture2D" uid="uid://dkxqbscn4skfr" path="res://Sprites/gorros/Gorro Lvl 1_01.png" id="13_atrak"]
-[ext_resource type="Texture2D" uid="uid://bpor5fkrue1ht" path="res://Sprites/gorros/Gorro Lvl 2_02.png" id="14_fftlv"]
-[ext_resource type="Texture2D" uid="uid://bx8i824n5tqvo" path="res://Sprites/gorros/Gorro Lvl 3_02.png" id="15_202fp"]
+[ext_resource type="Texture2D" uid="uid://c23dxwbodfc41" path="res://Sprites/Ads/Malakala.png" id="13_4v0y7"]
+[ext_resource type="Texture2D" uid="uid://rbtstejg77l" path="res://Sprites/Ads/Escoba 0 km.png" id="14_a2q43"]
 [ext_resource type="Resource" uid="uid://d2qmkpv5e2382" path="res://Resources/calidades/Calidad1.tres" id="16_xt3bv"]
 
 [node name="Trade_Web" type="Panel"]
@@ -134,19 +135,14 @@ offset_top = 311.0
 offset_right = 127.0
 offset_bottom = 351.0
 script = ExtResource("12_ieh81")
-ads = Array[Texture2D]([ExtResource("13_atrak"), ExtResource("14_fftlv"), ExtResource("15_202fp")])
-
-[node name="Timer" type="Timer" parent="VBoxContainer/HBoxContainer/RigthPanel/Ads"]
-wait_time = 3.0
-autostart = true
+ads = Array[Texture2D]([ExtResource("11_gij4k"), ExtResource("10_7uib5"), ExtResource("12_a6cmn"), ExtResource("13_4v0y7"), ExtResource("14_a2q43")])
 
 [node name="MarketManager" type="Node" parent="."]
 script = ExtResource("7_suktn")
-CalidadesBubble = Array[ExtResource("8_th6xu")]([ExtResource("8_j5c35"), ExtResource("16_xt3bv"), ExtResource("11_tl6if"), ExtResource("11_tl6if"), ExtResource("11_tl6if"), ExtResource("11_tl6if"), ExtResource("11_tl6if"), ExtResource("11_tl6if"), ExtResource("11_tl6if")])
+CalidadesBubble = Array[ExtResource("8_th6xu")]([ExtResource("16_xt3bv"), ExtResource("16_xt3bv"), ExtResource("11_tl6if"), ExtResource("11_tl6if"), ExtResource("11_tl6if"), ExtResource("11_tl6if"), ExtResource("11_tl6if"), ExtResource("11_tl6if"), ExtResource("11_tl6if")])
 ComunCalidad = ExtResource("16_xt3bv")
 probabilidades_nueva_calidad = Array[float]([25.0, 42.0, 20.0, 10.0, 3.0])
 
 [connection signal="OpenTab" from="VBoxContainer/Tabs/HBoxContainer" to="VBoxContainer/HBoxContainer/WebConteiner" method="SetWebWindow"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/RigthPanel/RefresBtn" to="MarketManager" method="CompleteWithRandomBubbles"]
 [connection signal="webResearch" from="VBoxContainer/HBoxContainer/RigthPanel/RefresBtn" to="VBoxContainer/HBoxContainer/WebConteiner" method="SetWebWindow"]
-[connection signal="timeout" from="VBoxContainer/HBoxContainer/RigthPanel/Ads/Timer" to="VBoxContainer/HBoxContainer/RigthPanel/Ads" method="_on_timer_timeout"]
