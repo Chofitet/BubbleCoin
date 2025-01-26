@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scenes/Web_Window/Tab_Group_Controller.gd" id="1_ms467"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/TabController.gd" id="2_v1c5a"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/WebSpawner.gd" id="4_cnpws"]
-[ext_resource type="PackedScene" path="res://Scenes/Web_Window/Webs/ravenmail_web.tscn" id="4_jyajh"]
+[ext_resource type="PackedScene" uid="uid://qlbjd1hi37g0" path="res://Scenes/Web_Window/Webs/ravenmail_web.tscn" id="4_jyajh"]
 [ext_resource type="PackedScene" uid="uid://enowhwvjxhkg" path="res://Scenes/Web_Window/Webs/trade_web.tscn" id="5_dalg5"]
 [ext_resource type="PackedScene" uid="uid://br188hfsa56ie" path="res://Scenes/Web_Window/Webs/settings_web.tscn" id="6_jri3r"]
 
