@@ -22,7 +22,13 @@ var unlocked_tabs: Array[int] = [0,2]
 
 func AddBubble(bubbleData):
 	BubbleInventory.append(bubbleData)
+	
 
+func AreInventoryFull() -> bool:
+	if BubbleInventory.size() == 6:
+		return true
+	return false
+	
 func RemoveBubble(bubbleData):
 	BubbleInventory.erase(bubbleData)
 
@@ -42,3 +48,6 @@ func RemoveModifies(Modi : Modificador):
 	MultiplicadorIdle -= Modi.MultiplicadorIdle
 	AdicionIdle -= Modi.AdicionadorIdle
 	AdicionClicker -= Modi.AdicionadorClick
+
+func addSubCoins(coins):
+	BubbleCoins += coins
