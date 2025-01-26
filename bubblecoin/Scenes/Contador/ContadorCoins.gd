@@ -35,4 +35,4 @@ func _on_burbujero_generar_burbujas() -> void:
 
 func set_label():
 	if label:
-		label.text = str(PlayerVariables.BubbleCoins)
+		label.text = "%.2f" % PlayerVariables.BubbleCoins
