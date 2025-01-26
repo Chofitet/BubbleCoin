@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://65w1bax7wqlj"]
+[gd_scene load_steps=10 format=3 uid="uid://65w1bax7wqlj"]
 
 [ext_resource type="Script" path="res://Scenes/Web_Window/Tab_Group_Controller.gd" id="1_ms467"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/web_window_Controller.gd" id="1_o7x32"]
