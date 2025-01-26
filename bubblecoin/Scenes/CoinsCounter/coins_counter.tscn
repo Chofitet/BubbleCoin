@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://d2o3y845ue5dd"]
+[gd_scene load_steps=4 format=3 uid="uid://d2o3y845ue5dd"]
 
 [ext_resource type="Script" path="res://Scenes/CoinsCounter/coins_counter.gd" id="1_byl60"]
 [ext_resource type="Texture2D" uid="uid://ctmpd35783tew" path="res://Sprites/UI/SP_BBC_LOGO.png" id="2_fej2d"]
+[ext_resource type="LabelSettings" uid="uid://cgewloggi6i7e" path="res://fonts/Label_GamebublevERDE.tres" id="3_0tyg3"]
 
 [node name="CoinsCounter" type="Control"]
 layout_mode = 3
@@ -22,11 +23,16 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CoinIcon" type="TextureRect" parent="HBoxContainer"]
-self_modulate = Color(1, 1, 0.415686, 1)
+self_modulate = Color(1, 1, 0.415686, 0)
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.35
 texture = ExtResource("2_fej2d")
-expand_mode = 3
+expand_mode = 1
 
 [node name="Label" type="Label" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 1
+label_settings = ExtResource("3_0tyg3")
+horizontal_alignment = 1
+vertical_alignment = 1

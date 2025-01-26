@@ -2,17 +2,12 @@
 
 [ext_resource type="Script" path="res://Scenes/Bubble/bubble.gd" id="1_rmvf7"]
 [ext_resource type="Texture2D" uid="uid://cahqy66xmwj0l" path="res://Sprites/BurbujaCuerpos/Simple Bubble_01.png" id="3_aomck"]
-[ext_resource type="Texture2D" uid="uid://c0oscsn87yjd7" path="res://Sprites/Button_01.png" id="3_tmfj8"]
-[ext_resource type="Texture2D" uid="uid://bmni1c5jck0mf" path="res://Sprites/Lentes/Lentes Lvl 1_01.png" id="4_kffpe"]
-[ext_resource type="Texture2D" uid="uid://dkxqbscn4skfr" path="res://Sprites/gorros/Gorro Lvl 1_01.png" id="5_0xfdh"]
-[ext_resource type="Texture2D" uid="uid://bs8yftn2u1xoe" path="res://Sprites/barbas/Bigote Lvl 1_01.png" id="6_snhdu"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1rjgv"]
-texture = ExtResource("3_tmfj8")
-region_rect = Rect2(21.1194, 20.0405, 360.631, 61.4712)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o8o4h"]
-texture = ExtResource("3_tmfj8")
+[ext_resource type="Texture2D" uid="uid://c1p6wad1vabhs" path="res://Sprites/gorros/SP_HAT_1.png" id="3_ipwg0"]
+[ext_resource type="Texture2D" uid="uid://bvykrlbomq7x1" path="res://Sprites/Lentes/SP_OJOS_1.png" id="4_gowgx"]
+[ext_resource type="Texture2D" uid="uid://e20h4r8ojh4w" path="res://Sprites/barbas/SP_BARBA_1.png" id="5_vbyy2"]
+[ext_resource type="StyleBox" uid="uid://dul6amb3g8iri" path="res://BTNStyles/btnVerde.tres" id="6_243fa"]
+[ext_resource type="StyleBox" uid="uid://c4dq7x0yp4phv" path="res://BTNStyles/btnVerdedISABLE.tres" id="6_ejmwm"]
+[ext_resource type="Texture2D" uid="uid://ctmpd35783tew" path="res://Sprites/UI/SP_BBC_LOGO.png" id="8_bk1rj"]
 
 [node name="Bubble" type="MarginContainer"]
 anchors_preset = 15
@@ -93,20 +88,20 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
-texture = ExtResource("5_0xfdh")
+texture = ExtResource("3_ipwg0")
 expand_mode = 1
 
 [node name="Lente" type="TextureRect" parent="HBoxContainer/Panel/HBoxContainer/VBoxContainer/BubbleTexture/Cosmetics"]
 layout_mode = 2
 size_flags_vertical = 3
-texture = ExtResource("4_kffpe")
+texture = ExtResource("4_gowgx")
 expand_mode = 1
 
 [node name="Barba" type="TextureRect" parent="HBoxContainer/Panel/HBoxContainer/VBoxContainer/BubbleTexture/Cosmetics"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 1.8
-texture = ExtResource("6_snhdu")
+texture = ExtResource("5_vbyy2")
 expand_mode = 1
 
 [node name="PaddingBottom" type="Control" parent="HBoxContainer/Panel/HBoxContainer/VBoxContainer"]
@@ -152,9 +147,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/normal = SubResource("StyleBoxTexture_1rjgv")
+theme_override_styles/disabled = ExtResource("6_ejmwm")
+theme_override_styles/hover = ExtResource("6_243fa")
+theme_override_styles/pressed = ExtResource("6_243fa")
+theme_override_styles/normal = ExtResource("6_243fa")
 disabled = true
-flat = true
 
 [node name="BuyPrice" type="Label" parent="HBoxContainer/MarginContainer/VBoxContainer/Control/BuyBtn"]
 layout_mode = 1
@@ -172,6 +169,20 @@ grow_vertical = 2
 text = "1.00"
 horizontal_alignment = 1
 
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/MarginContainer/VBoxContainer/Control/BuyBtn"]
+self_modulate = Color(0.815686, 0.988235, 0.0901961, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.198
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = 16.866
+offset_right = -445.0
+offset_bottom = -69.0
+texture = ExtResource("8_bk1rj")
+expand_mode = 1
+
 [node name="SellBtn" type="Button" parent="HBoxContainer/MarginContainer/VBoxContainer/Control"]
 layout_mode = 1
 anchors_preset = 15
@@ -179,7 +190,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/normal = SubResource("StyleBoxTexture_o8o4h")
+theme_override_styles/disabled = ExtResource("6_ejmwm")
+theme_override_styles/hover = ExtResource("6_243fa")
+theme_override_styles/pressed = ExtResource("6_243fa")
+theme_override_styles/normal = ExtResource("6_243fa")
 
 [node name="SellPrice" type="Label" parent="HBoxContainer/MarginContainer/VBoxContainer/Control/SellBtn"]
 layout_mode = 1
@@ -196,6 +210,21 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "25.6"
 horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/MarginContainer/VBoxContainer/Control/SellBtn"]
+self_modulate = Color(0.815686, 0.988235, 0.0901961, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.159
+anchor_top = 0.5
+anchor_right = 0.159
+anchor_bottom = 0.5
+offset_left = -29.676
+offset_top = -53.5
+offset_right = 29.324
+offset_bottom = 47.5
+texture = ExtResource("8_bk1rj")
+expand_mode = 1
 
 [node name="Disable" type="Panel" parent="."]
 visible = false

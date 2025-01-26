@@ -1,0 +1,195 @@
+[gd_scene load_steps=21 format=3 uid="uid://dg2lbykb8kif3"]
+
+[ext_resource type="Script" path="res://Scenes/Web_Window/web_window_Controller.gd" id="1_nseh8"]
+[ext_resource type="Script" path="res://Scenes/Web_Window/BuySellTabGroup.gd" id="2_ammik"]
+[ext_resource type="Texture2D" uid="uid://b2u4f484v1fue" path="res://Sprites/UI/SP_TRADER_BOTON.png" id="3_h6kbv"]
+[ext_resource type="Script" path="res://Scenes/Web_Window/TabController.gd" id="4_psiit"]
+[ext_resource type="PackedScene" uid="uid://bih2hluw54uxj" path="res://Scenes/Web_Window/Webs/Buy_web.tscn" id="5_43nf7"]
+[ext_resource type="LabelSettings" uid="uid://cgewloggi6i7e" path="res://fonts/Label_GamebublevERDE.tres" id="6_iqtp6"]
+[ext_resource type="PackedScene" uid="uid://c5u82qfxqdit3" path="res://Scenes/Web_Window/Webs/Sell_web.tscn" id="7_m715r"]
+[ext_resource type="LabelSettings" uid="uid://bukwinkmrytsr" path="res://fonts/Label_GamebublemARRON.tres" id="8_6m1vb"]
+[ext_resource type="Script" path="res://Scenes/Web_Window/WebSpawner.gd" id="9_gf3oi"]
+[ext_resource type="Script" path="res://Scenes/RefreshBTN/refresh_btn.gd" id="10_s3myh"]
+[ext_resource type="Script" path="res://Scenes/Web_Window/Webs/ads.gd" id="11_rodiq"]
+[ext_resource type="Texture2D" uid="uid://4xxtfst5ufmt" path="res://Sprites/Ads/Saborcitos.png" id="12_4yecn"]
+[ext_resource type="Texture2D" uid="uid://ciu7621gbjhoh" path="res://Sprites/Ads/Wizard Forbes_no text.png" id="13_y11i5"]
+[ext_resource type="Texture2D" uid="uid://cd5wprb2wco6" path="res://Sprites/Ads/Vote por Rahamaraán Tercero.png" id="14_1j576"]
+[ext_resource type="Texture2D" uid="uid://c23dxwbodfc41" path="res://Sprites/Ads/Malakala.png" id="15_0ncga"]
+[ext_resource type="Texture2D" uid="uid://rbtstejg77l" path="res://Sprites/Ads/Escoba 0 km.png" id="16_hdvx0"]
+[ext_resource type="Script" path="res://Scenes/Web_Window/MarketManager.gd" id="17_anypq"]
+[ext_resource type="Script" path="res://Scenes/Bubble/CalidadData.gd" id="18_cwig0"]
+[ext_resource type="Resource" uid="uid://d2qmkpv5e2382" path="res://Resources/calidades/Calidad1.tres" id="19_1mmfb"]
+[ext_resource type="Resource" uid="uid://b1vp177e1vlb3" path="res://Resources/calidades/Calidad2.tres" id="20_vtvo3"]
+
+[node name="Trade_Web" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nseh8")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Tabs" type="Panel" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.07
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Tabs"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_ammik")
+
+[node name="CompraBTN" type="TextureRect" parent="VBoxContainer/Tabs/HBoxContainer"]
+self_modulate = Color(0.192157, 0.870588, 0.478431, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("3_h6kbv")
+expand_mode = 2
+script = ExtResource("4_psiit")
+Web = ExtResource("5_43nf7")
+nameWeb = "compra"
+
+[node name="button" type="Button" parent="VBoxContainer/Tabs/HBoxContainer/CompraBTN"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "
+"
+flat = true
+
+[node name="Label" type="Label" parent="VBoxContainer/Tabs/HBoxContainer/CompraBTN"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -61.0
+offset_top = -20.5
+offset_right = 61.0
+offset_bottom = 21.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "COMPRA
+"
+label_settings = ExtResource("6_iqtp6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VentaBTN" type="TextureRect" parent="VBoxContainer/Tabs/HBoxContainer"]
+self_modulate = Color(0.870588, 0.6, 0.192157, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("3_h6kbv")
+expand_mode = 2
+script = ExtResource("4_psiit")
+Web = ExtResource("7_m715r")
+nameWeb = "venta"
+
+[node name="button" type="Button" parent="VBoxContainer/Tabs/HBoxContainer/VentaBTN"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.00323179
+flat = true
+
+[node name="Label" type="Label" parent="VBoxContainer/Tabs/HBoxContainer/VentaBTN"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "VENTA"
+label_settings = ExtResource("8_6m1vb")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.07
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.05
+
+[node name="WebConteiner" type="Panel" parent="VBoxContainer/HBoxContainer"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.33
+script = ExtResource("9_gf3oi")
+
+[node name="RigthPanel" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RefresBtn" type="Button" parent="VBoxContainer/HBoxContainer/RigthPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("10_s3myh")
+web = ExtResource("5_43nf7")
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/RigthPanel/RefresBtn"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 27.0
+offset_top = 18.0
+offset_right = -27.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Ads" type="TextureRect" parent="VBoxContainer/HBoxContainer/RigthPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+expand_mode = 4
+script = ExtResource("11_rodiq")
+ads = Array[Texture2D]([ExtResource("12_4yecn"), ExtResource("13_y11i5"), ExtResource("14_1j576"), ExtResource("15_0ncga"), ExtResource("16_hdvx0")])
+
+[node name="MarketManager" type="Node" parent="."]
+script = ExtResource("17_anypq")
+CalidadesBubble = Array[ExtResource("18_cwig0")]([ExtResource("19_1mmfb"), ExtResource("19_1mmfb"), ExtResource("20_vtvo3"), ExtResource("20_vtvo3"), ExtResource("20_vtvo3"), ExtResource("20_vtvo3"), ExtResource("20_vtvo3"), ExtResource("20_vtvo3"), ExtResource("20_vtvo3")])
+ComunCalidad = ExtResource("19_1mmfb")
+probabilidades_nueva_calidad = Array[float]([25.0, 42.0, 20.0, 10.0, 3.0])
+
+[connection signal="OpenTab" from="VBoxContainer/Tabs/HBoxContainer" to="VBoxContainer/HBoxContainer/WebConteiner" method="SetWebWindow"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/RigthPanel/RefresBtn" to="MarketManager" method="CompleteWithRandomBubbles"]
+[connection signal="webResearch" from="VBoxContainer/HBoxContainer/RigthPanel/RefresBtn" to="VBoxContainer/HBoxContainer/WebConteiner" method="SetWebWindow"]

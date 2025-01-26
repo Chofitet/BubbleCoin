@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cgewloggi6i7e"]
+
+[ext_resource type="FontFile" uid="uid://cieyqt2214xaf" path="res://fonts/FONT_GAMEBUBLE.otf" id="1_gj61p"]
+
+[resource]
+font = ExtResource("1_gj61p")
+font_size = 24
+font_color = Color(0.815686, 0.988235, 0.0901961, 1)
