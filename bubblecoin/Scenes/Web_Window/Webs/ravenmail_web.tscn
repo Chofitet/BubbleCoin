@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://qlbjd1hi37g0"]
+[gd_scene load_steps=6 format=3 uid="uid://qlbjd1hi37g0"]
 
 [ext_resource type="Script" path="res://Scenes/Web_Window/Webs/ravenmail_web.gd" id="1_nyxuh"]
-[ext_resource type="PackedScene" uid="uid://bqtgr0yw0e6yh" path="res://Scenes/Web_Window/Webs/ravenmail_email_button.tscn" id="2_hwebp"]
+[ext_resource type="PackedScene" uid="uid://baoochsn4ef2b" path="res://Scenes/Web_Window/Webs/ravenmail_email_button.tscn" id="2_hwebp"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/Ravenmail_Controller.gd" id="2_p8nkq"]
+[ext_resource type="Texture2D" uid="uid://b2u4f484v1fue" path="res://Sprites/UI/SP_TRADER_BOTON.png" id="4_61rpa"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/EmailSpawner.gd" id="5_yfui4"]
 
 [node name="Ravenmail_Web" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -18,12 +20,15 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = 36.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Tabs" type="Panel" parent="HBoxContainer"]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.38
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Tabs"]
 layout_mode = 1
@@ -32,11 +37,19 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 15
 script = ExtResource("2_p8nkq")
+
+[node name="Control" type="Control" parent="HBoxContainer/Tabs/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
 
 [node name="estimadoArkhar" parent="HBoxContainer/Tabs/VBoxContainer" instance=ExtResource("2_hwebp")]
 visible = false
+self_modulate = Color(0.950334, 0.541582, 0.381953, 1)
 layout_mode = 2
+texture = ExtResource("4_61rpa")
 email_subject = "Estimado Arkhar"
 article = 1
 email = "Estimado Arkhar, 
@@ -47,7 +60,9 @@ Sinceramente, tu amigo, Berker"
 
 [node name="bienvenido" parent="HBoxContainer/Tabs/VBoxContainer" instance=ExtResource("2_hwebp")]
 visible = false
+self_modulate = Color(0.94902, 0.541176, 0.380392, 1)
 layout_mode = 2
+texture = ExtResource("4_61rpa")
 email_subject = "bienvenido"
 email = "Estimado Arkhar, 
 Ha llegado a mis oídos la terrible noticia de que injustamente te han Estimado Arkhar, 
