@@ -8,12 +8,12 @@ signal webResearch
 var incremento = 1.5
 func _ready() -> void:
 	pressed.connect(Refresh)
-	label.text = str(cost)
+	label.text = "%.2f" % cost
 
 func Refresh():
 	PlayerVariables.addSubCoins(-cost)
 	cost *= incremento
-	label.text = str(cost)
+	label.text = "%.2f" % cost
 	webResearch.emit(web)
 
 func _process(delta: float) -> void:

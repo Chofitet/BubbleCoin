@@ -27,7 +27,7 @@ func set_bubble_data(bubbleData : BubbleData) -> void:
 
 func set_buy_price(price) -> void:
 	bubble_data.buy_price = price
-	$HBoxContainer/MarginContainer/VBoxContainer/Control/BuyBtn/BuyPrice.text = str(bubble_data.buy_price)
+	$HBoxContainer/MarginContainer/VBoxContainer/Control/BuyBtn/BuyPrice.text = "%.2f" % bubble_data.buy_price
 
 func set_sell_price(price) -> void:
 	bubble_data.sell_price = price
@@ -42,7 +42,7 @@ func _process(delta: float) -> void:
 		$HBoxContainer/MarginContainer/VBoxContainer/Control/BuyBtn.disabled = true
 
 func update_sell_price() -> void:
-	$HBoxContainer/MarginContainer/VBoxContainer/Control/SellBtn/SellPrice.text =  str(bubble_data.sell_price)
+	$HBoxContainer/MarginContainer/VBoxContainer/Control/SellBtn/SellPrice.text = "%.2f" % bubble_data.sell_price
 
 func set_name_description(_name : String, description):
 	bubble_data.bubble_name = _name
