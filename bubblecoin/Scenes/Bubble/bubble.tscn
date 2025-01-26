@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cdnr74tow1gdm"]
+[gd_scene load_steps=9 format=3 uid="uid://cdnr74tow1gdm"]
 
 [ext_resource type="Script" path="res://Scenes/Bubble/bubble.gd" id="1_rmvf7"]
 [ext_resource type="Texture2D" uid="uid://cahqy66xmwj0l" path="res://Sprites/BurbujaCuerpos/Simple Bubble_01.png" id="3_aomck"]
@@ -11,13 +11,17 @@
 texture = ExtResource("3_tmfj8")
 region_rect = Rect2(0, 0, 401, 99)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o8o4h"]
+texture = ExtResource("3_tmfj8")
+
 [node name="Bubble" type="Control"]
-custom_minimum_size = Vector2(436, 136)
 layout_mode = 3
 anchor_right = 0.378
 anchor_bottom = 0.21
 offset_right = 0.543976
 offset_bottom = -0.0800018
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("1_rmvf7")
 
 [node name="Background" type="ColorRect" parent="."]
@@ -29,48 +33,101 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.264698, 0.464787, 1, 1)
 
-[node name="ModifierDescription" type="Label" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_aomck")
+expand_mode = 2
+
+[node name="Lente" type="TextureRect" parent="HBoxContainer/Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.313
-anchor_right = 1.0
-anchor_bottom = 0.346
-offset_left = 9.53198
-offset_top = 18.0
-offset_right = 75.052
-offset_bottom = 27.16
+anchor_left = 0.493
+anchor_top = 0.386
+anchor_right = 0.493
+anchor_bottom = 0.386
+offset_left = -65.527
+offset_top = -7.496
+offset_right = 61.473
+offset_bottom = 35.504
+texture = ExtResource("4_kffpe")
+expand_mode = 2
+
+[node name="Gorro" type="TextureRect" parent="HBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.464
+anchor_top = 0.132
+anchor_right = 0.464
+anchor_bottom = 0.132
+offset_left = -63.496
+offset_top = -45.952
+offset_right = 63.504
+offset_bottom = 26.048
+texture = ExtResource("5_0xfdh")
+expand_mode = 2
+
+[node name="Barba" type="TextureRect" parent="HBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.464
+anchor_top = 0.132
+anchor_right = 0.464
+anchor_bottom = 0.132
+offset_left = -61.496
+offset_top = 48.048
+offset_right = 65.504
+offset_bottom = 82.048
+texture = ExtResource("6_snhdu")
+expand_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="ModifierDescription" type="Label" parent="HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
 text = "x2 contador"
 horizontal_alignment = 1
 
-[node name="name" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.787
-anchor_right = 0.31
-anchor_bottom = 1.0
-offset_top = -0.0320053
-offset_right = -0.160004
-offset_bottom = 14.448
-grow_vertical = 0
+[node name="name" type="Label" parent="HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
 horizontal_alignment = 1
 
-[node name="BuyBtn" type="Button" parent="."]
+[node name="Control" type="Control" parent="HBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="BuyBtn" type="Button" parent="HBoxContainer/MarginContainer/Control"]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.655
-anchor_top = 0.75
-anchor_right = 0.655
-anchor_bottom = 0.75
-offset_left = -144.58
-offset_top = -27.0
-offset_right = 144.42
-offset_bottom = 27.0
-grow_horizontal = 0
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/normal = SubResource("StyleBoxTexture_1rjgv")
 disabled = true
 
-[node name="BuyPrice" type="Label" parent="BuyBtn"]
+[node name="BuyPrice" type="Label" parent="HBoxContainer/MarginContainer/Control/BuyBtn"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -86,22 +143,18 @@ grow_vertical = 2
 text = "Buy price: ฿ 1.00"
 horizontal_alignment = 1
 
-[node name="SellBtn" type="Button" parent="."]
-visible = false
+[node name="SellBtn" type="Button" parent="HBoxContainer/MarginContainer/Control"]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.655
-anchor_top = 0.75
-anchor_right = 0.655
-anchor_bottom = 0.75
-offset_left = -144.58
-offset_top = -27.0
-offset_right = 144.42
-offset_bottom = 27.0
-grow_horizontal = 0
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -8.0
+grow_horizontal = 2
 grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_o8o4h")
 
-[node name="SellPrice" type="Label" parent="SellBtn"]
+[node name="SellPrice" type="Label" parent="HBoxContainer/MarginContainer/Control/SellBtn"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -117,75 +170,5 @@ grow_vertical = 2
 text = "Sell: 25.6 bubs"
 horizontal_alignment = 1
 
-[node name="Panel" type="Panel" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.319
-anchor_bottom = 1.0
-offset_right = -0.0839996
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="TextureRect" type="TextureRect" parent="Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("3_aomck")
-expand_mode = 2
-
-[node name="Lente" type="TextureRect" parent="Panel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.493
-anchor_top = 0.386
-anchor_right = 0.493
-anchor_bottom = 0.386
-offset_left = -65.527
-offset_top = -7.496
-offset_right = 61.473
-offset_bottom = 35.504
-texture = ExtResource("4_kffpe")
-expand_mode = 2
-
-[node name="Gorro" type="TextureRect" parent="Panel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.464
-anchor_top = 0.132
-anchor_right = 0.464
-anchor_bottom = 0.132
-offset_left = -63.496
-offset_top = -45.952
-offset_right = 63.504
-offset_bottom = 26.048
-texture = ExtResource("5_0xfdh")
-expand_mode = 2
-
-[node name="Barba" type="TextureRect" parent="Panel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.464
-anchor_top = 0.132
-anchor_right = 0.464
-anchor_bottom = 0.132
-offset_left = -61.496
-offset_top = 48.048
-offset_right = 65.504
-offset_bottom = 82.048
-texture = ExtResource("6_snhdu")
-expand_mode = 2
-
-[node name="Disable" type="Panel" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[connection signal="pressed" from="BuyBtn" to="." method="buy"]
-[connection signal="pressed" from="SellBtn" to="." method="sell"]
+[connection signal="pressed" from="HBoxContainer/MarginContainer/Control/BuyBtn" to="." method="buy"]
+[connection signal="pressed" from="HBoxContainer/MarginContainer/Control/SellBtn" to="." method="sell"]

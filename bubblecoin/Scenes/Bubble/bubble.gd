@@ -5,6 +5,8 @@ const bubbleScene = preload("res://Scenes/Bubble/bubble.tscn")
 
 @export var bubble_data : BubbleData
 
+@onready var buy_button = $HBoxContainer/MarginContainer/Control/BuyBtn
+@onready var sell_button = $HBoxContainer/MarginContainer/Control/SellBtn
 signal DisableButtons
 
 static func new_bubble(_bubbleData : BubbleData, in_inventory: bool) -> Bubble:
@@ -15,8 +17,8 @@ static func new_bubble(_bubbleData : BubbleData, in_inventory: bool) -> Bubble:
 	return bubble
 
 func set_in_inventory(in_inventory: bool) -> void:
-	$BuyBtn.visible = not in_inventory
-	$SellBtn.visible = in_inventory
+	$HBoxContainer/MarginContainer/Control/BuyBtn.visible = not in_inventory
+	$HBoxContainer/MarginContainer/Control/SellBtn.visible = in_inventory
 
 func set_bubble_data(bubbleData : BubbleData) -> void:
 	bubble_data = bubbleData
@@ -27,7 +29,7 @@ func set_bubble_data(bubbleData : BubbleData) -> void:
 
 func set_buy_price(price) -> void:
 	bubble_data.buy_price = price
-	$BuyBtn/BuyPrice.text = "Buy price: ฿ %.2f" % bubble_data.buy_price
+	$HBoxContainer/MarginContainer/Control/BuyBtn/BuyPrice.text = "Buy price: ฿ %.2f" % bubble_data.buy_price
 
 func set_sell_price(price) -> void:
 	bubble_data.sell_price = price
@@ -40,19 +42,19 @@ func _process(delta: float) -> void:
 		$BuyBtn.disabled = false
 
 func update_sell_price() -> void:
-	$SellBtn/SellPrice.text = "Sell price: ฿ %.2f" % bubble_data.sell_price
+	$HBoxContainer/MarginContainer/Control/SellBtn/SellPrice.text = "Sell price: ฿ %.2f" % bubble_data.sell_price
 
-func set_name_description(_name, description):
+func set_name_description(_name : String, description):
 	bubble_data.bubble_name = _name
 	bubble_data.modifier_description = description
-	$name.text = _name
-	$ModifierDescription.text = description
+	$HBoxContainer/MarginContainer/name.text = "%d" % _name.length()
+	$HBoxContainer/MarginContainer/ModifierDescription.text = description
 
 func Set_Estetica(BubbleEstetica):
-	$Panel/TextureRect.texture = BubbleEstetica.BurbujasCuerpo
-	$Panel/Lente.texture = BubbleEstetica.lente
-	$Panel/Gorro.texture = BubbleEstetica.gorro
-	$Panel/Barba.texture = BubbleEstetica.barba
+	$HBoxContainer/Panel/TextureRect.texture = BubbleEstetica.BurbujasCuerpo
+	$HBoxContainer/Panel/Lente.texture = BubbleEstetica.lente
+	$HBoxContainer/Panel/Gorro.texture = BubbleEstetica.gorro
+	$HBoxContainer/Panel/Barba.texture = BubbleEstetica.barba
 
 func buy() -> void:
 	PlayerVariables.AddBubble(bubble_data)

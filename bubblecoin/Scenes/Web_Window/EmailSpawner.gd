@@ -2,6 +2,8 @@ extends Panel
 
 var article_to_open = -1
 
+signal ArticleSet(article_to_set: int)
+
 func _ready() -> void:
 	$Button.pressed.connect(set_article)
 
@@ -16,5 +18,6 @@ func SetEmail(emailButton):
 
 
 func set_article():
+	ArticleSet.emit(article_to_open)
 	# :/ sry
-	get_parent().get_parent().get_parent().get_node("Tab_Bar/Tab_Controller").open_article(article_to_open)
+	#get_parent().get_parent().get_parent().get_parent().get_node("Tab_Bar/Tab_Controller").open_article(article_to_open)
