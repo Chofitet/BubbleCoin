@@ -9,7 +9,7 @@ func _ready() -> void:
 		if tab is TextureRect:
 			tab.TabPress.connect(tabPressed)
 			tabsArray.append(tab)
-			if (tab.day == PlayerVariables.dia):
+			if (not Engine.is_editor_hint() and tab.day == PlayerVariables.dia):
 				if i not in PlayerVariables.unlocked_emails:
 					PlayerVariables.unlocked_emails.append(i)
 			tab.visible = false

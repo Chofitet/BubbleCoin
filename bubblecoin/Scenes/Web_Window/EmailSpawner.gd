@@ -1,19 +1,19 @@
-extends Panel
+extends MarginContainer
 
 var article_to_open = -1
 
 signal ArticleSet(article_to_set: int)
 
 func _ready() -> void:
-	$Button.pressed.connect(set_article)
+	$VBoxContainer/Button.pressed.connect(set_article)
 
 func SetEmail(emailButton):
-	$RichTextLabel.visible = true
-	$RichTextLabel.text = emailButton.email
+	$VBoxContainer/RichTextLabel.visible = true
+	$VBoxContainer/RichTextLabel.text = emailButton.email
 	if (emailButton.article >= 0):
-		$Button.visible = true
+		$VBoxContainer/Button.visible = true
 	else:
-		$Button.visible = false
+		$VBoxContainer/Button.visible = false
 	article_to_open = emailButton.article
 
 
