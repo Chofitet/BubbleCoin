@@ -20,6 +20,9 @@
 [ext_resource type="PackedScene" uid="uid://rbljan4kgue8" path="res://Scenes/Menus/pantalla_inicio.tscn" id="11_6riax"]
 [ext_resource type="PackedScene" uid="uid://ccle73ewwwxpq" path="res://Scenes/Menus/pantalla_final.tscn" id="12_dsira"]
 [ext_resource type="PackedScene" uid="uid://cao5qu706kxm0" path="res://Scenes/Dormir/Cartel/cartel_dormir.tscn" id="13_ghivl"]
+[ext_resource type="AudioStream" uid="uid://ugq3mviifagn" path="res://AudioAssets/mus_trade.ogg" id="17_usfh4"]
+[ext_resource type="AudioStream" uid="uid://clixo6fgahqtd" path="res://AudioAssets/sfx_click.ogg" id="18_x2y2x"]
+[ext_resource type="Script" path="res://_Scripts/audio_stream_player.gd" id="19_5ttrm"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_0pdpc"]
 frames = 2
@@ -175,5 +178,14 @@ layout_mode = 1
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_usfh4")
+autoplay = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AudioStreamPlayer"]
+stream = ExtResource("18_x2y2x")
+volume_db = -6.995
+script = ExtResource("19_5ttrm")
 
 [connection signal="ChangeWeb" from="Control/Pantalla/Web_Window" to="TextureBackGround" method="ChangeWeb"]
