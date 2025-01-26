@@ -6,7 +6,7 @@ var barba
 var lente
 var gorro
 var price
-var modificador
+var modificador : Modificador
 
 @export var Nombre : Array[String] = []
 @export var Apellido : Array[String] = []
@@ -28,7 +28,20 @@ func PicRandomBubble():
 	
 	name = Nombre[randf_range(0,Nombre.size())] + " " + Apellido[randf_range(0,Nombre.size())] + " " + Titulo[randf_range(0,Nombre.size())]
 	price = randi_range(minPrice,maxPrice)
-	if Modificadores.size() != 0 : modificador = Modificadores[randf_range(0,Modificadores.size())]
+	if Modificadores.size() != 0 :
+		modificador = Modificadores[randf_range(0,Modificadores.size())].duplicate()
+		if modificador.ModifierType == "Multiplicador Idle":
+			modificador.MultiplicadorIdle = randi_range(modificador.minimumValue, modificador.maximumValue + 1)
+			modificador.ModifyDescription = "Idle x%d" % modificador.MultiplicadorIdle
+		if modificador.ModifierType == "Adicionador Idle":
+			modificador.AdicionadorIdle = randi_range(modificador.minimumValue, modificador.maximumValue + 1)
+			modificador.ModifyDescription = "Idle +%d" % modificador.AdicionadorIdle
+		if modificador.ModifierType == "Multiplicador Click":
+			modificador.MultiplicadorClick = randi_range(modificador.minimumValue, modificador.maximumValue + 1)
+			modificador.ModifyDescription = "Click x%d" % modificador.MultiplicadorClick
+		if modificador.ModifierType == "Adicionador Click":
+			modificador.AdicionadorClick = randi_range(modificador.minimumValue, modificador.maximumValue + 1)
+			modificador.ModifyDescription = "Idle +%d" % modificador.AdicionadorClick
 	if Barbas.size() != 0: barba = Barbas[randf_range(0,Barbas.size())]
 	if Lentes.size() != 0: lente = Lentes[randf_range(0,Lentes.size())]
 	if Gorros.size() != 0: gorro = Gorros[randf_range(0,Gorros.size())]
