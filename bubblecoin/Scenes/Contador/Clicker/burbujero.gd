@@ -23,5 +23,4 @@ func _on_timer_timeout() -> void:
 	on_generar_burbujas()
 
 func on_generar_burbujas():
-	print("Bubble Coins generadas.")
 	generar_burbujas.emit()

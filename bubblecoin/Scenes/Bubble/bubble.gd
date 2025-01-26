@@ -58,6 +58,7 @@ func buy() -> void:
 
 func sell() -> void:
 	PlayerVariables.RemoveBubble(bubble_data)
+	PlayerVariables.RemoveModifies(bubble_data.bubbleCalidad.modificador)
 	queue_free()
 
 func apply_modifier(counter):
