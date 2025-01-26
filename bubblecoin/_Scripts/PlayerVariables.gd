@@ -20,7 +20,7 @@ var AdicionIdle = 0
 
 var unlocked_emails: Array[int] = []
 
-var unlocked_tabs: Array[int] = [0,2]
+var unlocked_tabs: Array[int] = [0,2,3]
 
 var ActualWeb
 

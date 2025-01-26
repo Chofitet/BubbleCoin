@@ -3,6 +3,7 @@ extends TextureRect
 @export var TextureAnimCompra : AnimatedTexture
 @export var TextureAnimVenta : AnimatedTexture
 @export var TextureAnimMail : AnimatedTexture
+@export var TextureAnimBubble : AnimatedTexture
 
 func _process(delta: float) -> void:
 	var web = PlayerVariables.ActualWeb
@@ -12,5 +13,5 @@ func _process(delta: float) -> void:
 		texture = TextureAnimVenta
 	elif web == "trade":
 		texture = TextureAnimVenta
-	elif web == "mail":
+	elif web == "bubble":
 		texture = TextureAnimMail

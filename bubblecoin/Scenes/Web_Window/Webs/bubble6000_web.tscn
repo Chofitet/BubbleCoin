@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://c2qwklqpdrcp5"]
+
+[node name="Bubble6000_Web" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HPaddingContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PaddingLeft" type="Control" parent="HPaddingContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0
+
+[node name="VPaddingContainer" type="VBoxContainer" parent="HPaddingContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 90.0
+
+[node name="PaddingTop" type="Control" parent="HPaddingContainer/VPaddingContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 5.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HPaddingContainer/VPaddingContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 90.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HPaddingContainer/VPaddingContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 60.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HPaddingContainer/VPaddingContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 49.0
+
+[node name="Title" type="Label" parent="HPaddingContainer/VPaddingContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "ULTRA
+BBL 6000X
+XX ESTELAR
+HYPER"
+
+[node name="TextureRect" type="TextureRect" parent="HPaddingContainer/VPaddingContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+expand_mode = 5
+
+[node name="Padding" type="Control" parent="HPaddingContainer/VPaddingContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="TextureRect" type="TextureRect" parent="HPaddingContainer/VPaddingContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 49.0
+
+[node name="Label" type="Label" parent="HPaddingContainer/VPaddingContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 20.0
+text = "La burbuja definitiva, creada por el mismisimo Murk Elchado, es la primera y más poderosa de las Bubbles.
+Si obtienes esta Bubble está claro que eres el mago más habilidoso del continente y de seguro te dará el poder para dominar el mundo."
+autowrap_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HPaddingContainer/VPaddingContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 20.0
+
+[node name="TextureRect" type="TextureRect" parent="HPaddingContainer/VPaddingContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+expand_mode = 3
+
+[node name="Button" type="Button" parent="HPaddingContainer/VPaddingContainer/VBoxContainer/HBoxContainer2/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "9999999999"
+flat = true
+
+[node name="comprala" type="Label" parent="HPaddingContainer/VPaddingContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "cómprala,
+antes de que alguien más lo haga"
+autowrap_mode = 2
+
+[node name="PaddingBottom" type="Control" parent="HPaddingContainer/VPaddingContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PaddingRight" type="Control" parent="HPaddingContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0
