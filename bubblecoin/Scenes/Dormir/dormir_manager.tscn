@@ -10,7 +10,7 @@ offset_bottom = 40.0
 script = ExtResource("1_4aoyk")
 
 [node name="DelayAdvertencia" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 120.0
 one_shot = true
 
 [node name="DelayDormir" type="Timer" parent="."]
