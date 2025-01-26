@@ -5,7 +5,6 @@
 [resource]
 script = ExtResource("1_u2w6d")
 ModifyDescription = "+2 burbujas por segundo"
-MultiplicadorIdle = 0
-AdicionadorIdle = 2
-MultiplicadorClick = 0
-AdicionadorClick = 0
+ModifierType = "Adicionador Idle"
+minimumValue = 2
+maximumValue = 5

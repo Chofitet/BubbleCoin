@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://65w1bax7wqlj"]
+[gd_scene load_steps=8 format=3 uid="uid://65w1bax7wqlj"]
 
 [ext_resource type="Texture2D" uid="uid://be37561hvnr5h" path="res://Scenes/Web_Window/tab.jpg" id="1_ag27l"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/Tab_Group_Controller.gd" id="1_ms467"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://Scenes/Web_Window/WebSpawner.gd" id="4_cnpws"]
 [ext_resource type="PackedScene" uid="uid://qlbjd1hi37g0" path="res://Scenes/Web_Window/Webs/ravenmail_web.tscn" id="4_jyajh"]
 [ext_resource type="PackedScene" uid="uid://enowhwvjxhkg" path="res://Scenes/Web_Window/Webs/trade_web.tscn" id="5_dalg5"]
+[ext_resource type="PackedScene" path="res://Scenes/Web_Window/Webs/settings_web.tscn" id="6_jri3r"]
 
 [node name="Web_Window" type="Control"]
 layout_mode = 3
@@ -43,7 +44,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ms467")
-TabEnables = 2
 
 [node name="Tab" type="TextureRect" parent="Tab_Bar/Tab_Controller"]
 layout_mode = 2
@@ -84,7 +84,7 @@ layout_mode = 2
 texture = ExtResource("1_ag27l")
 expand_mode = 3
 script = ExtResource("2_v1c5a")
-Web = ExtResource("5_dalg5")
+Web = ExtResource("6_jri3r")
 
 [node name="button" type="Button" parent="Tab_Bar/Tab_Controller/Tab3"]
 layout_mode = 1
@@ -93,6 +93,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+text = "Settings"
 flat = true
 
 [node name="Tab4" type="TextureRect" parent="Tab_Bar/Tab_Controller"]

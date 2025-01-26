@@ -1,7 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://enowhwvjxhkg"]
+[gd_scene load_steps=16 format=3 uid="uid://enowhwvjxhkg"]
 
-[ext_resource type="Script" path="res://Scenes/Web_Window/Tab_Group_Controller.gd" id="1_nodkm"]
 [ext_resource type="Texture2D" uid="uid://be37561hvnr5h" path="res://Scenes/Web_Window/tab.jpg" id="2_8gyiu"]
+[ext_resource type="Script" path="res://Scenes/Web_Window/BuySellTabGroup.gd" id="2_a3upk"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/TabController.gd" id="3_yhvqc"]
 [ext_resource type="PackedScene" uid="uid://bih2hluw54uxj" path="res://Scenes/Web_Window/Webs/Buy_web.tscn" id="4_oqvlr"]
 [ext_resource type="PackedScene" uid="uid://c5u82qfxqdit3" path="res://Scenes/Web_Window/Webs/Sell_web.tscn" id="5_ei5bm"]
@@ -10,7 +10,11 @@
 [ext_resource type="Resource" uid="uid://d2qmkpv5e2382" path="res://Resources/calidades/Calidad1.tres" id="8_j5c35"]
 [ext_resource type="Script" path="res://Scenes/Bubble/CalidadData.gd" id="8_th6xu"]
 [ext_resource type="Script" path="res://Scenes/RefreshBTN/refresh_btn.gd" id="9_nrrwf"]
-[ext_resource type="Resource" uid="uid://t7oom3us4qjd" path="res://Resources/calidades/Calidad2.tres" id="11_tl6if"]
+[ext_resource type="Resource" uid="uid://b1vp177e1vlb3" path="res://Resources/calidades/Calidad2.tres" id="11_tl6if"]
+[ext_resource type="Script" path="res://Scenes/Web_Window/Webs/ads.gd" id="12_ieh81"]
+[ext_resource type="Texture2D" uid="uid://dkxqbscn4skfr" path="res://Sprites/gorros/Gorro Lvl 1_01.png" id="13_atrak"]
+[ext_resource type="Texture2D" uid="uid://bpor5fkrue1ht" path="res://Sprites/gorros/Gorro Lvl 2_02.png" id="14_fftlv"]
+[ext_resource type="Texture2D" uid="uid://bx8i824n5tqvo" path="res://Sprites/gorros/Gorro Lvl 3_02.png" id="15_202fp"]
 
 [node name="Trade_Web" type="Panel"]
 anchors_preset = -1
@@ -54,8 +58,7 @@ offset_bottom = -0.045002
 layout_mode = 0
 offset_right = 436.0
 offset_bottom = 40.0
-script = ExtResource("1_nodkm")
-TabEnables = 2
+script = ExtResource("2_a3upk")
 
 [node name="CompraBTN" type="TextureRect" parent="Tabs/HBoxContainer"]
 custom_minimum_size = Vector2(218, 0)
@@ -142,6 +145,20 @@ text = "10"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Ads" type="TextureRect" parent="RigthPanel"]
+layout_mode = 0
+offset_left = 87.0001
+offset_top = 311.0
+offset_right = 127.0
+offset_bottom = 351.0
+script = ExtResource("12_ieh81")
+ads = Array[Texture2D]([ExtResource("13_atrak"), ExtResource("14_fftlv"), ExtResource("15_202fp")])
+
+[node name="Timer" type="Timer" parent="RigthPanel/Ads"]
+wait_time = 3.0
+autostart = true
+
 [connection signal="OpenTab" from="Tabs/HBoxContainer" to="WebConteiner" method="SetWebWindow"]
 [connection signal="pressed" from="RigthPanel/RefresBtn" to="MarketManager" method="CompleteWithRandomBubbles"]
 [connection signal="webResearch" from="RigthPanel/RefresBtn" to="WebConteiner" method="SetWebWindow"]
+[connection signal="timeout" from="RigthPanel/Ads/Timer" to="RigthPanel/Ads" method="_on_timer_timeout"]

@@ -5,6 +5,8 @@ const bubbleScene = preload("res://Scenes/Bubble/bubble.tscn")
 
 @export var bubble_data : BubbleData
 
+signal DisableButtons
+
 static func new_bubble(_bubbleData : BubbleData, in_inventory: bool) -> Bubble:
 	var bubble: Bubble = bubbleScene.instantiate()
 	bubble.set_bubble_data(_bubbleData)
@@ -33,6 +35,9 @@ func set_sell_price(price) -> void:
 	
 func _process(delta: float) -> void:
 	update_sell_price()
+	var coins = PlayerVariables.BubbleCoins
+	if coins >= bubble_data.buy_price:
+		$BuyBtn.disabled = false
 
 func update_sell_price() -> void:
 	$SellBtn/SellPrice.text = "Sell price: ฿ %.2f" % bubble_data.sell_price
@@ -54,13 +59,20 @@ func buy() -> void:
 	PlayerVariables.SetBubbleLevel(bubble_data.bubbleCalidad.Level)
 	MarketVariables.Remove_Bubble(bubble_data)
 	PlayerVariables.Modifies(bubble_data.bubbleCalidad.modificador)
+	PlayerVariables.addSubCoins(-bubble_data.bubbleCalidad.price)
+	if PlayerVariables.AreInventoryFull(): DisableButtons.emit()
+	await get_tree().create_timer(0.1).timeout
 	queue_free()
 
 func sell() -> void:
 	PlayerVariables.RemoveBubble(bubble_data)
 	PlayerVariables.RemoveModifies(bubble_data.bubbleCalidad.modificador)
+	PlayerVariables.addSubCoins(bubble_data.bubbleCalidad.price)
 	queue_free()
 
 func apply_modifier(counter):
 	counter.multiplier += bubble_data.multiplier
 	counter.addition +=  bubble_data.addition
+
+func DisableEnableBubble(x):
+	$Disable.visible = x
