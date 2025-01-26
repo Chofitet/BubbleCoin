@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c5u82qfxqdit3" path="res://Scenes/Web_Window/Webs/Sell_web.tscn" id="5_ei5bm"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/WebSpawner.gd" id="6_2p82q"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/MarketManager.gd" id="7_suktn"]
-[ext_resource type="Resource" uid="uid://d2qmkpv5e2382" path="res://Resources/calidades/Calidad0.tres" id="8_j5c35"]
+[ext_resource type="Resource" uid="uid://d2qmkpv5e2382" path="res://Resources/calidades/Calidad1.tres" id="8_j5c35"]
 [ext_resource type="Script" path="res://Scenes/Bubble/CalidadData.gd" id="8_th6xu"]
 [ext_resource type="Script" path="res://Scenes/RefreshBTN/refresh_btn.gd" id="9_nrrwf"]
 [ext_resource type="Resource" uid="uid://b1vp177e1vlb3" path="res://Resources/calidades/Calidad2.tres" id="11_tl6if"]

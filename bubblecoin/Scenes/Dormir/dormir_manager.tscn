@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0j8un1yi7won"]
+
+[ext_resource type="Script" path="res://Scenes/Dormir/dormir_manager.gd" id="1_4aoyk"]
+
+[node name="DormirManager" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_4aoyk")
+
+[node name="DelayAdvertencia" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="DelayDormir" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="DuracionSueño" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="DelayAdvertencia" to="." method="_on_delay_advertencia_timeout"]
+[connection signal="timeout" from="DelayDormir" to="." method="_on_delay_dormir_timeout"]
+[connection signal="timeout" from="DuracionSueño" to="." method="_on_duracion_sueño_timeout"]
