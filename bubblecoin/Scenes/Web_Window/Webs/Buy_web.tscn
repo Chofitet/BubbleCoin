@@ -17,11 +17,41 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_bottom = 5
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 10
 
 [node name="GridBubbles" type="GridContainer" parent="MarginContainer"]
 layout_mode = 2
 columns = 2
 script = ExtResource("1_m3hxi")
+
+[node name="Control" type="Control" parent="MarginContainer/GridBubbles"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Control2" type="Control" parent="MarginContainer/GridBubbles"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Control3" type="Control" parent="MarginContainer/GridBubbles"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Control4" type="Control" parent="MarginContainer/GridBubbles"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Control5" type="Control" parent="MarginContainer/GridBubbles"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Control6" type="Control" parent="MarginContainer/GridBubbles"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3

@@ -1,14 +1,18 @@
-[gd_scene load_steps=14 format=3 uid="uid://twbqfw2t33fc"]
+[gd_scene load_steps=16 format=3 uid="uid://twbqfw2t33fc"]
 
 [ext_resource type="Texture2D" uid="uid://pbhlufe76kw1" path="res://Sprites/UI/fondo.png" id="1_lg1o1"]
 [ext_resource type="Texture2D" uid="uid://bnfqk8r1ii1ff" path="res://Sprites/UI/AnimCompraBackground.tres" id="2_vwgx1"]
 [ext_resource type="PackedScene" uid="uid://65w1bax7wqlj" path="res://Scenes/Web_Window/web_window.tscn" id="3_eqm8y"]
 [ext_resource type="Texture2D" uid="uid://drgbcysfs5kii" path="res://Scenes/Escenario/CapturaEscenario.png" id="3_kyd6h"]
 [ext_resource type="Script" path="res://_Scripts/texture_back_ground_Controller.gd" id="4_ip1yt"]
+[ext_resource type="Texture2D" uid="uid://ceudd6eaejsel" path="res://Sprites/UI/AnimMailBackground.tres" id="4_ukyyw"]
 [ext_resource type="PackedScene" uid="uid://b43amscl2xy2c" path="res://Scenes/Contador/contador_coins.tscn" id="5_p1l58"]
 [ext_resource type="Texture2D" uid="uid://trlp1po4mxbh" path="res://Sprites/Placeholders y guias/REF_PAUSA.png" id="6_po5de"]
 [ext_resource type="PackedScene" uid="uid://umo188trkdoi" path="res://Scenes/Dormir/Transicion/transition.tscn" id="6_xp8mb"]
 [ext_resource type="PackedScene" uid="uid://c0j8un1yi7won" path="res://Scenes/Dormir/dormir_manager.tscn" id="7_tgfjh"]
+[ext_resource type="Texture2D" uid="uid://d1cjh7uapl5ur" path="res://Sprites/UI/SP_CLICKER_ON.png" id="8_v1udh"]
+[ext_resource type="Texture2D" uid="uid://bs6bcyv81hfke" path="res://Sprites/UI/SP_CLICKER_OFF.png" id="9_cth2s"]
+[ext_resource type="Texture2D" uid="uid://dj2jk0awo6ns7" path="res://Sprites/UI/REF_TRADER_COMPRA.png" id="9_htmjt"]
 [ext_resource type="PackedScene" uid="uid://dtie11qy1fmrt" path="res://Scenes/Finals/final_manager.tscn" id="10_ad8x7"]
 [ext_resource type="PackedScene" uid="uid://rbljan4kgue8" path="res://Scenes/Menus/pantalla_inicio.tscn" id="11_6riax"]
 [ext_resource type="PackedScene" uid="uid://ccle73ewwwxpq" path="res://Scenes/Menus/pantalla_final.tscn" id="12_dsira"]
@@ -43,7 +47,7 @@ expand_mode = 1
 script = ExtResource("4_ip1yt")
 TextureAnimCompra = ExtResource("2_vwgx1")
 TextureAnimVenta = ExtResource("2_vwgx1")
-TextureAnimMail = ExtResource("2_vwgx1")
+TextureAnimMail = ExtResource("4_ukyyw")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 1
@@ -110,16 +114,19 @@ expand_mode = 1
 [node name="Contador_Coins" parent="." instance=ExtResource("5_p1l58")]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.753
-anchor_top = 0.639
-anchor_right = 0.862
-anchor_bottom = 0.819
-offset_left = -7.45605
-offset_top = -13.072
-offset_right = 17.976
-offset_bottom = 17.288
+anchor_left = 0.751
+anchor_top = 0.627
+anchor_right = 0.87
+anchor_bottom = 0.855
+offset_left = 71.848
+offset_top = -2.29602
+offset_right = 72.7599
+offset_bottom = -63.04
 grow_horizontal = 0
 grow_vertical = 2
+rotation = 1.09269
+btnClick = ExtResource("8_v1udh")
+btnIdle = ExtResource("9_cth2s")
 
 [node name="CartelDormir" parent="." instance=ExtResource("13_ghivl")]
 unique_name_in_owner = true
@@ -131,18 +138,22 @@ offset_bottom = -209.0
 
 [node name="Transition" parent="." instance=ExtResource("6_xp8mb")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 
 [node name="DormirManager" parent="." instance=ExtResource("7_tgfjh")]
 unique_name_in_owner = true
+visible = false
 mouse_filter = 1
 
 [node name="FinalManager" parent="." instance=ExtResource("10_ad8x7")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 
 [node name="PantallaInicio" parent="." instance=ExtResource("11_6riax")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 
 [node name="PantallaFinal" parent="." instance=ExtResource("12_dsira")]

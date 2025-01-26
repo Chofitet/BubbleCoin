@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scenes/Bubble/Bonificadores.gd" id="1_lf46a"]
 [ext_resource type="Script" path="res://Scenes/Bubble/CalidadData.gd" id="2_2qwjl"]
 [ext_resource type="Texture2D" uid="uid://iiqqwrhn3ygr" path="res://Sprites/barbas/Bigote Lvl 2_01.png" id="2_syies"]
-[ext_resource type="Texture2D" uid="uid://cahqy66xmwj0l" path="res://Sprites/BurbujaCuerpos/Simple Bubble_01.png" id="3_n2r5e"]
+[ext_resource type="Texture2D" uid="uid://bk7if3ep150hn" path="res://Sprites/BurbujaCuerpos/Bubble Lvl 3_01.png" id="3_si8be"]
 [ext_resource type="Texture2D" uid="uid://dkxqbscn4skfr" path="res://Sprites/gorros/Gorro Lvl 1_01.png" id="4_wstv7"]
 [ext_resource type="Resource" uid="uid://bvyjn3a7rdv6e" path="res://Resources/calidades/Modificadores/+10Click.tres" id="6_bcktl"]
 [ext_resource type="Resource" uid="uid://xorvx1fvf5xy" path="res://Resources/calidades/Modificadores/x5Click.tres" id="7_r742e"]
@@ -12,7 +12,7 @@
 
 [resource]
 script = ExtResource("2_2qwjl")
-BurbujasCuerpo = ExtResource("3_n2r5e")
+BurbujasCuerpo = ExtResource("3_si8be")
 Barbas = Array[Texture]([ExtResource("1_8osha"), ExtResource("2_syies")])
 Lentes = Array[Texture]([])
 Gorros = Array[Texture]([ExtResource("4_wstv7")])

@@ -4,14 +4,13 @@
 
 [node name="Sell_Web" type="Control"]
 layout_mode = 3
-anchor_left = 0.017
-anchor_top = 0.031
-anchor_right = 0.941
-anchor_bottom = 0.748
-offset_left = 0.415998
-offset_top = -0.0880013
-offset_right = -0.0321045
-offset_bottom = 0.29599
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -20,7 +19,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_top = 40
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
 
 [node name="GridBubbles" type="GridContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -28,3 +29,33 @@ theme_override_constants/h_separation = 16
 theme_override_constants/v_separation = 16
 columns = 2
 script = ExtResource("1_08fnr")
+
+[node name="Control" type="Control" parent="MarginContainer/GridBubbles"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Control2" type="Control" parent="MarginContainer/GridBubbles"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Control3" type="Control" parent="MarginContainer/GridBubbles"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Control4" type="Control" parent="MarginContainer/GridBubbles"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Control5" type="Control" parent="MarginContainer/GridBubbles"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Control6" type="Control" parent="MarginContainer/GridBubbles"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
