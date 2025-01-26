@@ -18,7 +18,7 @@ var AdicionIdle = 1
 
 var unlocked_emails: Array[int] = [0]
 
-var unlocked_tabs: Array[int] = [0]
+var unlocked_tabs: Array[int] = [0,2]
 
 func AddBubble(bubbleData):
 	BubbleInventory.append(bubbleData)
