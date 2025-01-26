@@ -125,3 +125,4 @@ script = ExtResource("4_cnpws")
 metadata/_edit_use_anchors_ = true
 
 [connection signal="OpenTab" from="Tab_Bar/Tab_Controller" to="Web_Conteiner" method="SetWebWindow"]
+[connection signal="ArticleSet" from="Web_Conteiner" to="Tab_Bar/Tab_Controller" method="open_article"]
