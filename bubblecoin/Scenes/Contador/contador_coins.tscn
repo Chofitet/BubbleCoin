@@ -7,10 +7,6 @@
 [node name="Contador_Bubbles" type="Control" node_paths=PackedStringArray("label")]
 layout_mode = 3
 anchors_preset = 0
-offset_left = -72.0
-offset_top = -62.0
-offset_right = 72.0
-offset_bottom = 62.0
 script = ExtResource("1_mdkp7")
 label = NodePath("Label")
 
@@ -19,9 +15,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
 grow_horizontal = 2
 grow_vertical = 2
-flat = true
 
 [node name="Burbujero" parent="." instance=ExtResource("3_3h8o3")]
 
@@ -32,4 +29,5 @@ offset_bottom = 23.0
 text = "NUMERO
 "
 
+[connection signal="click" from="Clicker" to="." method="_on_clicker_click"]
 [connection signal="generar_burbujas" from="Burbujero" to="." method="_on_burbujero_generar_burbujas"]
