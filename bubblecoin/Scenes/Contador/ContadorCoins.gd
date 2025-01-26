@@ -5,6 +5,9 @@ extends Control
 func _ready() -> void:
 	$Clicker.pressed.connect(_on_clicker_click)
 
+func _process(delta: float) -> void:
+	set_label()
+
 func obtener_coins(valor : float):
 	PlayerVariables.BubbleCoins += valor
 	set_label()

@@ -2,6 +2,37 @@
 
 [ext_resource type="Script" path="res://Scenes/Dormir/Transicion/transition.gd" id="1_r1dli"]
 
+[sub_resource type="Animation" id="Animation_2miyb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.092894, 0.0105131, 0.142574, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_0bnhq"]
+resource_name = "black"
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.09009, 0.0098, 0.14, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_3n6rh"]
 resource_name = "fade_in"
 length = 3.0
@@ -33,21 +64,6 @@ tracks/1/keys = {
 }]
 }
 
-[sub_resource type="Animation" id="Animation_2miyb"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Transition:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0.092894, 0.0105131, 0.142574, 1)]
-}
-
 [sub_resource type="Animation" id="Animation_j86rh"]
 resource_name = "fade_out"
 length = 3.0
@@ -77,22 +93,6 @@ tracks/1/keys = {
 "args": [],
 "method": &"is_out"
 }]
-}
-
-[sub_resource type="Animation" id="Animation_0bnhq"]
-resource_name = "black"
-step = 1.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Transition:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0.09009, 0.0098, 0.14, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t34e6"]

@@ -14,7 +14,7 @@ var MultiplicadorIdle = 1
 
 var AdicionClicker = 1
 
-var AdicionIdle = 1
+var AdicionIdle = 0
 
 var unlocked_emails: Array[int] = [0]
 
