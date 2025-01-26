@@ -5,8 +5,6 @@ const bubbleScene = preload("res://Scenes/Bubble/bubble.tscn")
 
 @export var bubble_data : BubbleData
 
-@onready var buy_button = $HBoxContainer/MarginContainer/Control/BuyBtn
-@onready var sell_button = $HBoxContainer/MarginContainer/Control/SellBtn
 signal DisableButtons
 
 static func new_bubble(_bubbleData : BubbleData, in_inventory: bool) -> Bubble:
@@ -53,12 +51,11 @@ func set_name_description(_name : String, description):
 	$HBoxContainer/MarginContainer/VBoxContainer/ModifierDescription.text = description
 
 func Set_Estetica(BubbleEstetica):
-	
-	$HBoxContainer/Panel/MarginContainer/TextureRect.texture = BubbleEstetica.BurbujasCuerpo
+	$HBoxContainer/Panel/HBoxContainer/VBoxContainer/BubbleTexture/TextureRect.texture = BubbleEstetica.BurbujasCuerpo
 	print(BubbleEstetica.BurbujasCuerpo)
-	$HBoxContainer/Panel/VBoxContainer/Lente.texture = BubbleEstetica.lente
-	$HBoxContainer/Panel/VBoxContainer/Gorro.texture = BubbleEstetica.gorro
-	$HBoxContainer/Panel/VBoxContainer/Barba.texture = BubbleEstetica.barba
+	$HBoxContainer/Panel/HBoxContainer/VBoxContainer/BubbleTexture/Cosmetics/Lente.texture = BubbleEstetica.lente
+	$HBoxContainer/Panel/HBoxContainer/VBoxContainer/BubbleTexture/Cosmetics/Gorro.texture = BubbleEstetica.gorro
+	$HBoxContainer/Panel/HBoxContainer/VBoxContainer/BubbleTexture/Cosmetics/Barba.texture = BubbleEstetica.barba
 
 func buy() -> void:
 	PlayerVariables.AddBubble(bubble_data)
