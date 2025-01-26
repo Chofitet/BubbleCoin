@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://twbqfw2t33fc"]
+[gd_scene load_steps=13 format=3 uid="uid://twbqfw2t33fc"]
 
 [ext_resource type="Texture2D" uid="uid://pbhlufe76kw1" path="res://Sprites/UI/fondo.png" id="1_lg1o1"]
 [ext_resource type="Texture2D" uid="uid://bnfqk8r1ii1ff" path="res://Sprites/UI/AnimCompraBackground.tres" id="2_vwgx1"]
@@ -9,6 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://umo188trkdoi" path="res://Scenes/Dormir/Transicion/transition.tscn" id="6_xp8mb"]
 [ext_resource type="PackedScene" uid="uid://c0j8un1yi7won" path="res://Scenes/Dormir/dormir_manager.tscn" id="7_tgfjh"]
 [ext_resource type="Texture2D" uid="uid://dj2jk0awo6ns7" path="res://Sprites/UI/REF_TRADER_COMPRA.png" id="9_htmjt"]
+[ext_resource type="PackedScene" uid="uid://dtie11qy1fmrt" path="res://Scenes/Finals/final_manager.tscn" id="10_ad8x7"]
+[ext_resource type="PackedScene" uid="uid://rbljan4kgue8" path="res://Scenes/Menus/pantalla_inicio.tscn" id="11_6riax"]
+[ext_resource type="PackedScene" uid="uid://ccle73ewwwxpq" path="res://Scenes/Menus/pantalla_final.tscn" id="12_dsira"]
 
 [node name="Escenario" type="Control"]
 layout_mode = 3
@@ -90,6 +93,17 @@ offset_top = 0.191986
 offset_right = -76.0
 offset_bottom = 0.191986
 
+[node name="refe" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_htmjt")
+expand_mode = 1
+
 [node name="Contador_Coins" parent="." instance=ExtResource("5_p1l58")]
 layout_mode = 1
 anchors_preset = -1
@@ -109,17 +123,20 @@ unique_name_in_owner = true
 layout_mode = 1
 
 [node name="DormirManager" parent="." instance=ExtResource("7_tgfjh")]
+unique_name_in_owner = true
 mouse_filter = 1
 
-[node name="refe" type="TextureRect" parent="."]
+[node name="FinalManager" parent="." instance=ExtResource("10_ad8x7")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="PantallaInicio" parent="." instance=ExtResource("11_6riax")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="PantallaFinal" parent="." instance=ExtResource("12_dsira")]
+unique_name_in_owner = true
 visible = false
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("9_htmjt")
-expand_mode = 1
 
 [connection signal="ChangeWeb" from="Control/Pantalla/Web_Window" to="TextureBackGround" method="ChangeWeb"]

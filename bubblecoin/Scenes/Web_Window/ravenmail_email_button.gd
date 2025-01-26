@@ -12,6 +12,8 @@ signal TabPress
 		email = value
 		TabPress.emit(self)
 
+@export var day : int
+
 func _ready() -> void:
 	if not Engine.is_editor_hint():
 		self_modulate = Color.DARK_GRAY

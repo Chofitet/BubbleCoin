@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="NombreAleatorio" load_steps=2 format=3 uid="uid://b075xlx1s5hop"]
+
+[ext_resource type="Script" path="res://Resources/Nombres Aleatorios/nombres.gd" id="1_xdfa1"]
+
+[resource]
+script = ExtResource("1_xdfa1")
+nombres = Array[String](["harry", "besitos", "goo", "susana", "mcGonagall", "capurro", "justin", "tastico", "shino", "jhonny", "don", "alador", "chavo", "pedro", "misterio", "alador"])
+apellidos = Array[String](["Bernardez", "Frunciante", "Richardson", "Slythurim", "Horia", "Pepe", "Tontoñez", "Glitter", "hijo de", "Enojon", "Melavo", "Remedios", "uwu", "Malavar", "Enroquecio", "Kune"])
+titulos = Array[String](["El Duque", "Monseñor", "Merlinista", "El Heredero", "La Naranja", "Double Bacon", "Cuarto", "El Malvado", "El Bailarín", "El Mugriento", "El Suave", "El Corrupto", "La Chusma", "El Enano", "El Duelista", "Kittyboy", "Malakala Fan", "El Enjabonado"])

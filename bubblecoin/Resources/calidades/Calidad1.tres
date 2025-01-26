@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Calidad" load_steps=8 format=3 uid="uid://d2qmkpv5e2382"]
+[gd_resource type="Resource" script_class="Calidad" load_steps=9 format=3 uid="uid://d2qmkpv5e2382"]
 
 [ext_resource type="Texture2D" uid="uid://bs8yftn2u1xoe" path="res://Sprites/barbas/Bigote Lvl 1_01.png" id="1_1m4ig"]
 [ext_resource type="Texture2D" uid="uid://bmni1c5jck0mf" path="res://Sprites/Lentes/Lentes Lvl 1_01.png" id="2_4b1qq"]
@@ -7,12 +7,10 @@
 [ext_resource type="Script" path="res://Scenes/Bubble/CalidadData.gd" id="3_4ha8n"]
 [ext_resource type="Resource" uid="uid://bnl47mcdxki0k" path="res://Resources/calidades/Modificadores/+2Idle.tres" id="4_i36qp"]
 [ext_resource type="Resource" uid="uid://gv16jq6h4m2m" path="res://Resources/calidades/Modificadores/x2Idle.tres" id="5_ql8w4"]
+[ext_resource type="Resource" uid="uid://b075xlx1s5hop" path="res://Resources/Nombres Aleatorios/PackNombres.tres" id="7_615ml"]
 
 [resource]
 script = ExtResource("3_4ha8n")
-Nombre = Array[String](["Alador", "Trinkanar"])
-Apellido = Array[String](["Ralstak", "kune"])
-Titulo = Array[String](["el Enjabonado", "el Volador"])
 Barbas = Array[Texture]([ExtResource("1_1m4ig"), ExtResource("2_plcqd")])
 Lentes = Array[Texture]([ExtResource("2_4b1qq")])
 Gorros = Array[Texture]([])
@@ -20,3 +18,4 @@ Level = 1
 minPrice = 50
 maxPrice = 500
 Modificadores = Array[ExtResource("2_lqw4n")]([ExtResource("4_i36qp"), ExtResource("5_ql8w4")])
+Nombres = ExtResource("7_615ml")

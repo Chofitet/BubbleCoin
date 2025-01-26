@@ -1,3 +1,4 @@
+class_name DormirManager
 extends Control
 
 @onready var transition : Transition = %Transition
@@ -7,13 +8,14 @@ extends Control
 @onready var duracion_sue_o: Timer = $'DuracionSueño'
 
 @export var auto := true
-@export var dia = 0
-
-signal actualizar_dia
 
 func _ready() -> void:
 	if auto:
 		comenzar_sueño()
+
+func _process(delta: float) -> void:
+	if PlayerVariables.final_activo:
+		queue_free()
 
 #region Ciclo de sueño
 func comenzar_sueño():
@@ -54,5 +56,16 @@ func sueño_completado():
 #endregion
 
 func siguiente_dia():
-	dia += 1
-	actualizar_dia.emit()
+	PlayerVariables.dia += 1
+	PlayerVariables.unlocked_emails.clear()
+	PlayerVariables.nuevo_dia.emit(PlayerVariables.dia)
+
+func parar_tiempo():
+	delay_advertencia.paused = true
+	delay_dormir.paused = true
+	duracion_sue_o.paused = true
+
+func reanudar_tiempo():
+	delay_advertencia.paused = false
+	delay_dormir.paused = false
+	duracion_sue_o.paused = false

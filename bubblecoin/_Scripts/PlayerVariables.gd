@@ -1,5 +1,7 @@
 extends Node
 
+signal nuevo_dia(nuevo_dia : int)
+
 var BubbleCoins : float
 
 var fame : float = 0
@@ -16,11 +18,17 @@ var AdicionClicker = 1
 
 var AdicionIdle = 0
 
-var unlocked_emails: Array[int] = [0]
+var unlocked_emails: Array[int] = []
 
 var unlocked_tabs: Array[int] = [0,2]
 
 var ActualWeb
+
+var dia : int = 0
+
+var compro_burbuja_final := false
+
+var final_activo := false
 
 func AddBubble(bubbleData):
 	BubbleInventory.append(bubbleData)
