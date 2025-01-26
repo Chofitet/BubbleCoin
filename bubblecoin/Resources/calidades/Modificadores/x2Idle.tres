@@ -5,7 +5,6 @@
 [resource]
 script = ExtResource("1_rx2mb")
 ModifyDescription = "x2 burbujas por segundo"
-MultiplicadorIdle = 2
-AdicionadorIdle = 0
-MultiplicadorClick = 0
-AdicionadorClick = 0
+ModifierType = "Multiplicador Idle"
+minimumValue = 2
+maximumValue = 4
