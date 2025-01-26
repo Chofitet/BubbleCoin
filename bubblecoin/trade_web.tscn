@@ -21,7 +21,7 @@
 [ext_resource type="Resource" uid="uid://d2qmkpv5e2382" path="res://Resources/calidades/Calidad1.tres" id="19_1mmfb"]
 [ext_resource type="Resource" uid="uid://b1vp177e1vlb3" path="res://Resources/calidades/Calidad2.tres" id="20_vtvo3"]
 
-[node name="Trade_Web" type="Panel"]
+[node name="Trade_Web2" type="Panel"]
 self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0

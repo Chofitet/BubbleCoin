@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://trlp1po4mxbh"
-path="res://.godot/imported/REF_PAUSA.png-3dc843e740029d4371b8fd4cd9431e29.ctex"
+uid="uid://xtnn6jib2r36"
+path="res://.godot/imported/SP_BARRASLIDER.png-4cd62098364af3247f00870275d34e0f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Placeholders y guias/REF_PAUSA.png"
-dest_files=["res://.godot/imported/REF_PAUSA.png-3dc843e740029d4371b8fd4cd9431e29.ctex"]
+source_file="res://Sprites/UI/PAUSA/SP_BARRASLIDER.png"
+dest_files=["res://.godot/imported/SP_BARRASLIDER.png-4cd62098364af3247f00870275d34e0f.ctex"]
 
 [params]
 

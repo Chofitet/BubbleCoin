@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://qlbjd1hi37g0" path="res://Scenes/Web_Window/Webs/ravenmail_web.tscn" id="4_jyajh"]
 [ext_resource type="PackedScene" uid="uid://c5kcn8mj8vbmc" path="res://Scenes/Web_Window/Webs/trade_web.tscn" id="5_dalg5"]
 [ext_resource type="PackedScene" uid="uid://br188hfsa56ie" path="res://Scenes/Web_Window/Webs/settings_web.tscn" id="6_jri3r"]
-[ext_resource type="PackedScene" uid="uid://c2qwklqpdrcp5" path="res://Scenes/Web_Window/Webs/bubble6000_web.tscn" id="8_7npsx"]
+[ext_resource type="PackedScene" uid="uid://bnv0aobmeq0ql" path="res://Scenes/Web_Window/Webs/bubble6000_web.tscn" id="8_7npsx"]
 
 [node name="Web_Window" type="Control"]
 layout_mode = 3
