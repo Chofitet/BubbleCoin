@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://65w1bax7wqlj" path="res://Scenes/Web_Window/web_window.tscn" id="3_eqm8y"]
 [ext_resource type="Texture2D" uid="uid://drgbcysfs5kii" path="res://Scenes/Escenario/CapturaEscenario.png" id="3_kyd6h"]
 [ext_resource type="Script" path="res://_Scripts/texture_back_ground_Controller.gd" id="4_ip1yt"]
-[ext_resource type="Texture2D" path="res://Sprites/UI/AnimMailBackground.tres" id="4_ukyyw"]
+[ext_resource type="Texture2D" uid="uid://ceudd6eaejsel" path="res://Sprites/UI/AnimMailBackground.tres" id="4_ukyyw"]
 [ext_resource type="Texture2D" uid="uid://b7glujwfx7i8h" path="res://Sprites/UI/BBL6000/TX_BBL6000_BASE_F1.png" id="5_gf27b"]
 [ext_resource type="PackedScene" uid="uid://b43amscl2xy2c" path="res://Scenes/Contador/contador_coins.tscn" id="5_p1l58"]
 [ext_resource type="Texture2D" uid="uid://ccluc68tek0og" path="res://Sprites/UI/BBL6000/TX_BBL6000_BASE_F2.png" id="6_l12kk"]

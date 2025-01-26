@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Modificador" load_steps=2 format=3 uid="uid://boo65ovbm0kry"]
+
+[ext_resource type="Script" path="res://Scenes/Bubble/Bonificadores.gd" id="1_avwem"]
+
+[resource]
+script = ExtResource("1_avwem")
+ModifyDescription = "x10 por segundo"
+ModifierType = "Multiplicador Idle"
+minimumValue = 10
+maximumValue = 15

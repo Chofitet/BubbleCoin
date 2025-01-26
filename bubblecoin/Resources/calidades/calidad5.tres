@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Calidad" load_steps=13 format=3 uid="uid://d370p8cteweo3"]
+
+[ext_resource type="Texture2D" uid="uid://igeygl0aekvf" path="res://Sprites/BurbujaCuerpos/Bubble Lvl 2_01.png" id="1_2lubo"]
+[ext_resource type="Script" path="res://Scenes/Bubble/Bonificadores.gd" id="1_sd58p"]
+[ext_resource type="Texture2D" uid="uid://ccimvtqe22gge" path="res://Sprites/SKINS/SP_HATS_4.png" id="2_25p3n"]
+[ext_resource type="Script" path="res://Scenes/Bubble/CalidadData.gd" id="2_sbb3f"]
+[ext_resource type="Texture2D" uid="uid://i81olyfca1m4" path="res://Sprites/SKINS/SP_HAT_1.png" id="3_13spx"]
+[ext_resource type="Texture2D" uid="uid://cewjamhxgpdku" path="res://Sprites/SKINS/SP_HATS_5.png" id="4_joex5"]
+[ext_resource type="Texture2D" uid="uid://davooksppu8fy" path="res://Sprites/SKINS/SP_OJOS_6.png" id="5_mvyss"]
+[ext_resource type="Texture2D" uid="uid://ctuh6dy0xfdxa" path="res://Sprites/SKINS/SP_OJOS_1.png" id="6_pe7rb"]
+[ext_resource type="Texture2D" uid="uid://dvvvxt2s04orf" path="res://Sprites/SKINS/SP_OJOS_3.png" id="7_ti0sd"]
+[ext_resource type="Resource" uid="uid://b075xlx1s5hop" path="res://Resources/Nombres Aleatorios/PackNombres.tres" id="9_ugp37"]
+[ext_resource type="Resource" uid="uid://boo65ovbm0kry" path="res://Resources/calidades/Modificadores/x10Idle.tres" id="9_xfkl7"]
+[ext_resource type="Resource" uid="uid://b7a4bge1ekey7" path="res://Resources/calidades/Modificadores/+50Click.tres" id="10_hwbeh"]
+
+[resource]
+script = ExtResource("2_sbb3f")
+BurbujasCuerpo = ExtResource("1_2lubo")
+Barbas = Array[Texture]([])
+Lentes = Array[Texture]([ExtResource("5_mvyss"), ExtResource("6_pe7rb"), ExtResource("7_ti0sd")])
+Gorros = Array[Texture]([ExtResource("2_25p3n"), ExtResource("3_13spx"), ExtResource("4_joex5")])
+Level = 5
+minPrice = 900
+maxPrice = 5000
+Modificadores = Array[ExtResource("1_sd58p")]([ExtResource("9_xfkl7"), ExtResource("10_hwbeh")])
+Nombres = ExtResource("9_ugp37")

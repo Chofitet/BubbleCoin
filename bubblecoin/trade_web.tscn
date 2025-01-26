@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dg2lbykb8kif3"]
+[gd_scene load_steps=33 format=3 uid="uid://dg2lbykb8kif3"]
 
 [ext_resource type="Script" path="res://Scenes/Web_Window/web_window_Controller.gd" id="1_nseh8"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/BuySellTabGroup.gd" id="2_ammik"]
@@ -18,8 +18,42 @@
 [ext_resource type="Texture2D" uid="uid://rbtstejg77l" path="res://Sprites/Ads/Escoba 0 km.png" id="16_hdvx0"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/MarketManager.gd" id="17_anypq"]
 [ext_resource type="Script" path="res://Scenes/Bubble/CalidadData.gd" id="18_cwig0"]
-[ext_resource type="Resource" uid="uid://d2qmkpv5e2382" path="res://Resources/calidades/Calidad1.tres" id="19_1mmfb"]
-[ext_resource type="Resource" uid="uid://b1vp177e1vlb3" path="res://Resources/calidades/Calidad2.tres" id="20_vtvo3"]
+[ext_resource type="Texture2D" uid="uid://bs8yftn2u1xoe" path="res://Sprites/barbas/Bigote Lvl 1_01.png" id="19_f8703"]
+[ext_resource type="Texture2D" uid="uid://iiqqwrhn3ygr" path="res://Sprites/barbas/Bigote Lvl 2_01.png" id="20_rjyd4"]
+[ext_resource type="Texture2D" uid="uid://igeygl0aekvf" path="res://Sprites/BurbujaCuerpos/Bubble Lvl 2_01.png" id="21_jwjv1"]
+[ext_resource type="Texture2D" uid="uid://bmni1c5jck0mf" path="res://Sprites/Lentes/Lentes Lvl 1_01.png" id="22_jfi17"]
+[ext_resource type="Script" path="res://Scenes/Bubble/Bonificadores.gd" id="23_5oga0"]
+[ext_resource type="Resource" uid="uid://bnl47mcdxki0k" path="res://Resources/calidades/Modificadores/+2Idle.tres" id="24_04s3m"]
+[ext_resource type="Resource" uid="uid://gv16jq6h4m2m" path="res://Resources/calidades/Modificadores/x2Idle.tres" id="25_hk5hc"]
+[ext_resource type="Resource" uid="uid://b075xlx1s5hop" path="res://Resources/Nombres Aleatorios/PackNombres.tres" id="26_wiite"]
+[ext_resource type="Texture2D" uid="uid://bk7if3ep150hn" path="res://Sprites/BurbujaCuerpos/Bubble Lvl 3_01.png" id="27_s8i76"]
+[ext_resource type="Texture2D" uid="uid://dkxqbscn4skfr" path="res://Sprites/gorros/Gorro Lvl 1_01.png" id="28_1kcqg"]
+[ext_resource type="Resource" uid="uid://bvyjn3a7rdv6e" path="res://Resources/calidades/Modificadores/+10Click.tres" id="29_3y7y2"]
+[ext_resource type="Resource" uid="uid://xorvx1fvf5xy" path="res://Resources/calidades/Modificadores/x5Click.tres" id="30_6ojyx"]
+
+[sub_resource type="Resource" id="Resource_q5fkn"]
+script = ExtResource("18_cwig0")
+BurbujasCuerpo = ExtResource("21_jwjv1")
+Barbas = Array[Texture]([ExtResource("19_f8703"), ExtResource("20_rjyd4")])
+Lentes = Array[Texture]([ExtResource("22_jfi17")])
+Gorros = Array[Texture]([])
+Level = 1
+minPrice = 50
+maxPrice = 500
+Modificadores = Array[ExtResource("23_5oga0")]([ExtResource("24_04s3m"), ExtResource("25_hk5hc")])
+Nombres = ExtResource("26_wiite")
+
+[sub_resource type="Resource" id="Resource_8gpc0"]
+script = ExtResource("18_cwig0")
+BurbujasCuerpo = ExtResource("27_s8i76")
+Barbas = Array[Texture]([ExtResource("19_f8703"), ExtResource("20_rjyd4")])
+Lentes = Array[Texture]([])
+Gorros = Array[Texture]([ExtResource("28_1kcqg")])
+Level = 2
+minPrice = 10000
+maxPrice = 50000
+Modificadores = Array[ExtResource("23_5oga0")]([ExtResource("29_3y7y2"), ExtResource("30_6ojyx")])
+Nombres = ExtResource("26_wiite")
 
 [node name="Trade_Web2" type="Panel"]
 self_modulate = Color(1, 1, 1, 0)
@@ -186,8 +220,8 @@ ads = Array[Texture2D]([ExtResource("12_4yecn"), ExtResource("13_y11i5"), ExtRes
 
 [node name="MarketManager" type="Node" parent="."]
 script = ExtResource("17_anypq")
-CalidadesBubble = Array[ExtResource("18_cwig0")]([ExtResource("19_1mmfb"), ExtResource("19_1mmfb"), ExtResource("20_vtvo3"), ExtResource("20_vtvo3"), ExtResource("20_vtvo3"), ExtResource("20_vtvo3"), ExtResource("20_vtvo3"), ExtResource("20_vtvo3"), ExtResource("20_vtvo3")])
-ComunCalidad = ExtResource("19_1mmfb")
+CalidadesBubble = Array[ExtResource("18_cwig0")]([SubResource("Resource_q5fkn"), SubResource("Resource_q5fkn"), SubResource("Resource_8gpc0"), SubResource("Resource_8gpc0"), SubResource("Resource_8gpc0"), SubResource("Resource_8gpc0"), SubResource("Resource_8gpc0"), SubResource("Resource_8gpc0"), SubResource("Resource_8gpc0")])
+ComunCalidad = SubResource("Resource_q5fkn")
 probabilidades_nueva_calidad = Array[float]([25.0, 42.0, 20.0, 10.0, 3.0])
 
 [connection signal="OpenTab" from="VBoxContainer/Tabs/HBoxContainer" to="VBoxContainer/HBoxContainer/WebConteiner" method="SetWebWindow"]
