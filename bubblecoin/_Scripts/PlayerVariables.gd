@@ -20,9 +20,13 @@ var unlocked_emails: Array[int] = [0]
 
 var unlocked_tabs: Array[int] = [0,2]
 
+var ActualWeb
+
 func AddBubble(bubbleData):
 	BubbleInventory.append(bubbleData)
-	
+
+func SetActualWeb(txt):
+	ActualWeb = txt
 
 func AreInventoryFull() -> bool:
 	if BubbleInventory.size() == 6:

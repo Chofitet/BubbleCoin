@@ -1,0 +1,11 @@
+[gd_resource type="AnimatedTexture" load_steps=3 format=3 uid="uid://bnfqk8r1ii1ff"]
+
+[ext_resource type="Texture2D" uid="uid://c0ygml7ipbv6n" path="res://Sprites/UI/TX_TRADER_BASE_F1.png" id="1_3jllm"]
+[ext_resource type="Texture2D" uid="uid://c75lhx8vq0ft5" path="res://Sprites/UI/TX_TRADER_BASE_F2.png" id="2_vw7fa"]
+
+[resource]
+frames = 2
+frame_0/texture = ExtResource("1_3jllm")
+frame_0/duration = 0.2
+frame_1/texture = ExtResource("2_vw7fa")
+frame_1/duration = 0.2

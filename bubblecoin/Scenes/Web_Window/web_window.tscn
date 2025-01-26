@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://65w1bax7wqlj"]
+[gd_scene load_steps=10 format=3 uid="uid://65w1bax7wqlj"]
 
 [ext_resource type="Texture2D" uid="uid://be37561hvnr5h" path="res://Scenes/Web_Window/tab.jpg" id="1_ag27l"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/Tab_Group_Controller.gd" id="1_ms467"]
+[ext_resource type="Script" path="res://Scenes/Web_Window/web_window_Controller.gd" id="1_o7x32"]
 [ext_resource type="Texture2D" uid="uid://colupvcvyp804" path="res://Sprites/UI/SP_TAB_TRADER.png" id="2_4636o"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/TabController.gd" id="2_v1c5a"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/WebSpawner.gd" id="4_cnpws"]
@@ -16,6 +17,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_o7x32")
 
 [node name="Tab_Bar" type="Panel" parent="."]
 self_modulate = Color(1, 1, 1, 0)
@@ -45,6 +47,7 @@ texture = ExtResource("2_4636o")
 expand_mode = 3
 script = ExtResource("2_v1c5a")
 Web = ExtResource("4_jyajh")
+nameWeb = "mail"
 
 [node name="button" type="Button" parent="Tab_Bar/Tab_Controller/Tab"]
 layout_mode = 1
@@ -62,6 +65,7 @@ texture = ExtResource("2_4636o")
 expand_mode = 3
 script = ExtResource("2_v1c5a")
 Web = ExtResource("5_dalg5")
+nameWeb = "trade"
 
 [node name="button" type="Button" parent="Tab_Bar/Tab_Controller/Tab2"]
 layout_mode = 1
@@ -79,6 +83,7 @@ texture = ExtResource("2_4636o")
 expand_mode = 3
 script = ExtResource("2_v1c5a")
 Web = ExtResource("6_jri3r")
+nameWeb = "settings"
 
 [node name="button" type="Button" parent="Tab_Bar/Tab_Controller/Tab3"]
 layout_mode = 1
@@ -120,5 +125,6 @@ grow_vertical = 2
 script = ExtResource("4_cnpws")
 metadata/_edit_use_anchors_ = true
 
+[connection signal="OpenTab" from="Tab_Bar/Tab_Controller" to="." method="EmitSignalWeb"]
 [connection signal="OpenTab" from="Tab_Bar/Tab_Controller" to="Web_Conteiner" method="SetWebWindow"]
 [connection signal="ArticleSet" from="Web_Conteiner" to="Tab_Bar/Tab_Controller" method="open_article"]
