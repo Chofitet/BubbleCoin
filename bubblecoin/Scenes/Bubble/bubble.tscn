@@ -125,6 +125,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/normal = SubResource("StyleBoxTexture_1rjgv")
+disabled = true
 
 [node name="BuyPrice" type="Label" parent="HBoxContainer/MarginContainer/Control/BuyBtn"]
 layout_mode = 1
