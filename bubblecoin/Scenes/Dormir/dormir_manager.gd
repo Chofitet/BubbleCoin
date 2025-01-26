@@ -6,11 +6,18 @@ extends Control
 @onready var delay_dormir: Timer = $DelayDormir
 @onready var duracion_sue_o: Timer = $'DuracionSueño'
 
+@export var auto := true
+@export var dia = 0
+
 signal actualizar_dia
+
+func _ready() -> void:
+	if auto:
+		comenzar_sueño()
 
 #region Ciclo de sueño
 func comenzar_sueño():
-	print("El jugador tendrá sueño pronto")
+	print("El dia acaba de iniciar")
 	delay_advertencia.start()
 
 func _on_delay_advertencia_timeout() -> void:
@@ -40,8 +47,12 @@ func _on_duracion_sueño_timeout() -> void:
 func sueño_completado():
 	print("El jugador ya comenzó su día")
 	transition.out.disconnect(sueño_completado)
-	print("sueño_completado")
+	if (auto):
+		comenzar_sueño()
+	else:
+		print("sueño_completado")
 #endregion
 
 func siguiente_dia():
+	dia += 1
 	actualizar_dia.emit()
