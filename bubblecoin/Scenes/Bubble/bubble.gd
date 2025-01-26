@@ -38,6 +38,8 @@ func _process(delta: float) -> void:
 	var coins = PlayerVariables.BubbleCoins
 	if coins >= bubble_data.buy_price:
 		$BuyBtn.disabled = false
+	else:
+		$BuyBtn.disabled = true
 
 func update_sell_price() -> void:
 	$SellBtn/SellPrice.text = "Sell price: ฿ %.2f" % bubble_data.sell_price
@@ -59,7 +61,7 @@ func buy() -> void:
 	PlayerVariables.SetBubbleLevel(bubble_data.bubbleCalidad.Level)
 	MarketVariables.Remove_Bubble(bubble_data)
 	PlayerVariables.Modifies(bubble_data.bubbleCalidad.modificador)
-	PlayerVariables.addSubCoins(-bubble_data.bubbleCalidad.price)
+	PlayerVariables.addSubCoins(-bubble_data.buy_price)
 	if PlayerVariables.AreInventoryFull(): DisableButtons.emit()
 	await get_tree().create_timer(0.1).timeout
 	queue_free()
@@ -67,7 +69,7 @@ func buy() -> void:
 func sell() -> void:
 	PlayerVariables.RemoveBubble(bubble_data)
 	PlayerVariables.RemoveModifies(bubble_data.bubbleCalidad.modificador)
-	PlayerVariables.addSubCoins(bubble_data.bubbleCalidad.price)
+	PlayerVariables.addSubCoins(bubble_data.sell_price)
 	queue_free()
 
 func apply_modifier(counter):
