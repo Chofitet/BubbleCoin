@@ -8,6 +8,7 @@ extends Control
 @onready var duracion_sue_o: Timer = $'DuracionSueño'
 
 @export var auto := true
+@export var time_counter : Label
 
 func _ready() -> void:
 	if auto:
@@ -16,6 +17,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if PlayerVariables.final_activo:
 		queue_free()
+	if time_counter:
+		time_counter.text = str(ceili(delay_dormir.time_left))
+	else:
+		time_counter = %CartelDormir.count
 
 #region Ciclo de sueño
 func comenzar_sueño():
@@ -25,6 +30,7 @@ func comenzar_sueño():
 func _on_delay_advertencia_timeout() -> void:
 	# Comienza el delay antes de que el jugador se duerma
 	print("El jugador esta por dormirse")
+	%CartelDormir.aparecer()
 	delay_dormir.start()
 
 func _on_delay_dormir_timeout() -> void:
@@ -36,6 +42,7 @@ func _on_delay_dormir_timeout() -> void:
 func dormido():
 	# REINICIO DE TODO
 	siguiente_dia()
+	%CartelDormir.desaparecer()
 	print("Pasó un nuevo día")
 	transition.enter.disconnect(dormido)
 	duracion_sue_o.start()
