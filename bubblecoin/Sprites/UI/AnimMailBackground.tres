@@ -1,0 +1,11 @@
+[gd_resource type="AnimatedTexture" load_steps=3 format=3 uid="uid://ceudd6eaejsel"]
+
+[ext_resource type="Texture2D" uid="uid://bc58s8mp3meyt" path="res://Sprites/UI/MAIL/TX_MAIL_BASE_F1.png" id="1_67sm3"]
+[ext_resource type="Texture2D" uid="uid://31hmblftbpj1" path="res://Sprites/UI/MAIL/TX_MAIL_BASE_F2.png" id="2_hso61"]
+
+[resource]
+frames = 2
+frame_0/texture = ExtResource("1_67sm3")
+frame_0/duration = 0.2
+frame_1/texture = ExtResource("2_hso61")
+frame_1/duration = 0.2

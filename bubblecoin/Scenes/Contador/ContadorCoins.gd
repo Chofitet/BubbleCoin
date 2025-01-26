@@ -1,6 +1,8 @@
 extends Control
 
 @export var label : Label
+@export var btnClick : Texture
+@export var btnIdle : Texture
 
 func _ready() -> void:
 	$Clicker.pressed.connect(_on_clicker_click)
@@ -23,6 +25,9 @@ func _on_clicker_click() -> void:
 	print("click")
 	var coins_por_click = PlayerVariables.AdicionClicker * PlayerVariables.MultiplicadorClicker
 	obtener_coins(coins_por_click)
+	$TextureRect.texture = btnClick
+	await get_tree().create_timer(0.2).timeout
+	$TextureRect.texture = btnIdle
 
 func _on_burbujero_generar_burbujas() -> void:
 	var coins_por_bubujero = PlayerVariables.AdicionIdle * PlayerVariables.MultiplicadorIdle
