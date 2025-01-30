@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://c0j8un1yi7won" path="res://Scenes/Dormir/dormir_manager.tscn" id="7_tgfjh"]
 [ext_resource type="Texture2D" uid="uid://os4yw0qvraur" path="res://Sprites/UI/PAUSA/TX_PAUSA_BASE_F2.png" id="8_3nk5q"]
 [ext_resource type="PackedScene" uid="uid://dtie11qy1fmrt" path="res://Scenes/Finals/final_manager.tscn" id="10_ad8x7"]
-[ext_resource type="Texture2D" uid="uid://d27avgyelwtr6" path="res://Sprites/UI/BBL6000/REF_BBL6000.png" id="10_mhovl"]
+[ext_resource type="Texture2D" uid="uid://dj2jk0awo6ns7" path="res://Sprites/UI/REF_TRADER_COMPRA.png" id="10_wshnc"]
 [ext_resource type="PackedScene" uid="uid://rbljan4kgue8" path="res://Scenes/Menus/pantalla_inicio.tscn" id="11_6riax"]
 [ext_resource type="PackedScene" uid="uid://ccle73ewwwxpq" path="res://Scenes/Menus/pantalla_final.tscn" id="12_dsira"]
 [ext_resource type="PackedScene" uid="uid://cao5qu706kxm0" path="res://Scenes/Dormir/Cartel/cartel_dormir.tscn" id="13_ghivl"]
@@ -69,17 +69,11 @@ TextureAnimBubble = SubResource("AnimatedTexture_0pdpc")
 TextureSettingsBubble = SubResource("AnimatedTexture_mwh5m")
 
 [node name="Pantalla" type="Control" parent="."]
-layout_mode = 1
-anchor_left = 0.071
-anchor_top = 0.117
-anchor_right = 0.645
-anchor_bottom = 0.914
-offset_left = 0.207993
-offset_top = -16.816
-offset_right = -0.0400391
-offset_bottom = 1.72797
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+offset_left = 146.0
+offset_top = 110.0
+offset_right = 146.0
+offset_bottom = 110.0
 
 [node name="Web_Window" parent="Pantalla" instance=ExtResource("3_eqm8y")]
 layout_mode = 0
@@ -101,7 +95,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("10_mhovl")
+texture = ExtResource("10_wshnc")
 expand_mode = 1
 
 [node name="Contador_Coins" parent="." instance=ExtResource("5_p1l58")]

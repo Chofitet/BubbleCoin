@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://ciu7621gbjhoh" path="res://Sprites/Ads/Wizard Forbes_no text.png" id="10_7uib5"]
 [ext_resource type="Texture2D" uid="uid://4xxtfst5ufmt" path="res://Sprites/Ads/Saborcitos.png" id="11_gij4k"]
 [ext_resource type="LabelSettings" uid="uid://csxcrfeu5xt16" path="res://fonts/Label_GamebubleBlue.tres" id="11_qtywl"]
-[ext_resource type="Theme" uid="uid://b4r6jyts06wde" path="res://themes/buysellbutton.tres" id="12_28rfc"]
+[ext_resource type="Theme" uid="uid://b4r6jyts06wde" path="res://themes/trading.tres" id="12_28rfc"]
 [ext_resource type="Texture2D" uid="uid://cd5wprb2wco6" path="res://Sprites/Ads/Vote por Rahamaraán Tercero.png" id="12_a6cmn"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/Webs/ads.gd" id="12_ieh81"]
 [ext_resource type="Texture2D" uid="uid://c23dxwbodfc41" path="res://Sprites/Ads/Malakala.png" id="13_4v0y7"]
@@ -50,12 +50,22 @@ maxPrice = 500
 Modificadores = Array[ExtResource("27_h4qh0")]([ExtResource("28_g480n"), ExtResource("29_qg5qg")])
 Nombres = ExtResource("30_xaou1")
 
-[node name="Trade_Web" type="ReferenceRect"]
+[node name="Trade_Web" type="Control"]
 self_modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 0
 offset_right = 1080.0
 offset_bottom = 760.0
-border_width = 2.0
 script = ExtResource("1_fpikt")
+
+[node name="ReferenceRect" type="ReferenceRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+border_width = 3.0
 
 [node name="Tabs" type="Panel" parent="."]
 self_modulate = Color(1, 1, 1, 0)
@@ -80,7 +90,7 @@ offset_bottom = 89.0
 size_flags_horizontal = 3
 theme = ExtResource("12_28rfc")
 theme_override_font_sizes/font_size = 32
-text = "COMPRA"
+text = "compra"
 script = ExtResource("4_4ctcb")
 Web = ExtResource("4_oqvlr")
 nameWeb = "compra"
@@ -96,7 +106,7 @@ theme = ExtResource("12_28rfc")
 theme_type_variation = &"SellButton"
 theme_override_font_sizes/font_size = 32
 toggle_mode = true
-text = "VENTA"
+text = "venta"
 script = ExtResource("4_4ctcb")
 Web = ExtResource("5_ei5bm")
 nameWeb = "venta"
