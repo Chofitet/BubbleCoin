@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cmj2de4hlwo87"]
+
+[ext_resource type="FontFile" uid="uid://cieyqt2214xaf" path="res://fonts/FONT_GAMEBUBLE.otf" id="1_4t61k"]
+
+[resource]
+default_font = ExtResource("1_4t61k")
+default_font_size = 40

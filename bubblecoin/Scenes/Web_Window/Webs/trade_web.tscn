@@ -1,33 +1,29 @@
-[gd_scene load_steps=41 format=3 uid="uid://c5kcn8mj8vbmc"]
+[gd_scene load_steps=39 format=3 uid="uid://c5kcn8mj8vbmc"]
 
 [ext_resource type="Script" path="res://Scenes/Web_Window/web_window_Controller.gd" id="1_fpikt"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/BuySellTabGroup.gd" id="2_a3upk"]
-[ext_resource type="PackedScene" uid="uid://d2o3y845ue5dd" path="res://Scenes/CoinsCounter/coins_counter.tscn" id="2_cs7hb"]
-[ext_resource type="Script" path="res://Scenes/Web_Window/TabController.gd" id="3_yhvqc"]
-[ext_resource type="Texture2D" uid="uid://b2u4f484v1fue" path="res://Sprites/UI/SP_TRADER_BOTON.png" id="3_ywpis"]
+[ext_resource type="Script" path="res://Scenes/Web_Window/TabControllerTrading.gd" id="4_4ctcb"]
 [ext_resource type="PackedScene" uid="uid://bih2hluw54uxj" path="res://Scenes/Web_Window/Webs/Buy_web.tscn" id="4_oqvlr"]
 [ext_resource type="PackedScene" uid="uid://c5u82qfxqdit3" path="res://Scenes/Web_Window/Webs/Sell_web.tscn" id="5_ei5bm"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/WebSpawner.gd" id="6_2p82q"]
-[ext_resource type="LabelSettings" uid="uid://cgewloggi6i7e" path="res://fonts/Label_GamebublevERDE.tres" id="6_8buce"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/MarketManager.gd" id="7_suktn"]
+[ext_resource type="Script" path="res://Scenes/Web_Window/Webs/CoinsCounter.gd" id="8_iqr0e"]
 [ext_resource type="Script" path="res://Scenes/Bubble/CalidadData.gd" id="8_th6xu"]
-[ext_resource type="LabelSettings" uid="uid://bukwinkmrytsr" path="res://fonts/Label_GamebublemARRON.tres" id="8_uieuh"]
 [ext_resource type="Script" path="res://Scenes/RefreshBTN/refresh_btn.gd" id="9_nrrwf"]
 [ext_resource type="Texture2D" uid="uid://ciu7621gbjhoh" path="res://Sprites/Ads/Wizard Forbes_no text.png" id="10_7uib5"]
-[ext_resource type="StyleBox" uid="uid://bfeo3sqrlhulw" path="res://BTNStyles/btnmORADO.tres" id="11_aiupu"]
 [ext_resource type="Texture2D" uid="uid://4xxtfst5ufmt" path="res://Sprites/Ads/Saborcitos.png" id="11_gij4k"]
 [ext_resource type="LabelSettings" uid="uid://csxcrfeu5xt16" path="res://fonts/Label_GamebubleBlue.tres" id="11_qtywl"]
-[ext_resource type="StyleBox" uid="uid://bjkb8dpkdorao" path="res://BTNStyles/btnmORADODisable.tres" id="11_unytb"]
+[ext_resource type="Theme" uid="uid://b4r6jyts06wde" path="res://themes/buysellbutton.tres" id="12_28rfc"]
 [ext_resource type="Texture2D" uid="uid://cd5wprb2wco6" path="res://Sprites/Ads/Vote por Rahamaraán Tercero.png" id="12_a6cmn"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/Webs/ads.gd" id="12_ieh81"]
 [ext_resource type="Texture2D" uid="uid://c23dxwbodfc41" path="res://Sprites/Ads/Malakala.png" id="13_4v0y7"]
 [ext_resource type="Texture2D" uid="uid://rbtstejg77l" path="res://Sprites/Ads/Escoba 0 km.png" id="14_a2q43"]
 [ext_resource type="Texture2D" uid="uid://bs8yftn2u1xoe" path="res://Sprites/barbas/Bigote Lvl 1_01.png" id="23_n0744"]
-[ext_resource type="Resource" uid="uid://blngjimdhdbef" path="res://Resources/calidades/calidad0.tres" id="23_xq5im"]
+[ext_resource type="Resource" uid="uid://blngjimdhdbef" path="res://Resources/calidades/Calidad0.tres" id="23_xq5im"]
 [ext_resource type="Texture2D" uid="uid://iiqqwrhn3ygr" path="res://Sprites/barbas/Bigote Lvl 2_01.png" id="24_emmkv"]
-[ext_resource type="Resource" uid="uid://dbgtoy8y1cqx2" path="res://Resources/calidades/calidad1.tres" id="24_gd1mq"]
+[ext_resource type="Resource" uid="uid://dbgtoy8y1cqx2" path="res://Resources/calidades/Calidad1.tres" id="24_gd1mq"]
 [ext_resource type="Texture2D" uid="uid://igeygl0aekvf" path="res://Sprites/BurbujaCuerpos/Bubble Lvl 2_01.png" id="25_4ddg4"]
-[ext_resource type="Resource" uid="uid://badtg2g0xsfsg" path="res://Resources/calidades/calidad2.tres" id="25_n752t"]
+[ext_resource type="Resource" uid="uid://badtg2g0xsfsg" path="res://Resources/calidades/Calidad2.tres" id="25_n752t"]
 [ext_resource type="Texture2D" uid="uid://bmni1c5jck0mf" path="res://Sprites/Lentes/Lentes Lvl 1_01.png" id="26_dh836"]
 [ext_resource type="Resource" uid="uid://cek1qx0h7jwjy" path="res://Resources/calidades/calidad3.tres" id="26_s5dor"]
 [ext_resource type="Resource" uid="uid://dv5n3jj8g71em" path="res://Resources/calidades/calidad4.tres" id="27_e8f0q"]
@@ -39,6 +35,8 @@
 [ext_resource type="Resource" uid="uid://b075xlx1s5hop" path="res://Resources/Nombres Aleatorios/PackNombres.tres" id="30_xaou1"]
 [ext_resource type="Resource" uid="uid://crsmqulmebdp0" path="res://Resources/calidades/calidad7.tres" id="30_xr0ar"]
 [ext_resource type="Resource" uid="uid://c6wgj37re2of3" path="res://Resources/calidades/calidad8.tres" id="31_qat1q"]
+[ext_resource type="Texture2D" uid="uid://d27avgyelwtr6" path="res://Sprites/UI/BBL6000/REF_BBL6000.png" id="40_pc7fv"]
+[ext_resource type="Texture2D" uid="uid://dj2jk0awo6ns7" path="res://Sprites/UI/REF_TRADER_COMPRA.png" id="41_6kx5e"]
 
 [sub_resource type="Resource" id="Resource_q5fkn"]
 script = ExtResource("8_th6xu")
@@ -52,212 +50,129 @@ maxPrice = 500
 Modificadores = Array[ExtResource("27_h4qh0")]([ExtResource("28_g480n"), ExtResource("29_qg5qg")])
 Nombres = ExtResource("30_xaou1")
 
-[node name="Trade_Web" type="Panel"]
+[node name="Trade_Web" type="ReferenceRect"]
 self_modulate = Color(1, 1, 1, 0)
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_right = 1080.0
+offset_bottom = 760.0
+border_width = 2.0
 script = ExtResource("1_fpikt")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Control2" type="Control" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.02
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.15
-
-[node name="Tabs" type="Panel" parent="VBoxContainer/HBoxContainer2"]
+[node name="Tabs" type="Panel" parent="."]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
+offset_top = 16.0
+offset_right = 645.0
+offset_bottom = 112.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.12
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer2/Tabs"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="HBoxContainer" type="Control" parent="Tabs"]
+anchors_preset = 0
 script = ExtResource("2_a3upk")
 
-[node name="CompraBTN" type="TextureRect" parent="VBoxContainer/HBoxContainer2/Tabs/HBoxContainer"]
-self_modulate = Color(0.192157, 0.870588, 0.478431, 1)
+[node name="CompraBTN" type="Button" parent="Tabs/HBoxContainer"]
 layout_mode = 2
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 195.0
+offset_bottom = 89.0
 size_flags_horizontal = 3
-texture = ExtResource("3_ywpis")
-expand_mode = 2
-script = ExtResource("3_yhvqc")
+theme = ExtResource("12_28rfc")
+theme_override_font_sizes/font_size = 32
+text = "COMPRA"
+script = ExtResource("4_4ctcb")
 Web = ExtResource("4_oqvlr")
 nameWeb = "compra"
 
-[node name="button" type="Button" parent="VBoxContainer/HBoxContainer2/Tabs/HBoxContainer/CompraBTN"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-flat = true
-
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2/Tabs/HBoxContainer/CompraBTN"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "COMPRA"
-label_settings = ExtResource("6_8buce")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="VentaBTN" type="TextureRect" parent="VBoxContainer/HBoxContainer2/Tabs/HBoxContainer"]
-self_modulate = Color(0.870588, 0.6, 0.192157, 1)
+[node name="VentaBTN" type="Button" parent="Tabs/HBoxContainer"]
 layout_mode = 2
+offset_left = 237.0
+offset_top = -9.0
+offset_right = 408.0
+offset_bottom = 89.0
 size_flags_horizontal = 3
-texture = ExtResource("3_ywpis")
-expand_mode = 2
-script = ExtResource("3_yhvqc")
-Web = ExtResource("5_ei5bm")
-nameWeb = "v"
-
-[node name="button" type="Button" parent="VBoxContainer/HBoxContainer2/Tabs/HBoxContainer/VentaBTN"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-rotation = -0.00323179
-flat = true
-
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2/Tabs/HBoxContainer/VentaBTN"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
+theme = ExtResource("12_28rfc")
+theme_type_variation = &"SellButton"
+theme_override_font_sizes/font_size = 32
+toggle_mode = true
 text = "VENTA"
-label_settings = ExtResource("8_uieuh")
-horizontal_alignment = 1
+script = ExtResource("4_4ctcb")
+Web = ExtResource("5_ei5bm")
+nameWeb = "venta"
+
+[node name="Coins" type="Label" parent="."]
+layout_mode = 0
+offset_left = 701.0
+offset_top = 9.0
+offset_right = 1047.0
+offset_bottom = 98.0
+theme = ExtResource("12_28rfc")
+theme_override_font_sizes/font_size = 51
+text = "9999"
+horizontal_alignment = 2
 vertical_alignment = 1
+script = ExtResource("8_iqr0e")
 
-[node name="CoinsCounter" parent="VBoxContainer/HBoxContainer2" instance=ExtResource("2_cs7hb")]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.08
-
-[node name="Control" type="Control" parent="VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.01
-
-[node name="Control" type="Control" parent="VBoxContainer"]
-visible = false
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.07
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="Control" type="Control" parent="VBoxContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.05
-
-[node name="WebConteiner" type="Panel" parent="VBoxContainer/HBoxContainer"]
+[node name="WebConteiner" type="Panel" parent="."]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
+offset_left = 14.0
+offset_top = 117.0
+offset_right = 803.0
+offset_bottom = 770.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.33
 script = ExtResource("6_2p82q")
 
-[node name="RigthPanel" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="."]
 layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/RigthPanel"]
-layout_mode = 2
+offset_left = 846.0
+offset_top = 177.0
+offset_right = 1006.0
+offset_bottom = 195.0
 text = "REFRESCA TUS BUBBLES"
 label_settings = ExtResource("11_qtywl")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/RigthPanel"]
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.42
-
-[node name="RefresBtn" type="Button" parent="VBoxContainer/HBoxContainer/RigthPanel/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_styles/disabled = ExtResource("11_unytb")
-theme_override_styles/hover = ExtResource("11_aiupu")
-theme_override_styles/pressed = ExtResource("11_aiupu")
-theme_override_styles/normal = ExtResource("11_aiupu")
+[node name="RefresBtn" type="Button" parent="."]
+layout_mode = 0
+offset_left = 819.0
+offset_top = 226.0
+offset_right = 1038.0
+offset_bottom = 326.0
+theme = ExtResource("12_28rfc")
+theme_type_variation = &"RefreshButton"
 script = ExtResource("9_nrrwf")
 web = ExtResource("4_oqvlr")
 
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/RigthPanel/VBoxContainer/RefresBtn"]
+[node name="Label" type="Label" parent="RefresBtn"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 27.0
-offset_top = 18.0
-offset_right = -27.0
-offset_bottom = -18.0
+offset_left = 104.0
+offset_top = 25.0
+offset_right = -32.0
+offset_bottom = -22.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_font_sizes/font_size = 45
 text = "10"
-horizontal_alignment = 1
+horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="Ads" type="TextureRect" parent="VBoxContainer/HBoxContainer/RigthPanel"]
+[node name="Ads" type="TextureRect" parent="."]
 layout_mode = 2
+offset_left = 811.0
+offset_top = 340.0
+offset_right = 1051.0
+offset_bottom = 767.0
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
-expand_mode = 4
+expand_mode = 1
+stretch_mode = 5
 script = ExtResource("12_ieh81")
 ads = Array[Texture2D]([ExtResource("11_gij4k"), ExtResource("10_7uib5"), ExtResource("12_a6cmn"), ExtResource("13_4v0y7"), ExtResource("14_a2q43")])
-
-[node name="Control" type="Control" parent="VBoxContainer/HBoxContainer/RigthPanel"]
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.06
-
-[node name="Control2" type="Control" parent="VBoxContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.05
 
 [node name="MarketManager" type="Node" parent="."]
 script = ExtResource("7_suktn")
@@ -265,6 +180,28 @@ CalidadesBubble = Array[ExtResource("8_th6xu")]([ExtResource("23_xq5im"), ExtRes
 ComunCalidad = SubResource("Resource_q5fkn")
 probabilidades_nueva_calidad = Array[float]([25.0, 42.0, 20.0, 10.0, 3.0])
 
-[connection signal="OpenTab" from="VBoxContainer/HBoxContainer2/Tabs/HBoxContainer" to="VBoxContainer/HBoxContainer/WebConteiner" method="SetWebWindow"]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer/RigthPanel/VBoxContainer/RefresBtn" to="MarketManager" method="CompleteWithRandomBubbles"]
-[connection signal="webResearch" from="VBoxContainer/HBoxContainer/RigthPanel/VBoxContainer/RefresBtn" to="VBoxContainer/HBoxContainer/WebConteiner" method="SetWebWindow"]
+[node name="refe" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -158.0
+offset_top = -184.0
+offset_right = 1762.0
+offset_bottom = 896.0
+texture = ExtResource("40_pc7fv")
+expand_mode = 1
+
+[node name="refe2" type="TextureRect" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.498039)
+layout_mode = 0
+offset_left = -158.0
+offset_top = -184.0
+offset_right = 1762.0
+offset_bottom = 896.0
+texture = ExtResource("41_6kx5e")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[connection signal="OpenTab" from="Tabs/HBoxContainer" to="WebConteiner" method="SetWebWindow"]
+[connection signal="pressed" from="RefresBtn" to="MarketManager" method="CompleteWithRandomBubbles"]
+[connection signal="webResearch" from="RefresBtn" to="WebConteiner" method="SetWebWindow"]

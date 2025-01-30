@@ -1,15 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://b43amscl2xy2c"]
+[gd_scene load_steps=6 format=3 uid="uid://b43amscl2xy2c"]
 
 [ext_resource type="Script" path="res://Scenes/Contador/ContadorCoins.gd" id="1_mdkp7"]
 [ext_resource type="PackedScene" uid="uid://b8tlqr6cl0jac" path="res://Scenes/Contador/Clicker/clicker.tscn" id="2_cynuy"]
+[ext_resource type="Texture2D" uid="uid://d1cjh7uapl5ur" path="res://Sprites/UI/SP_CLICKER_ON.png" id="2_her1w"]
 [ext_resource type="PackedScene" uid="uid://dp83p1usertis" path="res://Scenes/Contador/Clicker/burbujero.tscn" id="3_3h8o3"]
 [ext_resource type="Texture2D" uid="uid://bs6bcyv81hfke" path="res://Sprites/UI/SP_CLICKER_OFF.png" id="4_momo1"]
 
 [node name="Contador_Bubbles" type="Control" node_paths=PackedStringArray("label")]
 layout_mode = 3
 anchors_preset = 0
+offset_right = 200.0
+offset_bottom = 200.0
 script = ExtResource("1_mdkp7")
 label = NodePath("Label")
+btnClick = ExtResource("2_her1w")
+btnIdle = ExtResource("4_momo1")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -20,8 +25,9 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_momo1")
 expand_mode = 1
+stretch_mode = 4
 
-[node name="Clicker" parent="." instance=ExtResource("2_cynuy")]
+[node name="Clicker" parent="TextureRect" instance=ExtResource("2_cynuy")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -42,5 +48,5 @@ offset_bottom = 23.0
 text = "NUMERO
 "
 
-[connection signal="click" from="Clicker" to="." method="_on_clicker_click"]
+[connection signal="click" from="TextureRect/Clicker" to="." method="_on_clicker_click"]
 [connection signal="generar_burbujas" from="Burbujero" to="." method="_on_burbujero_generar_burbujas"]

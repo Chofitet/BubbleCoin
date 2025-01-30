@@ -5,7 +5,7 @@ extends Control
 @export var btnIdle : Texture
 
 func _ready() -> void:
-	$Clicker.pressed.connect(_on_clicker_click)
+	$TextureRect/Clicker.pressed.connect(_on_clicker_click)
 
 func _process(delta: float) -> void:
 	set_label()

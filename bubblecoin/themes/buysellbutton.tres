@@ -1,0 +1,27 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://b4r6jyts06wde"]
+
+[ext_resource type="FontFile" uid="uid://cieyqt2214xaf" path="res://fonts/FONT_GAMEBUBLE.otf" id="1_4otm6"]
+[ext_resource type="StyleBox" uid="uid://dul6amb3g8iri" path="res://BTNStyles/btnVerde.tres" id="3_yxleb"]
+[ext_resource type="StyleBox" uid="uid://c4dq7x0yp4phv" path="res://BTNStyles/btnVerdedISABLE.tres" id="4_m5tbw"]
+[ext_resource type="StyleBox" uid="uid://bfeo3sqrlhulw" path="res://BTNStyles/btnmORADO.tres" id="5_xjs5k"]
+[ext_resource type="StyleBox" uid="uid://bjkb8dpkdorao" path="res://BTNStyles/btnmORADODisable.tres" id="6_ptddq"]
+[ext_resource type="StyleBox" uid="uid://c2s0rwb4myruj" path="res://BTNStyles/btnMarron.tres" id="6_ryp4p"]
+
+[resource]
+Button/colors/font_color = Color(0.815686, 0.988235, 0.0901961, 1)
+Button/colors/font_disabled_color = Color(0.815686, 0.988235, 0.0901961, 0.823529)
+Button/colors/icon_normal_color = Color(0.815686, 0.988235, 0.0901961, 1)
+Button/constants/icon_max_width = 36
+Button/font_sizes/font_size = 26
+Button/fonts/font = ExtResource("1_4otm6")
+Button/styles/disabled = ExtResource("4_m5tbw")
+Button/styles/normal = ExtResource("3_yxleb")
+Label/colors/font_color = Color(0.815686, 0.988235, 0.0901961, 1)
+Label/font_sizes/font_size = 24
+Label/fonts/font = ExtResource("1_4otm6")
+RefreshButton/base_type = &"Button"
+RefreshButton/styles/disabled = ExtResource("6_ptddq")
+RefreshButton/styles/normal = ExtResource("5_xjs5k")
+SellButton/base_type = &"Button"
+SellButton/colors/font_color = Color(0.988235, 0.94902, 0.603922, 1)
+SellButton/styles/normal = ExtResource("6_ryp4p")

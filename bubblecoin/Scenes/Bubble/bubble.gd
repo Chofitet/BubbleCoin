@@ -1,9 +1,12 @@
 class_name Bubble
-extends MarginContainer
+extends Control
 
 const bubbleScene = preload("res://Scenes/Bubble/bubble.tscn")
 
 @export var bubble_data : BubbleData
+
+const modifier_icon_idle = preload("uid://b44tlbxvufmxk")
+const modifier_icon_click = preload("uid://d1cc73dviqote")
 
 signal DisableButtons
 
@@ -15,8 +18,8 @@ static func new_bubble(_bubbleData : BubbleData, in_inventory: bool) -> Bubble:
 	return bubble
 
 func set_in_inventory(in_inventory: bool) -> void:
-	$HBoxContainer/MarginContainer/VBoxContainer/Control/BuyBtn.visible = not in_inventory
-	$HBoxContainer/MarginContainer/VBoxContainer/Control/SellBtn.visible = in_inventory
+	%BuyButton.visible = not in_inventory
+	%SellButton.visible = in_inventory
 
 func set_bubble_data(bubbleData : BubbleData) -> void:
 	bubble_data = bubbleData
@@ -25,9 +28,12 @@ func set_bubble_data(bubbleData : BubbleData) -> void:
 	set_name_description(bubbleData.bubbleCalidad.name, bubbleData.bubbleCalidad.modificador.ModifyDescription)
 	Set_Estetica(bubbleData.bubbleCalidad)
 
+static func format_price(price: float) -> String:
+	return "%.2f   " % price
+
 func set_buy_price(price) -> void:
 	bubble_data.buy_price = price
-	$HBoxContainer/MarginContainer/VBoxContainer/Control/BuyBtn/BuyPrice.text = "%.2f" % bubble_data.buy_price
+	%BuyButton.text = format_price(bubble_data.buy_price)
 
 func set_sell_price(price) -> void:
 	bubble_data.sell_price = price
@@ -37,25 +43,33 @@ func _process(delta: float) -> void:
 	update_sell_price()
 	var coins = PlayerVariables.BubbleCoins
 	if coins >= bubble_data.buy_price:
-		$HBoxContainer/MarginContainer/VBoxContainer/Control/BuyBtn.disabled = false
+		%BuyButton.disabled = false
 	else:
-		$HBoxContainer/MarginContainer/VBoxContainer/Control/BuyBtn.disabled = true
+		%BuyButton.disabled = true
 
 func update_sell_price() -> void:
-	$HBoxContainer/MarginContainer/VBoxContainer/Control/SellBtn/SellPrice.text = "%.2f" % bubble_data.sell_price
+	%SellButton.text = format_price(bubble_data.sell_price)
 
 func set_name_description(_name : String, description):
 	bubble_data.bubble_name = _name
 	bubble_data.modifier_description = description
-	$HBoxContainer/MarginContainer/VBoxContainer/name.text = "\n".join(_name.split(" "))
-	$HBoxContainer/MarginContainer/VBoxContainer/ModifierDescription.text = description
+	# this will break with titles that have a space in between
+	var name_parts = _name.split(" ")
+	print(name_parts)
+	%Name.text = "[p align=left]%s[/p]\n[p align=center]%s[/p]\n[p align=right]%s[/p]" % [name_parts[0], name_parts[1], name_parts[2]]
+	print(%Name.text)
+	var modificador = bubble_data.bubbleCalidad.modificador
+	if (modificador.ModifierType.contains("Idle")):
+		%ModifierType.texture = modifier_icon_idle
+	else:
+		%ModifierType.texture = modifier_icon_click
+	%ModifierDescription.text = str(max(modificador.AdicionadorClick, modificador.AdicionadorIdle, modificador.MultiplicadorClick, modificador.MultiplicadorIdle))
 
 func Set_Estetica(BubbleEstetica):
-	$HBoxContainer/Panel/HBoxContainer/VBoxContainer/BubbleTexture/TextureRect.texture = BubbleEstetica.BurbujasCuerpo
-	print(BubbleEstetica.BurbujasCuerpo)
-	$HBoxContainer/Panel/HBoxContainer/VBoxContainer/BubbleTexture/Cosmetics/Lente.texture = BubbleEstetica.lente
-	$HBoxContainer/Panel/HBoxContainer/VBoxContainer/BubbleTexture/Cosmetics/Gorro.texture = BubbleEstetica.gorro
-	$HBoxContainer/Panel/HBoxContainer/VBoxContainer/BubbleTexture/Cosmetics/Barba.texture = BubbleEstetica.barba
+	%Burbuja.texture = BubbleEstetica.BurbujasCuerpo
+	%Lente.texture = BubbleEstetica.lente
+	%Gorro.texture = BubbleEstetica.gorro
+	%Barba.texture = BubbleEstetica.barba
 
 func buy() -> void:
 	PlayerVariables.AddBubble(bubble_data)
@@ -78,4 +92,4 @@ func apply_modifier(counter):
 	counter.addition +=  bubble_data.addition
 
 func DisableEnableBubble(x):
-	$Disable.visible = x
+	%Disable.visible = x

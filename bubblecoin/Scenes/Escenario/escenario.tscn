@@ -1,22 +1,19 @@
-[gd_scene load_steps=26 format=3 uid="uid://twbqfw2t33fc"]
+[gd_scene load_steps=23 format=3 uid="uid://twbqfw2t33fc"]
 
 [ext_resource type="Texture2D" uid="uid://pbhlufe76kw1" path="res://Sprites/UI/fondo.png" id="1_lg1o1"]
 [ext_resource type="Texture2D" uid="uid://bnfqk8r1ii1ff" path="res://Sprites/UI/AnimCompraBackground.tres" id="2_vwgx1"]
 [ext_resource type="PackedScene" uid="uid://65w1bax7wqlj" path="res://Scenes/Web_Window/web_window.tscn" id="3_eqm8y"]
-[ext_resource type="Texture2D" uid="uid://drgbcysfs5kii" path="res://Scenes/Escenario/CapturaEscenario.png" id="3_kyd6h"]
 [ext_resource type="Script" path="res://_Scripts/texture_back_ground_Controller.gd" id="4_ip1yt"]
 [ext_resource type="Texture2D" uid="uid://ceudd6eaejsel" path="res://Sprites/UI/AnimMailBackground.tres" id="4_ukyyw"]
 [ext_resource type="Texture2D" uid="uid://b7glujwfx7i8h" path="res://Sprites/UI/BBL6000/TX_BBL6000_BASE_F1.png" id="5_gf27b"]
 [ext_resource type="PackedScene" uid="uid://b43amscl2xy2c" path="res://Scenes/Contador/contador_coins.tscn" id="5_p1l58"]
 [ext_resource type="Texture2D" uid="uid://ccluc68tek0og" path="res://Sprites/UI/BBL6000/TX_BBL6000_BASE_F2.png" id="6_l12kk"]
-[ext_resource type="Texture2D" uid="uid://ulhxbfxuc2fm" path="res://Sprites/UI/PAUSA/REF_PAUSA.png" id="6_po5de"]
 [ext_resource type="PackedScene" uid="uid://umo188trkdoi" path="res://Scenes/Dormir/Transicion/transition.tscn" id="6_xp8mb"]
 [ext_resource type="Texture2D" uid="uid://b6bgjq7kjt5tg" path="res://Sprites/UI/PAUSA/TX_PAUSA_BASE_F1.png" id="7_dbtmg"]
 [ext_resource type="PackedScene" uid="uid://c0j8un1yi7won" path="res://Scenes/Dormir/dormir_manager.tscn" id="7_tgfjh"]
 [ext_resource type="Texture2D" uid="uid://os4yw0qvraur" path="res://Sprites/UI/PAUSA/TX_PAUSA_BASE_F2.png" id="8_3nk5q"]
-[ext_resource type="Texture2D" uid="uid://d1cjh7uapl5ur" path="res://Sprites/UI/SP_CLICKER_ON.png" id="8_v1udh"]
-[ext_resource type="Texture2D" uid="uid://bs6bcyv81hfke" path="res://Sprites/UI/SP_CLICKER_OFF.png" id="9_cth2s"]
 [ext_resource type="PackedScene" uid="uid://dtie11qy1fmrt" path="res://Scenes/Finals/final_manager.tscn" id="10_ad8x7"]
+[ext_resource type="Texture2D" uid="uid://d27avgyelwtr6" path="res://Sprites/UI/BBL6000/REF_BBL6000.png" id="10_mhovl"]
 [ext_resource type="PackedScene" uid="uid://rbljan4kgue8" path="res://Scenes/Menus/pantalla_inicio.tscn" id="11_6riax"]
 [ext_resource type="PackedScene" uid="uid://ccle73ewwwxpq" path="res://Scenes/Menus/pantalla_final.tscn" id="12_dsira"]
 [ext_resource type="PackedScene" uid="uid://cao5qu706kxm0" path="res://Scenes/Dormir/Cartel/cartel_dormir.tscn" id="13_ghivl"]
@@ -54,7 +51,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_lg1o1")
-expand_mode = 2
 
 [node name="TextureBackGround" type="TextureRect" parent="."]
 layout_mode = 1
@@ -63,6 +59,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_vwgx1")
 expand_mode = 1
 script = ExtResource("4_ip1yt")
 TextureAnimCompra = ExtResource("2_vwgx1")
@@ -71,54 +68,30 @@ TextureAnimMail = ExtResource("4_ukyyw")
 TextureAnimBubble = SubResource("AnimatedTexture_0pdpc")
 TextureSettingsBubble = SubResource("AnimatedTexture_mwh5m")
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="TextureRect" type="TextureRect" parent="Control"]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("3_kyd6h")
-expand_mode = 1
-
-[node name="Pantalla" type="Control" parent="Control"]
+[node name="Pantalla" type="Control" parent="."]
 layout_mode = 1
 anchor_left = 0.071
 anchor_top = 0.117
 anchor_right = 0.645
 anchor_bottom = 0.914
-offset_left = 0.208
+offset_left = 0.207993
 offset_top = -16.816
 offset_right = -0.0400391
 offset_bottom = 1.72797
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Web_Window" parent="Control/Pantalla" instance=ExtResource("3_eqm8y")]
-layout_mode = 1
-anchors_preset = -1
-
-[node name="Control2" type="Control" parent="."]
-layout_mode = 1
-anchor_left = 1.0
-anchor_top = 0.546
-anchor_right = 1.0
-anchor_bottom = 0.546
-offset_left = -76.0
-offset_top = 0.191986
-offset_right = -76.0
-offset_bottom = 0.191986
+[node name="Web_Window" parent="Pantalla" instance=ExtResource("3_eqm8y")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 11.0
+offset_top = -10.0
+offset_right = 11.0
+offset_bottom = -10.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="refe" type="TextureRect" parent="."]
 visible = false
@@ -126,52 +99,53 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -1.0
-offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("6_po5de")
+texture = ExtResource("10_mhovl")
 expand_mode = 1
 
 [node name="Contador_Coins" parent="." instance=ExtResource("5_p1l58")]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.751
-anchor_top = 0.627
-anchor_right = 0.87
-anchor_bottom = 0.855
-offset_left = 71.848
-offset_top = -2.29602
-offset_right = 72.7599
-offset_bottom = -63.04
-grow_horizontal = 0
-grow_vertical = 2
+offset_left = 1561.0
+offset_top = 679.0
+offset_right = 1777.0
+offset_bottom = 825.0
 rotation = 1.09269
-btnClick = ExtResource("8_v1udh")
-btnIdle = ExtResource("9_cth2s")
 
 [node name="CartelDormir" parent="." instance=ExtResource("13_ghivl")]
 unique_name_in_owner = true
 layout_mode = 1
-offset_left = 396.0
-offset_top = -249.0
-offset_right = 436.0
-offset_bottom = -209.0
+offset_left = 1408.0
+offset_top = 70.0
+offset_right = 1448.0
+offset_bottom = 110.0
 
 [node name="Transition" parent="." instance=ExtResource("6_xp8mb")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 
 [node name="DormirManager" parent="." instance=ExtResource("7_tgfjh")]
 unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_right = 0.0
+offset_bottom = 0.0
 mouse_filter = 1
 
 [node name="FinalManager" parent="." instance=ExtResource("10_ad8x7")]
 unique_name_in_owner = true
-layout_mode = 1
+visible = false
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="PantallaInicio" parent="." instance=ExtResource("11_6riax")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 
 [node name="PantallaFinal" parent="." instance=ExtResource("12_dsira")]
@@ -188,4 +162,4 @@ stream = ExtResource("18_x2y2x")
 volume_db = -6.995
 script = ExtResource("19_5ttrm")
 
-[connection signal="ChangeWeb" from="Control/Pantalla/Web_Window" to="TextureBackGround" method="ChangeWeb"]
+[connection signal="ChangeWeb" from="Pantalla/Web_Window" to="TextureBackGround" method="ChangeWeb"]

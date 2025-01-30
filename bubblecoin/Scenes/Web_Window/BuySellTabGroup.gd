@@ -1,10 +1,10 @@
-extends HBoxContainer
+extends Control
 
 var tabsArray =[]
 signal OpenTab
 func _ready() -> void:
 	for tab in get_children():
-		if tab is TextureRect:
+		if tab is Button:
 			tab.TabPress.connect(tabPressed)
 			tabsArray.append(tab)
 

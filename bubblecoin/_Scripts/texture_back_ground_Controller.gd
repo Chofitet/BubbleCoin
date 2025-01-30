@@ -10,7 +10,7 @@ func _process(delta: float) -> void:
 	var web = PlayerVariables.ActualWeb
 	if web == "compra":
 		texture = TextureAnimCompra
-	elif  web == "venta":
+	elif web == "venta":
 		texture = TextureAnimVenta
 	elif web == "trade":
 		texture = TextureAnimVenta
