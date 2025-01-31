@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://br188hfsa56ie"]
 
-[ext_resource type="Script" path="res://Scenes/Web_Window/Settings_Controller.gd" id="1_e7a3v"]
+[ext_resource type="Script" path="res://Scenes/Web_Window/Webs/Settings/Settings_Controller.gd" id="1_e7a3v"]
 [ext_resource type="Texture2D" uid="uid://b2u4f484v1fue" path="res://Sprites/UI/SP_TRADER_BOTON.png" id="2_8a174"]
 
 [node name="Settings_Web" type="Panel"]

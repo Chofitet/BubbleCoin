@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://baoochsn4ef2b"]
 
 [ext_resource type="Texture2D" uid="uid://be37561hvnr5h" path="res://Scenes/Web_Window/tab.jpg" id="1_thyw4"]
-[ext_resource type="Script" path="res://Scenes/Web_Window/ravenmail_email_button.gd" id="2_32p88"]
+[ext_resource type="Script" path="res://Scenes/Web_Window/Webs/Ravenmail/ravenmail_email_button.gd" id="2_32p88"]
 
 [node name="estimadoArkhar" type="TextureRect"]
 self_modulate = Color(0.662745, 0.662745, 0.662745, 1)

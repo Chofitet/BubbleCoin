@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bih2hluw54uxj"]
+[gd_scene load_steps=2 format=3 uid="uid://c5u82qfxqdit3"]
 
-[ext_resource type="Script" path="res://Scenes/Web_Window/Webs/GridBubbleBuySpawner.gd" id="1_m3hxi"]
+[ext_resource type="Script" path="res://Scenes/Web_Window/Webs/Trading/grid_bubbles_Setter.gd" id="1_08fnr"]
 
-[node name="Buy_Web" type="Control"]
+[node name="Sell_Web" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -19,14 +19,16 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 11
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
 
 [node name="GridBubbles" type="GridContainer" parent="MarginContainer"]
 layout_mode = 2
-theme_override_constants/h_separation = 8
-theme_override_constants/v_separation = 8
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 16
 columns = 2
-script = ExtResource("1_m3hxi")
+script = ExtResource("1_08fnr")
 
 [node name="Control" type="Control" parent="MarginContainer/GridBubbles"]
 layout_mode = 2

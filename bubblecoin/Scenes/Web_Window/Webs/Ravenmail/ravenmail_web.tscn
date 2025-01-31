@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://qlbjd1hi37g0"]
 
-[ext_resource type="Script" path="res://Scenes/Web_Window/Webs/ravenmail_web.gd" id="1_nyxuh"]
-[ext_resource type="PackedScene" uid="uid://baoochsn4ef2b" path="res://Scenes/Web_Window/Webs/ravenmail_email_button.tscn" id="2_hwebp"]
-[ext_resource type="Script" path="res://Scenes/Web_Window/Ravenmail_Controller.gd" id="2_p8nkq"]
+[ext_resource type="Script" path="res://Scenes/Web_Window/Webs/Ravenmail/ravenmail_web.gd" id="1_nyxuh"]
+[ext_resource type="PackedScene" uid="uid://baoochsn4ef2b" path="res://Scenes/Web_Window/Webs/Ravenmail/ravenmail_email_button.tscn" id="2_hwebp"]
+[ext_resource type="Script" path="res://Scenes/Web_Window/Webs/Ravenmail/Ravenmail_Controller.gd" id="2_p8nkq"]
 [ext_resource type="Texture2D" uid="uid://b2u4f484v1fue" path="res://Sprites/UI/SP_TRADER_BOTON.png" id="4_61rpa"]
-[ext_resource type="Script" path="res://Scenes/Web_Window/EmailSpawner.gd" id="5_yfui4"]
+[ext_resource type="Script" path="res://Scenes/Web_Window/Webs/Ravenmail/EmailSpawner.gd" id="5_yfui4"]
 
 [node name="Ravenmail_Web" type="Panel"]
 self_modulate = Color(1, 1, 1, 0)
