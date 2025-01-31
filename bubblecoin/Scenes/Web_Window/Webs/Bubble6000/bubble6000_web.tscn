@@ -44,6 +44,7 @@ offset_right = 1060.0
 offset_bottom = 780.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme = ExtResource("10_x7pfr")
 metadata/_edit_horizontal_guides_ = [780.0, 0.0]
 metadata/_edit_vertical_guides_ = [1060.0]
 
@@ -83,7 +84,6 @@ offset_right = 1012.0
 offset_bottom = 620.0
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
-theme = ExtResource("10_x7pfr")
 theme_type_variation = &"DescriptionLabel"
 text = "La burbuja definitiva, creada por el mismisimo Murk Elchado, es la primera y más poderosa de las Bubbles.
 
@@ -125,7 +125,6 @@ offset_right = 1432.0
 offset_bottom = 738.0
 size_flags_horizontal = 3
 size_flags_vertical = 1
-theme = ExtResource("10_x7pfr")
 theme_type_variation = &"CompralaLabel"
 text = "cómprala,
 antes de que alguien más lo haga"
@@ -138,7 +137,6 @@ offset_top = 82.0
 offset_right = 491.0
 offset_bottom = 270.0
 size_flags_vertical = 3
-theme = ExtResource("10_x7pfr")
 theme_type_variation = &"TitleLabel"
 text = "ultra
 bbl gooox

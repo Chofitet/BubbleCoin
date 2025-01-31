@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://c5kcn8mj8vbmc"]
+[gd_scene load_steps=38 format=3 uid="uid://c5kcn8mj8vbmc"]
 
 [ext_resource type="Script" path="res://Scenes/Web_Window/web_window_Controller.gd" id="1_oeh2v"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/BuySellTabGroup.gd" id="2_ef7xt"]
@@ -35,7 +35,6 @@
 [ext_resource type="Resource" uid="uid://bnl47mcdxki0k" path="res://Resources/calidades/Modificadores/+2Idle.tres" id="33_q7ff5"]
 [ext_resource type="Resource" uid="uid://gv16jq6h4m2m" path="res://Resources/calidades/Modificadores/x2Idle.tres" id="34_338sj"]
 [ext_resource type="Resource" uid="uid://b075xlx1s5hop" path="res://Resources/Nombres Aleatorios/PackNombres.tres" id="35_3n4r4"]
-[ext_resource type="Texture2D" uid="uid://d27avgyelwtr6" path="res://Sprites/UI/BBL6000/REF_BBL6000.png" id="36_v1iro"]
 [ext_resource type="Texture2D" uid="uid://dj2jk0awo6ns7" path="res://Sprites/UI/REF_TRADER_COMPRA.png" id="37_1x4yc"]
 
 [sub_resource type="Resource" id="Resource_q5fkn"]
@@ -56,7 +55,21 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1080.0
 offset_bottom = 760.0
+theme = ExtResource("3_7d18h")
 script = ExtResource("1_oeh2v")
+
+[node name="refe" type="TextureRect" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.498039)
+top_level = true
+layout_mode = 0
+offset_left = -158.0
+offset_top = -184.0
+offset_right = 1762.0
+offset_bottom = 896.0
+texture = ExtResource("37_1x4yc")
+expand_mode = 1
+metadata/_edit_lock_ = true
 
 [node name="ReferenceRect" type="ReferenceRect" parent="."]
 layout_mode = 1
@@ -88,7 +101,6 @@ offset_top = -9.0
 offset_right = 195.0
 offset_bottom = 89.0
 size_flags_horizontal = 3
-theme = ExtResource("3_7d18h")
 theme_override_font_sizes/font_size = 32
 text = "compra"
 script = ExtResource("4_ymgec")
@@ -102,7 +114,6 @@ offset_top = -9.0
 offset_right = 408.0
 offset_bottom = 89.0
 size_flags_horizontal = 3
-theme = ExtResource("3_7d18h")
 theme_type_variation = &"SellButton"
 theme_override_font_sizes/font_size = 32
 toggle_mode = true
@@ -117,7 +128,6 @@ offset_left = 701.0
 offset_top = 9.0
 offset_right = 1047.0
 offset_bottom = 98.0
-theme = ExtResource("3_7d18h")
 theme_override_font_sizes/font_size = 51
 text = "9999"
 horizontal_alignment = 2
@@ -150,7 +160,6 @@ offset_left = 819.0
 offset_top = 226.0
 offset_right = 1038.0
 offset_bottom = 326.0
-theme = ExtResource("3_7d18h")
 theme_type_variation = &"RefreshButton"
 script = ExtResource("10_6s6sh")
 web = ExtResource("5_0man6")
@@ -189,28 +198,6 @@ script = ExtResource("17_qh1wd")
 CalidadesBubble = Array[ExtResource("18_7eosm")]([ExtResource("19_frmoy"), ExtResource("20_1vjl3"), ExtResource("21_j4ayn"), ExtResource("22_j4p78"), ExtResource("23_6sp56"), ExtResource("24_4boyj"), ExtResource("25_tvyan"), ExtResource("26_up7cm"), ExtResource("27_gt2xa")])
 ComunCalidad = SubResource("Resource_q5fkn")
 probabilidades_nueva_calidad = Array[float]([25.0, 42.0, 20.0, 10.0, 3.0])
-
-[node name="refe" type="TextureRect" parent="."]
-visible = false
-layout_mode = 0
-offset_left = -158.0
-offset_top = -184.0
-offset_right = 1762.0
-offset_bottom = 896.0
-texture = ExtResource("36_v1iro")
-expand_mode = 1
-
-[node name="refe2" type="TextureRect" parent="."]
-visible = false
-modulate = Color(1, 1, 1, 0.498039)
-layout_mode = 0
-offset_left = -158.0
-offset_top = -184.0
-offset_right = 1762.0
-offset_bottom = 896.0
-texture = ExtResource("37_1x4yc")
-expand_mode = 1
-metadata/_edit_lock_ = true
 
 [connection signal="OpenTab" from="Tabs/HBoxContainer" to="WebConteiner" method="SetWebWindow"]
 [connection signal="pressed" from="RefresBtn" to="MarketManager" method="CompleteWithRandomBubbles"]
