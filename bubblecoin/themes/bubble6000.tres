@@ -1,0 +1,26 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://csmmltwpfr80g"]
+
+[ext_resource type="FontFile" uid="uid://dwbkrynmqvnsj" path="res://Sprites/UI/BBL6000/HelveticaLTStd-Bold.otf" id="1_ahdk6"]
+[ext_resource type="FontFile" uid="uid://d18x55xsclad6" path="res://Sprites/UI/BBL6000/AEXIR EXTENDED.otf" id="1_p3b63"]
+[ext_resource type="FontFile" uid="uid://drgduca1nao07" path="res://Sprites/UI/BBL6000/HelveticaLTStd-Roman.otf" id="2_uuw1y"]
+
+[sub_resource type="FontVariation" id="FontVariation_xefcp"]
+base_font = ExtResource("1_p3b63")
+variation_transform = Transform2D(1.25, 0, 0, 1, -0.04, 0)
+spacing_glyph = 7
+spacing_bottom = -4
+
+[resource]
+CompralaLabel/base_type = &"Label"
+CompralaLabel/colors/font_color = Color(0.47451, 0.988235, 0.929412, 1)
+CompralaLabel/font_sizes/font_size = 32
+CompralaLabel/fonts/font = ExtResource("1_ahdk6")
+DescriptionLabel/base_type = &"Label"
+DescriptionLabel/colors/font_color = Color(1, 1, 1, 1)
+DescriptionLabel/font_sizes/font_size = 22
+DescriptionLabel/fonts/font = ExtResource("2_uuw1y")
+Label/colors/font_color = Color(0.384314, 1, 0.0784314, 1)
+Label/fonts/font = ExtResource("1_p3b63")
+TitleLabel/base_type = &"Label"
+TitleLabel/font_sizes/font_size = 46
+TitleLabel/fonts/font = SubResource("FontVariation_xefcp")

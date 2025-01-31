@@ -1,7 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://bnv0aobmeq0ql"]
 
 [ext_resource type="Texture2D" uid="uid://bsayj2xo2y6sx" path="res://Sprites/UI/BBL6000/SP_OJO_F1.png" id="1_fms1y"]
-[ext_resource type="FontFile" uid="uid://d18x55xsclad6" path="res://Sprites/UI/BBL6000/AEXIR EXTENDED.otf" id="1_qeijf"]
 [ext_resource type="Texture2D" uid="uid://b3o0iluq3hj40" path="res://Sprites/UI/BBL6000/SP_OJO_F2.png" id="2_2xxae"]
 [ext_resource type="Texture2D" uid="uid://c5wro1yrj7vut" path="res://Sprites/UI/BBL6000/SP_OJO_F3.png" id="3_emtif"]
 [ext_resource type="Texture2D" uid="uid://bqhb6hquldkrx" path="res://Sprites/UI/BBL6000/SP_OJO_F4.png" id="4_bh2g7"]
@@ -10,8 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://b7pnj8abm6uv4" path="res://Sprites/UI/BBL6000/SP_DESTELLOS_F1.png" id="6_n3040"]
 [ext_resource type="Texture2D" uid="uid://c61ld7bgdvvjh" path="res://Sprites/UI/BBL6000/SP_DESTELLOS_F2.png" id="7_3ja3q"]
 [ext_resource type="Texture2D" uid="uid://dlo1x51x6lkly" path="res://Sprites/UI/BBL6000/SP_DESTELLOS_F3.png" id="8_e8x0o"]
-[ext_resource type="FontFile" uid="uid://drgduca1nao07" path="res://Sprites/UI/BBL6000/HelveticaLTStd-Roman.otf" id="9_q116s"]
-[ext_resource type="FontFile" uid="uid://dwbkrynmqvnsj" path="res://Sprites/UI/BBL6000/HelveticaLTStd-Bold.otf" id="10_jiwy7"]
+[ext_resource type="Theme" uid="uid://csmmltwpfr80g" path="res://themes/bubble6000.tres" id="10_x7pfr"]
+[ext_resource type="Theme" uid="uid://b4r6jyts06wde" path="res://themes/trading.tres" id="11_sbgtm"]
+[ext_resource type="Texture2D" uid="uid://r1djsywg1f2p" path="res://Sprites/UI/SP_BBC_LOGO_SMALL.png" id="12_vic3c"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_0qkvu"]
 frames = 5
@@ -37,19 +37,27 @@ frame_1/duration = 0.33
 frame_2/texture = ExtResource("8_e8x0o")
 frame_2/duration = 0.33
 
-[node name="Bubble6000_Web" type="ReferenceRect"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -860.0
-offset_bottom = -300.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Bubble6000_Web" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1060.0
+offset_bottom = 780.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-border_width = 2.0
 metadata/_edit_horizontal_guides_ = [780.0, 0.0]
 metadata/_edit_vertical_guides_ = [1060.0]
+
+[node name="refe" type="TextureRect" parent="."]
+visible = false
+self_modulate = Color(1, 1, 1, 0.47451)
+top_level = true
+layout_mode = 0
+offset_left = -158.0
+offset_top = -184.0
+offset_right = 1762.0
+offset_bottom = 896.0
+texture = ExtResource("6_jaav2")
+expand_mode = 1
 
 [node name="Eye" type="TextureRect" parent="."]
 layout_mode = 2
@@ -67,7 +75,7 @@ texture = SubResource("AnimatedTexture_pmmm4")
 expand_mode = 3
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="."]
+[node name="Description" type="Label" parent="."]
 layout_mode = 2
 offset_left = 65.0
 offset_top = 465.0
@@ -75,38 +83,41 @@ offset_right = 1012.0
 offset_bottom = 620.0
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
-theme_override_fonts/font = ExtResource("9_q116s")
-theme_override_font_sizes/font_size = 22
+theme = ExtResource("10_x7pfr")
+theme_type_variation = &"DescriptionLabel"
 text = "La burbuja definitiva, creada por el mismisimo Murk Elchado, es la primera y más poderosa de las Bubbles.
 
 Si obtienes esta Bubble está claro que eres el mago más habilidoso del continente y de seguro te dará el poder para dominar el mundo."
 autowrap_mode = 2
 
-[node name="TextureRect3" type="TextureRect" parent="."]
-layout_mode = 2
-offset_left = 56.0
-offset_top = 731.0
-offset_right = 732.0
-offset_bottom = 780.0
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 2.54
-expand_mode = 3
-
-[node name="Button" type="Button" parent="TextureRect3"]
+[node name="Button" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 138.0
-offset_top = -77.0
-offset_right = -378.0
-offset_bottom = -77.0
+offset_left = 66.0
+offset_top = 620.0
+offset_right = -626.0
+offset_bottom = -52.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "9999999999"
-flat = true
+theme = ExtResource("11_sbgtm")
+theme_override_font_sizes/font_size = 45
+text = "9999999999   "
+alignment = 2
 
-[node name="comprala" type="Label" parent="."]
+[node name="TextureRect" type="TextureRect" parent="Button"]
+self_modulate = Color(0.815686, 0.988235, 0.0901961, 1)
+layout_mode = 0
+offset_left = 33.0
+offset_top = 21.0
+offset_right = 66.0
+offset_bottom = 86.0
+texture = ExtResource("12_vic3c")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Comprala" type="Label" parent="."]
 layout_mode = 2
 offset_left = 485.0
 offset_top = 645.0
@@ -114,34 +125,22 @@ offset_right = 1432.0
 offset_bottom = 738.0
 size_flags_horizontal = 3
 size_flags_vertical = 1
-theme_override_constants/line_spacing = -1
-theme_override_fonts/font = ExtResource("10_jiwy7")
-theme_override_font_sizes/font_size = 32
+theme = ExtResource("10_x7pfr")
+theme_type_variation = &"CompralaLabel"
 text = "cómprala,
 antes de que alguien más lo haga"
 autowrap_mode = 2
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 0
-offset_left = 75.0
-offset_top = 87.0
-offset_right = 573.0
-offset_bottom = 288.0
+offset_left = 64.0
+offset_top = 82.0
+offset_right = 491.0
+offset_bottom = 270.0
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0.384314, 1, 0.0784314, 1)
-theme_override_fonts/font = ExtResource("1_qeijf")
-theme_override_font_sizes/font_size = 50
-text = "ULTRA
-BBL goooX
-XX ESTELAR
-HYPER"
-
-[node name="refe" type="TextureRect" parent="."]
-visible = false
-layout_mode = 0
-offset_left = -158.0
-offset_top = -184.0
-offset_right = 1762.0
-offset_bottom = 896.0
-texture = ExtResource("6_jaav2")
-expand_mode = 1
+theme = ExtResource("10_x7pfr")
+theme_type_variation = &"TitleLabel"
+text = "ultra
+bbl gooox
+xx estelar
+hyper"
