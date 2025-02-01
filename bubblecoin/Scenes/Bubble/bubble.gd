@@ -12,6 +12,12 @@ signal DisableButtons
 
 static func new_bubble(_bubbleData : BubbleData, in_inventory: bool) -> Bubble:
 	var bubble: Bubble = bubbleScene.instantiate()
+	if _bubbleData.bubbleCalidad.name == "":
+		_bubbleData.bubbleCalidad.PicRandomBubble()
+	
+	if not in_inventory:
+		_bubbleData.buy_price = _bubbleData.bubbleCalidad.price
+		_bubbleData.sell_price = _bubbleData.bubbleCalidad.price * 0.5
 	bubble.set_bubble_data(_bubbleData)
 	bubble.set_in_inventory(in_inventory)
 	
@@ -23,10 +29,19 @@ func set_in_inventory(in_inventory: bool) -> void:
 
 func set_bubble_data(bubbleData : BubbleData) -> void:
 	bubble_data = bubbleData
+	set_buy_price(bubbleData.buy_price)
+	set_sell_price(bubbleData.sell_price)
+	set_name_description(bubbleData.bubbleCalidad.name, bubbleData.bubbleCalidad.modificador.ModifyDescription)
+	Set_Estetica(bubbleData.bubbleCalidad)
+
+func generate_bubble_data(bubbleData : BubbleData) -> void:
+	bubble_data = bubbleData
 	set_buy_price(bubbleData.bubbleCalidad.price)
 	set_sell_price(bubbleData.bubbleCalidad.price)
 	set_name_description(bubbleData.bubbleCalidad.name, bubbleData.bubbleCalidad.modificador.ModifyDescription)
 	Set_Estetica(bubbleData.bubbleCalidad)
+
+
 
 static func format_price(price: float) -> String:
 	return "%.2f" % price
