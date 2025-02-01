@@ -1,5 +1,5 @@
 @tool
-extends Button
+extends ResponsiveButton
 class_name EmailButton
 
 @export var email_subject : String :
@@ -17,6 +17,7 @@ class_name EmailButton
 
 func _ready() -> void:
 	if not Engine.is_editor_hint():
+		super._ready()
 		$Label.text = email_subject
 
 func TabExit():

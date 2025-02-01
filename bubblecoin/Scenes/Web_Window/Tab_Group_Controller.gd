@@ -1,10 +1,10 @@
 extends HBoxContainer
 
-var tabsArray =[]
+var tabsArray : Array[WebTab] =[]
 signal OpenTab
 func _ready() -> void:
 	for tab in get_children():
-		if tab is TextureRect:
+		if tab is WebTab:
 			tab.TabPress.connect(tabPressed)
 			tabsArray.append(tab)
 			tab.visible = false
@@ -12,19 +12,18 @@ func _ready() -> void:
 		EnableTabs(i)
 	
 
-func open_article(article_to_open):
+func open_article(article_to_open : int):
 	if article_to_open not in PlayerVariables.unlocked_tabs:
 		PlayerVariables.unlocked_tabs.append(article_to_open)
 		EnableTabs(article_to_open)
 		
-	tabsArray[article_to_open].TabEnter()
+	tabsArray[article_to_open].button_pressed = true
 
-func tabPressed(tab):
+func tabPressed(tab : WebTab):
 	OpenTab.emit(tab.Web)
 	for t in tabsArray:
-		if t != tab: 
-			print(t.name)
-			t.TabExit()
+		if t != tab:
+			t.button_pressed = false
 
 
 func EnableTabs(tabToEnable : int):

@@ -1,6 +1,6 @@
 extends Control
 
-var tabsArray =[]
+var tabsArray : Array[Button] =[]
 signal OpenTab
 func _ready() -> void:
 	for tab in get_children():
@@ -8,12 +8,11 @@ func _ready() -> void:
 			tab.TabPress.connect(tabPressed)
 			tabsArray.append(tab)
 
-func tabPressed(tab):
+func tabPressed(tab : Button):
 	OpenTab.emit(tab.Web)
 	for t in tabsArray:
-		if t != tab: 
-			print(t.name)
-			t.TabExit()
+		if t != tab:
+			t.button_pressed = false
 
 func EnableTabs(tabToEnable : int):
 	tabsArray[tabToEnable].visible = true

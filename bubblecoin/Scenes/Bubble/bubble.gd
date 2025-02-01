@@ -29,11 +29,11 @@ func set_bubble_data(bubbleData : BubbleData) -> void:
 	Set_Estetica(bubbleData.bubbleCalidad)
 
 static func format_price(price: float) -> String:
-	return "%.2f   " % price
+	return "%.2f" % price
 
 func set_buy_price(price) -> void:
 	bubble_data.buy_price = price
-	%BuyButton.text = format_price(bubble_data.buy_price)
+	%BuyButton/Label.text = format_price(bubble_data.buy_price)
 
 func set_sell_price(price) -> void:
 	bubble_data.sell_price = price
@@ -48,7 +48,7 @@ func _process(delta: float) -> void:
 		%BuyButton.disabled = true
 
 func update_sell_price() -> void:
-	%SellButton.text = format_price(bubble_data.sell_price)
+	%SellButton/Label.text = format_price(bubble_data.sell_price)
 
 func set_name_description(_name : String, description):
 	bubble_data.bubble_name = _name

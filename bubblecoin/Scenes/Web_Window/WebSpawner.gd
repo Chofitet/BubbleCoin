@@ -20,5 +20,5 @@ func SetWebWindow(web : PackedScene):
 
 signal ArticleSet(article_to_open: int)
 
-func open_article(article_to_open):
+func open_article(article_to_open : int):
 	ArticleSet.emit(article_to_open)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bnv0aobmeq0ql"]
+[gd_scene load_steps=16 format=3 uid="uid://bnv0aobmeq0ql"]
 
 [ext_resource type="Texture2D" uid="uid://bsayj2xo2y6sx" path="res://Sprites/UI/BBL6000/SP_OJO_F1.png" id="1_fms1y"]
 [ext_resource type="Texture2D" uid="uid://b3o0iluq3hj40" path="res://Sprites/UI/BBL6000/SP_OJO_F2.png" id="2_2xxae"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dlo1x51x6lkly" path="res://Sprites/UI/BBL6000/SP_DESTELLOS_F3.png" id="8_e8x0o"]
 [ext_resource type="Theme" uid="uid://csmmltwpfr80g" path="res://themes/bubble6000.tres" id="10_x7pfr"]
 [ext_resource type="Theme" uid="uid://b4r6jyts06wde" path="res://themes/trading.tres" id="11_sbgtm"]
+[ext_resource type="Script" path="res://_Scripts/ResponsiveButton.gd" id="12_7ktr3"]
 [ext_resource type="Texture2D" uid="uid://r1djsywg1f2p" path="res://Sprites/UI/SP_BBC_LOGO_SMALL.png" id="12_vic3c"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_0qkvu"]
@@ -59,6 +60,7 @@ offset_right = 1762.0
 offset_bottom = 896.0
 texture = ExtResource("6_jaav2")
 expand_mode = 1
+metadata/_edit_lock_ = true
 
 [node name="Eye" type="TextureRect" parent="."]
 layout_mode = 2
@@ -102,9 +104,18 @@ offset_bottom = -52.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("11_sbgtm")
-theme_override_font_sizes/font_size = 45
-text = "9999999999   "
+text = "   "
 alignment = 2
+script = ExtResource("12_7ktr3")
+
+[node name="Label" type="Label" parent="Button"]
+layout_mode = 0
+offset_left = 93.0
+offset_top = 27.0
+offset_right = 313.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 45
+text = "9999999999"
 
 [node name="TextureRect" type="TextureRect" parent="Button"]
 self_modulate = Color(0.815686, 0.988235, 0.0901961, 1)
