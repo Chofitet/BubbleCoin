@@ -1,18 +1,42 @@
-[gd_resource type="Theme" load_steps=4 format=3 uid="uid://blv2a5sjocyq3"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://blv2a5sjocyq3"]
 
 [ext_resource type="Texture2D" uid="uid://sa3qw7tn6c78" path="res://Sprites/UI/PAUSA/SP_SLIDER.png" id="1_6smm6"]
+[ext_resource type="StyleBox" uid="uid://bewhm238vhuka" path="res://BTNStyles/btnExit.tres" id="1_olkj0"]
 [ext_resource type="StyleBox" uid="uid://buyq70ulef54t" path="res://themes/settings_slider.tres" id="2_xh18r"]
 
-[sub_resource type="SystemFont" id="SystemFont_yqh81"]
+[sub_resource type="SystemFont" id="SystemFont_ponds"]
 font_names = PackedStringArray("cursive")
 font_italic = true
 font_weight = 600
 
+[sub_resource type="FontVariation" id="FontVariation_61xcy"]
+base_font = SubResource("SystemFont_ponds")
+spacing_glyph = 1
+
+[sub_resource type="SystemFont" id="SystemFont_3fkc4"]
+font_names = PackedStringArray("cursive")
+font_weight = 600
+
 [resource]
-default_font = SubResource("SystemFont_yqh81")
+default_font = SubResource("SystemFont_3fkc4")
+Button/font_sizes/font_size = 30
+Button/styles/disabled = ExtResource("1_olkj0")
+Button/styles/normal = ExtResource("1_olkj0")
+Button/styles/pressed = ExtResource("1_olkj0")
+CreditsLabel/base_type = &"Label"
+CreditsLabel/colors/font_color = Color(0.47451, 0.988235, 0.929412, 1)
+CreditsLabel/font_sizes/font_size = 32
+ExitLabel/base_type = &"Label"
+ExitLabel/font_sizes/font_size = 27
 HSlider/icons/grabber = ExtResource("1_6smm6")
 HSlider/styles/slider = ExtResource("2_xh18r")
+JammerArea/base_type = &"Label"
+JammerArea/colors/font_color = Color(0, 0, 0, 1)
+JammerArea/font_sizes/font_size = 32
+JammerName/base_type = &"Label"
+JammerName/colors/font_color = Color(0.47451, 0.988235, 0.929412, 1)
+JammerName/font_sizes/font_size = 44
 SliderLabel/base_type = &"Label"
 SliderLabel/colors/font_color = Color(1, 0.709804, 0.811765, 1)
 SliderLabel/font_sizes/font_size = 30
-SliderLabel/fonts/font = SubResource("SystemFont_yqh81")
+SliderLabel/fonts/font = SubResource("FontVariation_61xcy")

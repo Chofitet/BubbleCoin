@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://br188hfsa56ie"]
+[gd_scene load_steps=7 format=3 uid="uid://br188hfsa56ie"]
 
 [ext_resource type="Script" path="res://Scenes/Web_Window/Webs/Settings/Settings_Controller.gd" id="1_e7a3v"]
 [ext_resource type="Theme" uid="uid://blv2a5sjocyq3" path="res://themes/settings.tres" id="1_y4x8u"]
 [ext_resource type="Texture2D" uid="uid://b2u4f484v1fue" path="res://Sprites/UI/SP_TRADER_BOTON.png" id="2_8a174"]
 [ext_resource type="Texture2D" uid="uid://ulhxbfxuc2fm" path="res://Sprites/UI/PAUSA/REF_PAUSA.png" id="3_31ec4"]
+[ext_resource type="Texture2D" uid="uid://ckmwq848myxvo" path="res://Sprites/UI/PAUSA/SP_EQUIS.png" id="4_m0eim"]
+[ext_resource type="Script" path="res://ResponsiveButton.gd" id="6_hkegs"]
 
 [node name="Settings_Web" type="Panel"]
 self_modulate = Color(1, 1, 1, 0)
@@ -22,6 +24,7 @@ metadata/_edit_lock_ = true
 visible = false
 modulate = Color(1, 1, 1, 0.498039)
 top_level = true
+layout_mode = 0
 offset_left = -158.0
 offset_top = -184.0
 offset_right = 1762.0
@@ -42,10 +45,10 @@ rounded = true
 
 [node name="Label" type="Label" parent="VolumeSlider"]
 layout_mode = 0
-offset_left = 4.0
-offset_top = 50.0
-offset_right = 108.0
-offset_bottom = 93.0
+offset_left = 2.0
+offset_top = 49.0
+offset_right = 112.0
+offset_bottom = 92.0
 theme_type_variation = &"SliderLabel"
 text = "general"
 
@@ -60,9 +63,10 @@ value = 30.0
 rounded = true
 
 [node name="Label" type="Label" parent="MusicSlider"]
-offset_left = 4.0
+layout_mode = 0
+offset_left = 1.0
 offset_top = 50.0
-offset_right = 108.0
+offset_right = 105.0
 offset_bottom = 93.0
 theme_type_variation = &"SliderLabel"
 text = "música"
@@ -78,21 +82,48 @@ value = 30.0
 rounded = true
 
 [node name="Label" type="Label" parent="EffectsSlider"]
-offset_left = 4.0
-offset_top = 50.0
-offset_right = 108.0
-offset_bottom = 93.0
+layout_mode = 0
+offset_left = 2.0
+offset_top = 53.0
+offset_right = 117.0
+offset_bottom = 96.0
 theme_type_variation = &"SliderLabel"
 text = "efectos"
+
+[node name="ExitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 847.0
+offset_top = 175.0
+offset_right = 1007.0
+offset_bottom = 247.0
+
+[node name="Icon" type="TextureRect" parent="ExitButton"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 13.0
+offset_right = 75.0
+offset_bottom = 62.0
+texture = ExtResource("4_m0eim")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="ExitButton"]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 15.0
+offset_right = 134.0
+offset_bottom = 53.0
+theme_type_variation = &"ExitLabel"
+text = "salir"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 self_modulate = Color(0.192157, 0.870588, 0.478431, 1)
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
-offset_left = 367.0
-offset_top = 291.0
-offset_right = 517.0
-offset_bottom = 341.0
+offset_left = 443.0
+offset_top = 196.0
+offset_right = 593.0
+offset_bottom = 246.0
 texture = ExtResource("2_8a174")
 expand_mode = 2
 
@@ -106,27 +137,6 @@ grow_vertical = 2
 text = "Pausar"
 flat = true
 metadata/_edit_lock_ = true
-
-[node name="TextureRect2" type="TextureRect" parent="."]
-self_modulate = Color(1, 0.421778, 0.389603, 1)
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-offset_left = 19.208
-offset_top = 161.0
-offset_right = 169.208
-offset_bottom = 211.0
-texture = ExtResource("2_8a174")
-expand_mode = 2
-
-[node name="Button" type="Button" parent="TextureRect2"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Salir"
-flat = true
 
 [node name="PauseMenu" type="Panel" parent="."]
 unique_name_in_owner = true
@@ -151,9 +161,202 @@ offset_right = 1048.0
 offset_bottom = 693.0
 text = "Inhala, exhala, ¡de vuelta al juego!"
 
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 273.0
+offset_right = 112.0
+offset_bottom = 737.0
+
+[node name="Jammer" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="JammerArea" type="Label" parent="VBoxContainer/Jammer"]
+layout_mode = 0
+offset_right = 158.0
+offset_bottom = 43.0
+theme_type_variation = &"JammerArea"
+text = "cargo/area"
+
+[node name="JammerName" type="Label" parent="VBoxContainer/Jammer"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 44.0
+offset_right = 368.0
+offset_bottom = 106.0
+theme_type_variation = &"JammerName"
+text = "Nombre, Apellido"
+
+[node name="Jammer2" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="JammerArea" type="Label" parent="VBoxContainer/Jammer2"]
+layout_mode = 0
+offset_right = 158.0
+offset_bottom = 43.0
+theme_type_variation = &"JammerArea"
+text = "cargo/area"
+
+[node name="JammerName" type="Label" parent="VBoxContainer/Jammer2"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 44.0
+offset_right = 368.0
+offset_bottom = 106.0
+theme_type_variation = &"JammerName"
+text = "Nombre, Apellido"
+
+[node name="Jammer3" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="JammerArea" type="Label" parent="VBoxContainer/Jammer3"]
+layout_mode = 0
+offset_right = 158.0
+offset_bottom = 43.0
+theme_type_variation = &"JammerArea"
+text = "cargo/area"
+
+[node name="JammerName" type="Label" parent="VBoxContainer/Jammer3"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 44.0
+offset_right = 368.0
+offset_bottom = 106.0
+theme_type_variation = &"JammerName"
+text = "Nombre, Apellido"
+
+[node name="Jammer4" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="JammerArea" type="Label" parent="VBoxContainer/Jammer4"]
+layout_mode = 0
+offset_right = 158.0
+offset_bottom = 43.0
+theme_type_variation = &"JammerArea"
+text = "cargo/area"
+
+[node name="JammerName" type="Label" parent="VBoxContainer/Jammer4"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 44.0
+offset_right = 368.0
+offset_bottom = 106.0
+theme_type_variation = &"JammerName"
+text = "Nombre, Apellido"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 626.0
+offset_top = 273.0
+offset_right = 666.0
+offset_bottom = 737.0
+
+[node name="Jammer" type="Control" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="JammerArea" type="Label" parent="VBoxContainer2/Jammer"]
+layout_mode = 0
+offset_right = 158.0
+offset_bottom = 43.0
+theme_type_variation = &"JammerArea"
+text = "cargo/area"
+
+[node name="JammerName" type="Label" parent="VBoxContainer2/Jammer"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 44.0
+offset_right = 368.0
+offset_bottom = 106.0
+theme_type_variation = &"JammerName"
+text = "Nombre, Apellido"
+
+[node name="Jammer2" type="Control" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="JammerArea" type="Label" parent="VBoxContainer2/Jammer2"]
+layout_mode = 0
+offset_right = 158.0
+offset_bottom = 43.0
+theme_type_variation = &"JammerArea"
+text = "cargo/area"
+
+[node name="JammerName" type="Label" parent="VBoxContainer2/Jammer2"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 44.0
+offset_right = 368.0
+offset_bottom = 106.0
+theme_type_variation = &"JammerName"
+text = "Nombre, Apellido"
+
+[node name="Jammer3" type="Control" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="JammerArea" type="Label" parent="VBoxContainer2/Jammer3"]
+layout_mode = 0
+offset_right = 158.0
+offset_bottom = 43.0
+theme_type_variation = &"JammerArea"
+text = "cargo/area"
+
+[node name="JammerName" type="Label" parent="VBoxContainer2/Jammer3"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 44.0
+offset_right = 368.0
+offset_bottom = 106.0
+theme_type_variation = &"JammerName"
+text = "Nombre, Apellido"
+
+[node name="Jammer4" type="Control" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="JammerArea" type="Label" parent="VBoxContainer2/Jammer4"]
+visible = false
+layout_mode = 0
+offset_right = 158.0
+offset_bottom = 43.0
+theme_type_variation = &"JammerArea"
+text = "cargo/area"
+
+[node name="JammerName" type="Label" parent="VBoxContainer2/Jammer4"]
+visible = false
+layout_mode = 0
+offset_left = -1.0
+offset_top = 44.0
+offset_right = 368.0
+offset_bottom = 106.0
+theme_type_variation = &"JammerName"
+text = "Nombre, Apellido"
+
+[node name="CreditsLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 194.0
+offset_right = 211.0
+offset_bottom = 240.0
+theme_type_variation = &"CreditsLabel"
+text = "créditos:"
+
+[node name="ResponsiveButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 346.0
+offset_top = 197.0
+offset_right = 418.0
+offset_bottom = 258.0
+script = ExtResource("6_hkegs")
+
 [connection signal="value_changed" from="VolumeSlider" to="." method="set_master_volume"]
 [connection signal="value_changed" from="MusicSlider" to="." method="set_music_volume"]
 [connection signal="value_changed" from="EffectsSlider" to="." method="set_effects_volume"]
+[connection signal="pressed" from="ExitButton" to="." method="exit_game"]
 [connection signal="pressed" from="TextureRect/Button" to="." method="pause_game"]
-[connection signal="pressed" from="TextureRect2/Button" to="." method="exit_game"]
 [connection signal="pressed" from="PauseMenu/Button" to="." method="resume_game"]
