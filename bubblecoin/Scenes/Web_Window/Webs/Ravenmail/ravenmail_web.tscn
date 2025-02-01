@@ -1,55 +1,55 @@
-[gd_scene load_steps=6 format=3 uid="uid://qlbjd1hi37g0"]
+[gd_scene load_steps=7 format=3 uid="uid://qlbjd1hi37g0"]
 
+[ext_resource type="Theme" uid="uid://cxqueq3e8hid2" path="res://themes/ravenmail.tres" id="1_idnji"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/Webs/Ravenmail/ravenmail_web.gd" id="1_nyxuh"]
 [ext_resource type="PackedScene" uid="uid://baoochsn4ef2b" path="res://Scenes/Web_Window/Webs/Ravenmail/ravenmail_email_button.tscn" id="2_hwebp"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/Webs/Ravenmail/Ravenmail_Controller.gd" id="2_p8nkq"]
-[ext_resource type="Texture2D" uid="uid://b2u4f484v1fue" path="res://Sprites/UI/SP_TRADER_BOTON.png" id="4_61rpa"]
-[ext_resource type="Script" path="res://Scenes/Web_Window/Webs/Ravenmail/EmailSpawner.gd" id="5_yfui4"]
+[ext_resource type="Texture2D" uid="uid://bh4d4puknx46e" path="res://Sprites/UI/MAIL/REF_MAIL_IDLE.png" id="3_vb72r"]
+[ext_resource type="Texture2D" uid="uid://ctehee3fi7sdn" path="res://Sprites/UI/MAIL/SP_MAIL_LOGO.png" id="6_to6v4"]
 
 [node name="Ravenmail_Web" type="Panel"]
 self_modulate = Color(1, 1, 1, 0)
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_right = 1060.0
+offset_bottom = 780.0
+theme = ExtResource("1_idnji")
 script = ExtResource("1_nyxuh")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="refe" type="TextureRect" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.498039)
+top_level = true
+layout_mode = 0
+offset_left = -158.0
+offset_top = -184.0
+offset_right = 1762.0
+offset_bottom = 896.0
+texture = ExtResource("3_vb72r")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_bottom = 36.0
+offset_left = 48.0
+offset_top = 132.0
+offset_right = -687.0
+offset_bottom = -14.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Tabs" type="Panel" parent="HBoxContainer"]
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 1.38
-
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Tabs"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 15
 script = ExtResource("2_p8nkq")
 
-[node name="Control" type="Control" parent="HBoxContainer/Tabs/VBoxContainer"]
+[node name="Control" type="Control" parent="VBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_stretch_ratio = 0.0
 
-[node name="amigo0" parent="HBoxContainer/Tabs/VBoxContainer" instance=ExtResource("2_hwebp")]
+[node name="amigo0" parent="VBoxContainer" instance=ExtResource("2_hwebp")]
 visible = false
-self_modulate = Color(0.950334, 0.541582, 0.381953, 1)
+self_modulate = Color(1, 1, 1, 1)
 layout_mode = 2
-texture = ExtResource("4_61rpa")
 email_subject = "Estimado Arkhar"
 article = 1
 email = "Estimado Arkhar, 
@@ -58,20 +58,20 @@ Pero calma, no has de entrar en angustia y desesperación, porque te traigo buen
 Tus problemas estarán resueltos con esta magia, hazme caso, no dudes en aprenderla.
 Sinceramente, tu amigo, Berker"
 
-[node name="amigo1" parent="HBoxContainer/Tabs/VBoxContainer" instance=ExtResource("2_hwebp")]
+[node name="amigo1" parent="VBoxContainer" instance=ExtResource("2_hwebp")]
 visible = false
+self_modulate = Color(1, 1, 1, 1)
 layout_mode = 2
-texture = ExtResource("4_61rpa")
 email_subject = "Mi amigo Arkhar"
 email = "Mi amigo Arkhar, 
 He recibido tu carta, y me llena de regocijo saber que te has sumergido en este maravilloso mundo mágico de las Bubble Coins. He oído rumores sobre una sorprendente Bubble Coin que es la más poderosa de todas, esta burbuja fue conjurada por las mismísimas manos del fundador original de las Bubble Coins”. Me entusiasmo de tan solo pensar en el poder que debe contener. Espero noticias de tus avances.
 Sinceramente, tu mejor amigo, Berker"
 day = 1
 
-[node name="amigo2" parent="HBoxContainer/Tabs/VBoxContainer" instance=ExtResource("2_hwebp")]
+[node name="amigo2" parent="VBoxContainer" instance=ExtResource("2_hwebp")]
 visible = false
+self_modulate = Color(1, 1, 1, 1)
 layout_mode = 2
-texture = ExtResource("4_61rpa")
 email_subject = "Estimadísimo amigo mío"
 email = "Estimadísimo amigo mío,
 Me han llegado rumores de que te has convertido en un Archimago Experto de las Bubble Coins, me invade el orgullo y la emoción. 
@@ -81,10 +81,10 @@ Sólo unas pocas, prometo devolvértelo en uno o dos días.
 Sinceramente, tu excelentísimo amigo, Berker"
 day = 2
 
-[node name="amigo3" parent="HBoxContainer/Tabs/VBoxContainer" instance=ExtResource("2_hwebp")]
+[node name="amigo3" parent="VBoxContainer" instance=ExtResource("2_hwebp")]
 visible = false
+self_modulate = Color(1, 1, 1, 1)
 layout_mode = 2
-texture = ExtResource("4_61rpa")
 email_subject = "Arkhar."
 email = "Arkhar,
 Después de esperar ansioso tu respuesta por tanto tiempo, caigo en la cuenta de que para ti, los años que llevamos siendo amigos no valen ni una miseria. Quiero que te enteres que ese dinero era para ayudar a mi madre enferma, la misma que tan alegremente te recibía con una taza de chocolate caliente todas las tardes después del colegio durante nuestra niñez. 
@@ -92,10 +92,10 @@ Espero que ahora estés contento, regocijándote entre tus burbujas, y que estas
 Berker"
 day = 3
 
-[node name="amigo4" parent="HBoxContainer/Tabs/VBoxContainer" instance=ExtResource("2_hwebp")]
+[node name="amigo4" parent="VBoxContainer" instance=ExtResource("2_hwebp")]
 visible = false
+self_modulate = Color(1, 1, 1, 1)
 layout_mode = 2
-texture = ExtResource("4_61rpa")
 email_subject = "Querida Rata Inmunda"
 email = "Me he enterado que lo has perdido TODO en las Bubbles Coins y me alegra haber sido partícipe de tu ruina. 
 Quiero que sepas que mi madre, la querida Pachita, pasó a mejor vida ayer por la noche, todo porque no quisiste prestarme el dinero antes de perderlo como el maldito avaro que eres. 
@@ -103,104 +103,114 @@ Espero algún día nos volvamos a encontrar, seguramente será en el infierno.
 Sinceramente, tu acérrimo enemigo, Berker"
 day = 4
 
-[node name="Spam0" parent="HBoxContainer/Tabs/VBoxContainer" instance=ExtResource("2_hwebp")]
+[node name="Spam0" parent="VBoxContainer" instance=ExtResource("2_hwebp")]
 visible = false
-self_modulate = Color(0.950334, 0.541582, 0.381953, 1)
+self_modulate = Color(1, 1, 1, 1)
 layout_mode = 2
-texture = ExtResource("4_61rpa")
 email_subject = "SPAM"
 email = "“Tienda El Warlock Coqueto”: Ya está disponible el nuevo sombrero que todos aman, consíguelo sólo en las tiendas oficiales”"
 
-[node name="Spam1" parent="HBoxContainer/Tabs/VBoxContainer" instance=ExtResource("2_hwebp")]
+[node name="Spam1" parent="VBoxContainer" instance=ExtResource("2_hwebp")]
 visible = false
-self_modulate = Color(0.950334, 0.541582, 0.381953, 1)
+self_modulate = Color(1, 1, 1, 1)
 layout_mode = 2
-texture = ExtResource("4_61rpa")
 email_subject = "SPAM"
 email = "Mira cómo se ven hoy en día el reparto de la serie “Volver al FuBrujo”, ¡uno se encuentra irreconocible!"
 day = 1
 
-[node name="Spam2" parent="HBoxContainer/Tabs/VBoxContainer" instance=ExtResource("2_hwebp")]
+[node name="Spam2" parent="VBoxContainer" instance=ExtResource("2_hwebp")]
 visible = false
-self_modulate = Color(0.950334, 0.541582, 0.381953, 1)
+self_modulate = Color(1, 1, 1, 1)
 layout_mode = 2
-texture = ExtResource("4_61rpa")
 email_subject = "Secretos de la Financieromancia"
 email = "Aprende los secretos de la Financieromancia. 50% DE DESCUENTO EN EL CURSO. PROMOCIÓN LIMITADA."
 day = 1
 
-[node name="Spam3" parent="HBoxContainer/Tabs/VBoxContainer" instance=ExtResource("2_hwebp")]
+[node name="Spam3" parent="VBoxContainer" instance=ExtResource("2_hwebp")]
 visible = false
-self_modulate = Color(0.950334, 0.541582, 0.381953, 1)
+self_modulate = Color(1, 1, 1, 1)
 layout_mode = 2
-texture = ExtResource("4_61rpa")
 email_subject = "SPAM"
 email = "¿Estás cansado de lootear todos los días en el mismo dungeon? INVIERTE YA EN BUBBLE COINS"
 day = 2
 
-[node name="Spam4" parent="HBoxContainer/Tabs/VBoxContainer" instance=ExtResource("2_hwebp")]
+[node name="Spam4" parent="VBoxContainer" instance=ExtResource("2_hwebp")]
 visible = false
-self_modulate = Color(0.950334, 0.541582, 0.381953, 1)
+self_modulate = Color(1, 1, 1, 1)
 layout_mode = 2
-texture = ExtResource("4_61rpa")
 email_subject = "SPAM"
 email = "¿Sufrís de disfunción mágica? No te preocupes, nosotros te ayudamos."
 day = 2
 
-[node name="Spam5" parent="HBoxContainer/Tabs/VBoxContainer" instance=ExtResource("2_hwebp")]
+[node name="Spam5" parent="VBoxContainer" instance=ExtResource("2_hwebp")]
 visible = false
-self_modulate = Color(0.950334, 0.541582, 0.381953, 1)
+self_modulate = Color(1, 1, 1, 1)
 layout_mode = 2
-texture = ExtResource("4_61rpa")
 email_subject = "SPAM"
 email = "¿Sos un mago mediocre? Comprá mi curso y te enseño cómo tener mentalidad de leviatán. Convertite en un experto de las Bubble Coins."
 day = 3
 
-[node name="Spam6" parent="HBoxContainer/Tabs/VBoxContainer" instance=ExtResource("2_hwebp")]
+[node name="Spam6" parent="VBoxContainer" instance=ExtResource("2_hwebp")]
 visible = false
-self_modulate = Color(0.950334, 0.541582, 0.381953, 1)
+self_modulate = Color(1, 1, 1, 1)
 layout_mode = 2
-texture = ExtResource("4_61rpa")
 email_subject = "$$$URGENTE$$$"
 email = "$$$URGENTE$$$: Aparece una nueva moneda en el mercado, las Dragon Coins. No te quedes afuera."
 day = 3
 
-[node name="Spam7" parent="HBoxContainer/Tabs/VBoxContainer" instance=ExtResource("2_hwebp")]
+[node name="Spam7" parent="VBoxContainer" instance=ExtResource("2_hwebp")]
 visible = false
-self_modulate = Color(0.950334, 0.541582, 0.381953, 1)
+self_modulate = Color(1, 1, 1, 1)
 layout_mode = 2
-texture = ExtResource("4_61rpa")
 email_subject = "SPAM"
 email = "Las Dragon Coins no paran de crecer $$$ NO TE QUEDES AFUERA!!$!!"
 day = 4
 
-[node name="EmailContainer" type="MarginContainer" parent="HBoxContainer"]
+[node name="Email" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 2.0
-theme_override_constants/margin_left = 30
-theme_override_constants/margin_top = 40
-theme_override_constants/margin_right = 30
-theme_override_constants/margin_bottom = 40
-script = ExtResource("5_yfui4")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/EmailContainer"]
-layout_mode = 2
-
-[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/EmailContainer/VBoxContainer"]
-layout_mode = 2
+offset_left = 487.0
+offset_top = 126.0
+offset_right = 1038.0
+offset_bottom = 672.0
 size_flags_vertical = 3
 size_flags_stretch_ratio = 5.0
 bbcode_enabled = true
 text = "Estimado Arkhar, 
-He recibido tu carta, y me llena de regocijo saber que te has sumergido en este maravilloso mundo mágico de las Bubble Coins. No olvides que puedes gastar Bubble Coins en conseguir Potenciadores Bubbles de Magia. Espero noticias de tus avances.
+Ha llegado a mis oídos la terrible noticia de que injustamente te han echado de la Universidad de Hechicería. ¡Por la barba de Merlín, qué infortunio! 
+Pero calma, no has de entrar en angustia y desesperación, porque te traigo buenos augurios. En las Tierras Lejanas de Valhan-Gün descubrieron una nueva magia, la llaman Bubble Coin, ¡Una fuerza extraña e intangible que te permite ganar más, más y más!
+Tus problemas estarán resueltos con esta magia, hazme caso, no dudes en aprenderla.
 Sinceramente, tu amigo, Berker"
 
-[node name="Button" type="Button" parent="HBoxContainer/EmailContainer/VBoxContainer"]
-visible = false
+[node name="EmailLink" type="Button" parent="."]
+unique_name_in_owner = true
 layout_mode = 2
+offset_left = 489.0
+offset_top = 687.0
+offset_right = 1039.0
+offset_bottom = 744.0
 size_flags_vertical = 3
 text = "¡Click aquí!"
 
-[connection signal="OpenTab" from="HBoxContainer/Tabs/VBoxContainer" to="HBoxContainer/EmailContainer" method="SetEmail"]
-[connection signal="ArticleSet" from="HBoxContainer/EmailContainer" to="." method="set_article"]
+[node name="IdleLogo" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 612.0
+offset_top = 233.0
+offset_right = 902.0
+offset_bottom = 483.0
+texture = ExtResource("6_to6v4")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="IdleLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 553.0
+offset_top = 721.0
+offset_right = 969.0
+offset_bottom = 744.0
+theme_type_variation = &"IdleLabel"
+text = "TUS PAPIROS SECRETOS, EN LAS MEJORES GARRAS"
+
+[connection signal="OpenTab" from="VBoxContainer" to="." method="SetEmail"]

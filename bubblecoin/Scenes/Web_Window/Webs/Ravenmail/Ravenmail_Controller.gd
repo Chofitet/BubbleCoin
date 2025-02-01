@@ -2,36 +2,35 @@
 extends VBoxContainer
 
 var tabsArray =[]
-signal OpenTab
+signal OpenTab(tab : EmailButton)
 func _ready() -> void:
+	
+	if Engine.is_editor_hint():
+		for tab in get_children():
+			if tab is EmailButton:
+				tab.pressed.connect(tabPressed.bind(tab))
+				tabsArray.append(tab)
+		return
+	
 	var i = 0
 	for tab in get_children():
-		if tab is TextureRect:
-			tab.TabPress.connect(tabPressed)
+		if tab is EmailButton:
+			tab.pressed.connect(tabPressed.bind(tab))
 			tabsArray.append(tab)
-			if (not Engine.is_editor_hint() and tab.day == PlayerVariables.dia):
-				if i not in PlayerVariables.unlocked_emails:
-					PlayerVariables.unlocked_emails.append(i)
+			if tab.day == PlayerVariables.dia and i not in PlayerVariables.unlocked_emails:
+				PlayerVariables.unlocked_emails.append(i)
 			tab.visible = false
 			i += 1
-	# so we can use this as a tool
-	if not Engine.is_editor_hint():
-		for unlocked_email in PlayerVariables.unlocked_emails:
-			EnableTabs(unlocked_email)
+	for unlocked_email in PlayerVariables.unlocked_emails:
+		EnableTabs(unlocked_email)
 
 
-
-func tabPressed(tab):
+func tabPressed(tab : EmailButton):
 	OpenTab.emit(tab)
-	print(tab.get_node("button").text)
+	print(tab.text)
 	for t in tabsArray:
-		if t != tab: 
-			print(t.name)
+		if t != tab:
 			t.TabExit()
-
-#func AppearTab():
-#	EnableTabs(TabEnables)
-#	TabEnables += 1
 
 func EnableTabs(TabEnables):
 	tabsArray[TabEnables].visible = true

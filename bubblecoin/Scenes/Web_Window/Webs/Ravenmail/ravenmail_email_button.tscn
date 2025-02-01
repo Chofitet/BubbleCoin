@@ -1,22 +1,28 @@
 [gd_scene load_steps=3 format=3 uid="uid://baoochsn4ef2b"]
 
-[ext_resource type="Texture2D" uid="uid://be37561hvnr5h" path="res://Scenes/Web_Window/tab.jpg" id="1_thyw4"]
+[ext_resource type="Theme" uid="uid://cxqueq3e8hid2" path="res://themes/ravenmail.tres" id="1_klytn"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/Webs/Ravenmail/ravenmail_email_button.gd" id="2_32p88"]
 
-[node name="estimadoArkhar" type="TextureRect"]
+[node name="estimadoArkhar" type="Button"]
 self_modulate = Color(0.662745, 0.662745, 0.662745, 1)
 custom_minimum_size = Vector2(0, 50)
-texture = ExtResource("1_thyw4")
-expand_mode = 2
+offset_right = 217.0
+offset_bottom = 50.0
+theme = ExtResource("1_klytn")
+theme_type_variation = &"EmailButton"
 script = ExtResource("2_32p88")
 
-[node name="button" type="Button" parent="."]
-custom_minimum_size = Vector2(218, 0)
+[node name="Label" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 14
+anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_bottom = 0.5
+offset_left = 33.0
+offset_top = -10.0
+offset_right = -31.0
+offset_bottom = 13.0
 grow_horizontal = 2
 grow_vertical = 2
-flat = true
-metadata/_edit_lock_ = true
+vertical_alignment = 2
+text_overrun_behavior = 3

@@ -1,28 +1,23 @@
 @tool
-extends TextureRect
+extends Button
+class_name EmailButton
 
 @export var email_subject : String :
 	set(value):
 		email_subject = value
-		$button.text = value
+		$Label.text = value
 @export var article : int = -1
-signal TabPress
+
 @export_multiline var email : String :
 	set(value):
 		email = value
-		TabPress.emit(self)
+		pressed.emit()
 
 @export var day : int
 
 func _ready() -> void:
 	if not Engine.is_editor_hint():
-		self_modulate = Color.DARK_GRAY
-		$button.text = email_subject
-		$button.pressed.connect(TabEnter)
-
-func TabEnter():
-	self_modulate = Color.WHITE
-	TabPress.emit(self)
+		$Label.text = email_subject
 
 func TabExit():
-	self_modulate = Color.DARK_GRAY
+	set_pressed_no_signal(false)

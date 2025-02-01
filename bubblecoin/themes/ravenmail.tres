@@ -1,0 +1,15 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://cxqueq3e8hid2"]
+
+[ext_resource type="StyleBox" uid="uid://dy8pdxm27awl6" path="res://BTNStyles/btnMailImportant.tres" id="1_cn8qx"]
+[ext_resource type="FontFile" uid="uid://drgduca1nao07" path="res://Sprites/UI/BBL6000/HelveticaLTStd-Roman.otf" id="2_5yjkj"]
+
+[resource]
+default_font = ExtResource("2_5yjkj")
+default_font_size = 22
+EmailButton/base_type = &"Button"
+EmailButton/styles/normal = ExtResource("1_cn8qx")
+IdleLabel/base_type = &"Label"
+IdleLabel/colors/font_color = Color(0.631373, 0.145098, 0.145098, 1)
+IdleLabel/font_sizes/font_size = 16
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
+VBoxContainer/constants/separation = 19
