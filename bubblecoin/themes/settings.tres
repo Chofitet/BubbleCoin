@@ -1,0 +1,18 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://blv2a5sjocyq3"]
+
+[ext_resource type="Texture2D" uid="uid://sa3qw7tn6c78" path="res://Sprites/UI/PAUSA/SP_SLIDER.png" id="1_6smm6"]
+[ext_resource type="StyleBox" uid="uid://buyq70ulef54t" path="res://themes/settings_slider.tres" id="2_xh18r"]
+
+[sub_resource type="SystemFont" id="SystemFont_yqh81"]
+font_names = PackedStringArray("cursive")
+font_italic = true
+font_weight = 600
+
+[resource]
+default_font = SubResource("SystemFont_yqh81")
+HSlider/icons/grabber = ExtResource("1_6smm6")
+HSlider/styles/slider = ExtResource("2_xh18r")
+SliderLabel/base_type = &"Label"
+SliderLabel/colors/font_color = Color(1, 0.709804, 0.811765, 1)
+SliderLabel/font_sizes/font_size = 30
+SliderLabel/fonts/font = SubResource("SystemFont_yqh81")

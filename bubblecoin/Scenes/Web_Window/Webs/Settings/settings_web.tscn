@@ -1,50 +1,102 @@
-[gd_scene load_steps=3 format=3 uid="uid://br188hfsa56ie"]
+[gd_scene load_steps=5 format=3 uid="uid://br188hfsa56ie"]
 
 [ext_resource type="Script" path="res://Scenes/Web_Window/Webs/Settings/Settings_Controller.gd" id="1_e7a3v"]
+[ext_resource type="Theme" uid="uid://blv2a5sjocyq3" path="res://themes/settings.tres" id="1_y4x8u"]
 [ext_resource type="Texture2D" uid="uid://b2u4f484v1fue" path="res://Sprites/UI/SP_TRADER_BOTON.png" id="2_8a174"]
+[ext_resource type="Texture2D" uid="uid://ulhxbfxuc2fm" path="res://Sprites/UI/PAUSA/REF_PAUSA.png" id="3_31ec4"]
 
 [node name="Settings_Web" type="Panel"]
 self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -860.0
+offset_bottom = -300.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_y4x8u")
 script = ExtResource("1_e7a3v")
+metadata/_edit_lock_ = true
 
-[node name="Tabs" type="Panel" parent="."]
-layout_mode = 2
-anchor_left = 0.018
-anchor_top = 0.04
-anchor_right = 0.982
-anchor_bottom = 0.109
-offset_left = 0.127998
-offset_top = -0.200001
-offset_right = -0.128052
-offset_bottom = -0.045002
+[node name="refe" type="TextureRect" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.498039)
+top_level = true
+offset_left = -158.0
+offset_top = -184.0
+offset_right = 1762.0
+offset_bottom = 896.0
+texture = ExtResource("3_31ec4")
+expand_mode = 1
+metadata/_edit_lock_ = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Tabs"]
-layout_mode = 0
-offset_right = 150.0
-offset_bottom = 43.0
-
-[node name="VolumeLabel" type="Label" parent="Tabs/VBoxContainer"]
-layout_mode = 2
-text = "Volumen"
-
-[node name="VolumeSlider" type="HSlider" parent="Tabs/VBoxContainer"]
+[node name="VolumeSlider" type="HSlider" parent="."]
 unique_name_in_owner = true
-layout_mode = 2
+layout_mode = 1
+offset_left = 75.0
+offset_top = 51.0
+offset_right = 325.0
+offset_bottom = 96.0
+value = 30.0
 rounded = true
 
-[node name="TextureRect" type="TextureRect" parent="Tabs/VBoxContainer"]
+[node name="Label" type="Label" parent="VolumeSlider"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 50.0
+offset_right = 108.0
+offset_bottom = 93.0
+theme_type_variation = &"SliderLabel"
+text = "general"
+
+[node name="MusicSlider" type="HSlider" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 409.0
+offset_top = 51.0
+offset_right = 659.0
+offset_bottom = 96.0
+value = 30.0
+rounded = true
+
+[node name="Label" type="Label" parent="MusicSlider"]
+offset_left = 4.0
+offset_top = 50.0
+offset_right = 108.0
+offset_bottom = 93.0
+theme_type_variation = &"SliderLabel"
+text = "música"
+
+[node name="EffectsSlider" type="HSlider" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 752.0
+offset_top = 51.0
+offset_right = 1002.0
+offset_bottom = 96.0
+value = 30.0
+rounded = true
+
+[node name="Label" type="Label" parent="EffectsSlider"]
+offset_left = 4.0
+offset_top = 50.0
+offset_right = 108.0
+offset_bottom = 93.0
+theme_type_variation = &"SliderLabel"
+text = "efectos"
+
+[node name="TextureRect" type="TextureRect" parent="."]
 self_modulate = Color(0.192157, 0.870588, 0.478431, 1)
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
+offset_left = 367.0
+offset_top = 291.0
+offset_right = 517.0
+offset_bottom = 341.0
 texture = ExtResource("2_8a174")
 expand_mode = 2
 
-[node name="Button" type="Button" parent="Tabs/VBoxContainer/TextureRect"]
+[node name="Button" type="Button" parent="TextureRect"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -53,15 +105,20 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Pausar"
 flat = true
+metadata/_edit_lock_ = true
 
-[node name="TextureRect2" type="TextureRect" parent="Tabs/VBoxContainer"]
+[node name="TextureRect2" type="TextureRect" parent="."]
 self_modulate = Color(1, 0.421778, 0.389603, 1)
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
+offset_left = 19.208
+offset_top = 161.0
+offset_right = 169.208
+offset_bottom = 211.0
 texture = ExtResource("2_8a174")
 expand_mode = 2
 
-[node name="Button" type="Button" parent="Tabs/VBoxContainer/TextureRect2"]
+[node name="Button" type="Button" parent="TextureRect2"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -94,7 +151,9 @@ offset_right = 1048.0
 offset_bottom = 693.0
 text = "Inhala, exhala, ¡de vuelta al juego!"
 
-[connection signal="value_changed" from="Tabs/VBoxContainer/VolumeSlider" to="." method="set_volume"]
-[connection signal="pressed" from="Tabs/VBoxContainer/TextureRect/Button" to="." method="pause_game"]
-[connection signal="pressed" from="Tabs/VBoxContainer/TextureRect2/Button" to="." method="exit_game"]
+[connection signal="value_changed" from="VolumeSlider" to="." method="set_master_volume"]
+[connection signal="value_changed" from="MusicSlider" to="." method="set_music_volume"]
+[connection signal="value_changed" from="EffectsSlider" to="." method="set_effects_volume"]
+[connection signal="pressed" from="TextureRect/Button" to="." method="pause_game"]
+[connection signal="pressed" from="TextureRect2/Button" to="." method="exit_game"]
 [connection signal="pressed" from="PauseMenu/Button" to="." method="resume_game"]

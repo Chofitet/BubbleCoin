@@ -2,11 +2,25 @@ extends Node
 
 const SETTINGS_FILENAME = "user://settings.cfg"
 
-var master_volume : float :
+var master_volume : float = 100.0 :
 	set(value):
 		AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), log (value/100)*20)
 	get():
 		return exp(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Master"))/20)*100
+
+
+var music_volume : float = 100.0 :
+	set(value):
+		AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), log (value/100)*20)
+	get():
+		return exp(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Music"))/20)*100
+
+
+var effects_volume : float = 100.0 :
+	set(value):
+		AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Effects"), log (value/100)*20)
+	get():
+		return exp(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Effects"))/20)*100
 
 
 func load_settings():
@@ -19,12 +33,15 @@ func load_settings():
 	if err != OK:
 		return
 	
-	var volume = config.get_value("Volume", "Master")
-	master_volume = volume
-	print(master_volume)
+	master_volume = config.get_value("Volume", "Master", 100.0)
+	music_volume = config.get_value("Volume", "Music", 100.0)
+	effects_volume = config.get_value("Volume", "Effects", 100.0)
+	print("master_volume", master_volume)
+	print("music_volume", music_volume)
+	print("effects_volume", effects_volume)
 	
 	
-func _ready() -> void:
+func _init() -> void:
 	load_settings()
 
 
@@ -36,6 +53,8 @@ func save_settings():
 
 	# Store some values.
 	config.set_value("Volume", "Master", master_volume)
+	config.set_value("Volume", "Music", music_volume)
+	config.set_value("Volume", "Effects", effects_volume)
 
 	# Save it to a file (overwrite if already exists).
 	config.save(SETTINGS_FILENAME)

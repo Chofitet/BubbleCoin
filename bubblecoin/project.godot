@@ -15,10 +15,6 @@ run/main_scene="res://Scenes/Escenario/escenario.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
-[audio]
-
-buses/default_bus_layout=""
-
 [autoload]
 
 PlayerVariables="*res://_Scripts/PlayerVariables.gd"

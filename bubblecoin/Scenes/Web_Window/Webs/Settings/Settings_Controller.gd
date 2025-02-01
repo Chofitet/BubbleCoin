@@ -4,9 +4,18 @@ extends Panel
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	%VolumeSlider.value = SfxManager.master_volume
+	%MusicSlider.value = SfxManager.music_volume
+	%EffectsSlider.value = SfxManager.effects_volume
 	
-func set_volume(value):
+func set_master_volume(value):
 	SfxManager.master_volume = value
+	
+func set_music_volume(value):
+	SfxManager.music_volume = value
+	
+func set_effects_volume(value):
+	SfxManager.effects_volume = value
+
 
 func pause_game():
 	get_tree().paused = true

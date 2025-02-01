@@ -150,10 +150,12 @@ layout_mode = 1
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("17_usfh4")
 autoplay = true
+bus = &"Music"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AudioStreamPlayer"]
 stream = ExtResource("18_x2y2x")
 volume_db = -6.995
+bus = &"Effects"
 script = ExtResource("19_5ttrm")
 
 [connection signal="ChangeWeb" from="Pantalla/Web_Window" to="TextureBackGround" method="ChangeWeb"]
