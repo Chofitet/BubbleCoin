@@ -126,7 +126,6 @@ size_flags_horizontal = 3
 theme_type_variation = &"SellButton"
 theme_override_font_sizes/font_size = 32
 toggle_mode = true
-text = "venta"
 script = ExtResource("4_ymgec")
 Web = ExtResource("6_5sw8v")
 nameWeb = "venta"
@@ -138,6 +137,7 @@ offset_top = 31.0
 offset_right = 122.0
 offset_bottom = 66.0
 theme_type_variation = &"SellLabel"
+text = "venta"
 
 [node name="Coins" type="Label" parent="."]
 layout_mode = 0

@@ -30,11 +30,14 @@ var compro_burbuja_final := false
 
 var final_activo := false
 
+signal ChangedWeb(web: String)
+
 func AddBubble(bubbleData):
 	BubbleInventory.append(bubbleData)
 
 func SetActualWeb(txt):
 	ActualWeb = txt
+	ChangedWeb.emit(txt)
 
 func AreInventoryFull() -> bool:
 	if BubbleInventory.size() == 6:

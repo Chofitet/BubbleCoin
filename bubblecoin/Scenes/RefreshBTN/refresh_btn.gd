@@ -17,7 +17,7 @@ func Refresh():
 	label.text = "%.2f" % cost
 	webResearch.emit(web)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if PlayerVariables.BubbleCoins >= cost:
 		disabled = false
 	else:

@@ -39,7 +39,7 @@ func set_sell_price(price) -> void:
 	bubble_data.sell_price = price
 	update_sell_price()
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	update_sell_price()
 	var coins = PlayerVariables.BubbleCoins
 	if coins >= bubble_data.buy_price:

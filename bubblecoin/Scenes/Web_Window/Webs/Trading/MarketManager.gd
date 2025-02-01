@@ -39,7 +39,7 @@ func _process(delta: float) -> void:
 
 func calcular_calidad(calidad_referencia : int):
 	print(str(calidad_referencia) + "refes")
-	var suma_chances : float
+	var suma_chances : float = 0.0
 	for chances in probabilidades_nueva_calidad.size():
 		suma_chances += probabilidades_nueva_calidad[chances]
 	var resultado = randf_range(0, suma_chances)

@@ -28,12 +28,12 @@ frame_0/duration = 0.2
 frame_1/texture = ExtResource("6_l12kk")
 frame_1/duration = 0.2
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_mwh5m"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_m3kdq"]
 frames = 2
 frame_0/texture = ExtResource("7_dbtmg")
 frame_0/duration = 0.2
 frame_1/texture = ExtResource("8_3nk5q")
-frame_1/duration = 1.0
+frame_1/duration = 0.2
 
 [node name="Escenario" type="Control"]
 layout_mode = 3
@@ -52,7 +52,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_lg1o1")
 
-[node name="TextureBackGround" type="TextureRect" parent="."]
+[node name="TextureBackground" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -66,7 +66,7 @@ TextureAnimCompra = ExtResource("2_vwgx1")
 TextureAnimVenta = ExtResource("2_vwgx1")
 TextureAnimMail = ExtResource("4_ukyyw")
 TextureAnimBubble = SubResource("AnimatedTexture_0pdpc")
-TextureSettingsBubble = SubResource("AnimatedTexture_mwh5m")
+TextureAnimSettings = SubResource("AnimatedTexture_m3kdq")
 
 [node name="Pantalla" type="Control" parent="."]
 anchors_preset = 0
@@ -158,4 +158,4 @@ volume_db = -6.995
 bus = &"Effects"
 script = ExtResource("19_5ttrm")
 
-[connection signal="ChangeWeb" from="Pantalla/Web_Window" to="TextureBackGround" method="ChangeWeb"]
+[connection signal="ChangeWeb" from="Pantalla/Web_Window" to="TextureBackground" method="ChangeWeb"]
