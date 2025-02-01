@@ -103,10 +103,18 @@ offset_bottom = 89.0
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 32
 toggle_mode = true
-text = "compra"
 script = ExtResource("4_ymgec")
 Web = ExtResource("5_0man6")
 nameWeb = "compra"
+
+[node name="Label" type="Label" parent="Tabs/HBoxContainer/CompraBTN"]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 31.0
+offset_right = 137.0
+offset_bottom = 66.0
+theme_type_variation = &"PriceLabel"
+text = "compra"
 
 [node name="VentaBTN" type="Button" parent="Tabs/HBoxContainer"]
 layout_mode = 2
@@ -122,6 +130,14 @@ text = "venta"
 script = ExtResource("4_ymgec")
 Web = ExtResource("6_5sw8v")
 nameWeb = "venta"
+
+[node name="Label" type="Label" parent="Tabs/HBoxContainer/VentaBTN"]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 31.0
+offset_right = 122.0
+offset_bottom = 66.0
+theme_type_variation = &"SellLabel"
 
 [node name="Coins" type="Label" parent="."]
 layout_mode = 0

@@ -1,17 +1,10 @@
-[gd_resource type="Theme" load_steps=4 format=3 uid="uid://cxqueq3e8hid2"]
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://cxqueq3e8hid2"]
 
 [ext_resource type="StyleBox" uid="uid://dy8pdxm27awl6" path="res://BTNStyles/btnMailImportant.tres" id="1_cn8qx"]
-
-[sub_resource type="SystemFont" id="SystemFont_nymxc"]
-font_names = PackedStringArray("Serif")
-
-[sub_resource type="FontVariation" id="FontVariation_wkibo"]
-base_font = SubResource("SystemFont_nymxc")
-spacing_top = -2
-spacing_bottom = -2
+[ext_resource type="FontVariation" uid="uid://cxywxpv73181t" path="res://fonts/Ravenmail_Font.tres" id="2_7vpbe"]
 
 [resource]
-default_font = SubResource("FontVariation_wkibo")
+default_font = ExtResource("2_7vpbe")
 default_font_size = 24
 EmailButton/base_type = &"Button"
 EmailButton/styles/normal = ExtResource("1_cn8qx")

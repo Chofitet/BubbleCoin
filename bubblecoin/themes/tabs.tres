@@ -1,10 +1,11 @@
-[gd_resource type="Theme" load_steps=12 format=3 uid="uid://cmj2de4hlwo87"]
+[gd_resource type="Theme" load_steps=13 format=3 uid="uid://cmj2de4hlwo87"]
 
 [ext_resource type="Texture2D" uid="uid://wxubauy1ojeu" path="res://Sprites/UI/BBL6000/SP_TAB_BBL6000.png" id="1_1cxre"]
 [ext_resource type="FontFile" uid="uid://cieyqt2214xaf" path="res://fonts/FONT_GAMEBUBLE.otf" id="1_4t61k"]
 [ext_resource type="Texture2D" uid="uid://d2ghcswe27udn" path="res://Sprites/UI/MAIL/SP_TAB_MAIL.png" id="1_n7ffq"]
 [ext_resource type="FontFile" uid="uid://d18x55xsclad6" path="res://Sprites/UI/BBL6000/AEXIR EXTENDED.otf" id="2_ogd5g"]
 [ext_resource type="Texture2D" uid="uid://dtdki06f5xtb7" path="res://Sprites/UI/PAUSA/SP_TAB_PAUSA.png" id="4_bsh4f"]
+[ext_resource type="FontVariation" uid="uid://cxywxpv73181t" path="res://fonts/Ravenmail_Font.tres" id="4_hoa4d"]
 [ext_resource type="SystemFont" uid="uid://opgoy385d8of" path="res://fonts/Settings_Font.tres" id="5_362om"]
 [ext_resource type="Texture2D" uid="uid://colupvcvyp804" path="res://Sprites/UI/SP_TAB_TRADER.png" id="6_t0swh"]
 
@@ -31,6 +32,9 @@ BBL6000XLabel/fonts/font = ExtResource("2_ogd5g")
 RavenmailButton/base_type = &"Button"
 RavenmailButton/styles/normal = SubResource("StyleBoxTexture_3dfbe")
 RavenmailLabel/base_type = &"Label"
+RavenmailLabel/colors/font_color = Color(0.631373, 0.145098, 0.145098, 1)
+RavenmailLabel/font_sizes/font_size = 34
+RavenmailLabel/fonts/font = ExtResource("4_hoa4d")
 SettingsButton/base_type = &"Button"
 SettingsButton/styles/normal = SubResource("StyleBoxTexture_okkfv")
 SettingsLabel/base_type = &"Label"
