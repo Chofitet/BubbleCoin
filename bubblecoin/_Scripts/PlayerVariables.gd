@@ -66,3 +66,8 @@ func RemoveModifies(Modi : Modificador):
 
 func addSubCoins(coins):
 	BubbleCoins += coins
+
+func siguiente_dia():
+	dia += 1
+	unlocked_emails.clear()
+	nuevo_dia.emit(PlayerVariables.dia)

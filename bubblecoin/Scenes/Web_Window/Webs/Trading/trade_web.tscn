@@ -210,6 +210,10 @@ stretch_mode = 5
 script = ExtResource("11_pjxnx")
 ads = Array[Texture2D]([ExtResource("12_bgcru"), ExtResource("13_cqtnf"), ExtResource("14_d7bgq"), ExtResource("15_mq6mq"), ExtResource("16_0140j")])
 
+[node name="Timer" type="Timer" parent="Ads"]
+wait_time = 20.0
+autostart = true
+
 [node name="MarketManager" type="Node" parent="."]
 script = ExtResource("17_qh1wd")
 CalidadesBubble = Array[ExtResource("18_7eosm")]([ExtResource("19_frmoy"), ExtResource("20_1vjl3"), ExtResource("21_j4ayn"), ExtResource("22_j4p78"), ExtResource("23_6sp56"), ExtResource("24_4boyj"), ExtResource("25_tvyan"), ExtResource("26_up7cm"), ExtResource("27_gt2xa")])
@@ -219,3 +223,4 @@ probabilidades_nueva_calidad = Array[float]([25.0, 42.0, 20.0, 10.0, 3.0])
 [connection signal="OpenTab" from="Tabs/HBoxContainer" to="WebConteiner" method="SetWebWindow"]
 [connection signal="pressed" from="RefresBtn" to="MarketManager" method="CompleteWithRandomBubbles"]
 [connection signal="webResearch" from="RefresBtn" to="WebConteiner" method="SetWebWindow"]
+[connection signal="timeout" from="Ads/Timer" to="Ads" method="randomize_ad"]
