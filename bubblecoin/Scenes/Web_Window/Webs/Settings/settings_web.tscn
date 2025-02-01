@@ -33,6 +33,7 @@ layout_mode = 2
 text = "Volumen"
 
 [node name="VolumeSlider" type="HSlider" parent="Tabs/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 rounded = true
 
@@ -71,6 +72,7 @@ text = "Salir"
 flat = true
 
 [node name="PauseMenu" type="Panel" parent="."]
+unique_name_in_owner = true
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -84,6 +86,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Button" type="Button" parent="PauseMenu"]
+visible = false
 layout_mode = 0
 offset_left = 778.0
 offset_top = 662.0
