@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://twbqfw2t33fc"]
+[gd_scene load_steps=25 format=3 uid="uid://twbqfw2t33fc"]
 
 [ext_resource type="Texture2D" uid="uid://pbhlufe76kw1" path="res://Sprites/UI/fondo.png" id="1_lg1o1"]
 [ext_resource type="Texture2D" uid="uid://bnfqk8r1ii1ff" path="res://Sprites/UI/AnimCompraBackground.tres" id="2_vwgx1"]
@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://_Scripts/texture_back_ground_Controller.gd" id="4_ip1yt"]
 [ext_resource type="Texture2D" uid="uid://ceudd6eaejsel" path="res://Sprites/UI/AnimMailBackground.tres" id="4_ukyyw"]
 [ext_resource type="Texture2D" uid="uid://b7glujwfx7i8h" path="res://Sprites/UI/BBL6000/TX_BBL6000_BASE_F1.png" id="5_gf27b"]
-[ext_resource type="PackedScene" uid="uid://b43amscl2xy2c" path="res://Scenes/Contador/contador_coins.tscn" id="5_p1l58"]
+[ext_resource type="PackedScene" uid="uid://b43amscl2xy2c" path="res://Scenes/Clicker/contador_coins.tscn" id="5_p1l58"]
 [ext_resource type="Texture2D" uid="uid://ccluc68tek0og" path="res://Sprites/UI/BBL6000/TX_BBL6000_BASE_F2.png" id="6_l12kk"]
 [ext_resource type="PackedScene" uid="uid://umo188trkdoi" path="res://Scenes/Dormir/Transicion/transition.tscn" id="6_xp8mb"]
 [ext_resource type="Texture2D" uid="uid://b6bgjq7kjt5tg" path="res://Sprites/UI/PAUSA/TX_PAUSA_BASE_F1.png" id="7_dbtmg"]
@@ -20,6 +20,11 @@
 [ext_resource type="AudioStream" uid="uid://ugq3mviifagn" path="res://AudioAssets/mus_trade.ogg" id="17_usfh4"]
 [ext_resource type="AudioStream" uid="uid://clixo6fgahqtd" path="res://AudioAssets/sfx_click.ogg" id="18_x2y2x"]
 [ext_resource type="Script" path="res://_Scripts/audio_stream_player.gd" id="19_5ttrm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cl4ty"]
+
+[sub_resource type="Theme" id="Theme_eqp1o"]
+Button/styles/focus = SubResource("StyleBoxEmpty_cl4ty")
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_0pdpc"]
 frames = 2
@@ -42,6 +47,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_eqp1o")
 
 [node name="Back" type="TextureRect" parent="."]
 layout_mode = 1

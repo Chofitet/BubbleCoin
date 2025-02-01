@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://b43amscl2xy2c"]
+
+[ext_resource type="Script" path="res://Scenes/Clicker/ContadorCoins.gd" id="1_mdkp7"]
+[ext_resource type="Texture2D" uid="uid://d1cjh7uapl5ur" path="res://Sprites/UI/SP_CLICKER_ON.png" id="2_her1w"]
+[ext_resource type="Texture2D" uid="uid://bs6bcyv81hfke" path="res://Sprites/UI/SP_CLICKER_OFF.png" id="4_momo1"]
+
+[node name="Clicker" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 200.0
+offset_bottom = 200.0
+script = ExtResource("1_mdkp7")
+btnClick = ExtResource("2_her1w")
+btnIdle = ExtResource("4_momo1")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_momo1")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Button" type="Button" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="Burbujero" type="Timer" parent="."]
+autostart = true
+
+[connection signal="button_down" from="TextureRect/Button" to="." method="click_down"]
+[connection signal="button_up" from="TextureRect/Button" to="." method="click_up"]
+[connection signal="timeout" from="Burbujero" to="." method="burbujero_timeout"]
