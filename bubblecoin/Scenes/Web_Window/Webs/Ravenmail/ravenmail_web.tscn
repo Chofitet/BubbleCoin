@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scenes/Web_Window/Webs/Ravenmail/ravenmail_web.gd" id="1_nyxuh"]
 [ext_resource type="PackedScene" uid="uid://baoochsn4ef2b" path="res://Scenes/Web_Window/Webs/Ravenmail/ravenmail_email_button.tscn" id="2_hwebp"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/Webs/Ravenmail/Ravenmail_Controller.gd" id="2_p8nkq"]
-[ext_resource type="Texture2D" uid="uid://bh4d4puknx46e" path="res://Sprites/UI/MAIL/REF_MAIL_IDLE.png" id="3_vb72r"]
+[ext_resource type="Texture2D" uid="uid://cus4tcedlsvyk" path="res://Sprites/UI/MAIL/REF_MAIL_ACTIVADO.png" id="3_xaqmr"]
 [ext_resource type="Texture2D" uid="uid://ctehee3fi7sdn" path="res://Sprites/UI/MAIL/SP_MAIL_LOGO.png" id="6_to6v4"]
 
 [node name="Ravenmail_Web" type="Panel"]
@@ -23,7 +23,7 @@ offset_left = -158.0
 offset_top = -184.0
 offset_right = 1762.0
 offset_bottom = 896.0
-texture = ExtResource("3_vb72r")
+texture = ExtResource("3_xaqmr")
 expand_mode = 1
 metadata/_edit_lock_ = true
 
@@ -46,8 +46,23 @@ custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_stretch_ratio = 0.0
 
+[node name="amigolorem" parent="VBoxContainer" instance=ExtResource("2_hwebp")]
+visible = false
+modulate = Color(0.827451, 0.827451, 0.827451, 1)
+self_modulate = Color(1, 1, 1, 1)
+layout_mode = 2
+toggle_mode = true
+email_subject = "Lorem ipsum...."
+email = "Estimado Arkhar, 
+Ha llegado a mis oídos la terrible noticia de que injustamente te han echado de la Universidad de Hechicería. ¡Por la barba de Merlín, qué infortunio! 
+Pero calma, no has de entrar en angustia y desesperación, porque te traigo buenos augurios. En las Tierras Lejanas de Valhan-Gün descubrieron una nueva magia, la llaman Bubble Coin, ¡Una fuerza extraña e intangible que te permite ganar más, más y más!
+Tus problemas estarán resueltos con esta magia, hazme caso, no dudes en aprenderla.
+Sinceramente, tu amigo, Berker"
+day = -1
+
 [node name="amigo0" parent="VBoxContainer" instance=ExtResource("2_hwebp")]
 visible = false
+modulate = Color(0.827451, 0.827451, 0.827451, 1)
 self_modulate = Color(1, 1, 1, 1)
 layout_mode = 2
 toggle_mode = true
@@ -194,14 +209,20 @@ day = 4
 [node name="Email" type="RichTextLabel" parent="."]
 unique_name_in_owner = true
 layout_mode = 2
-offset_left = 487.0
-offset_top = 126.0
-offset_right = 1038.0
-offset_bottom = 672.0
+offset_left = 491.0
+offset_top = 121.0
+offset_right = 1042.0
+offset_bottom = 667.0
 size_flags_vertical = 3
 size_flags_stretch_ratio = 5.0
 bbcode_enabled = true
-text = "Estimado Arkhar, 
+text = "asunto: Querido Arkhar
+
+de: berker88@raven.com
+para: g.arkhar@raven.com
+
+
+Estimado Arkhar, 
 Ha llegado a mis oídos la terrible noticia de que injustamente te han echado de la Universidad de Hechicería. ¡Por la barba de Merlín, qué infortunio! 
 Pero calma, no has de entrar en angustia y desesperación, porque te traigo buenos augurios. En las Tierras Lejanas de Valhan-Gün descubrieron una nueva magia, la llaman Bubble Coin, ¡Una fuerza extraña e intangible que te permite ganar más, más y más!
 Tus problemas estarán resueltos con esta magia, hazme caso, no dudes en aprenderla.
@@ -231,10 +252,10 @@ stretch_mode = 5
 [node name="IdleLabel" type="Label" parent="."]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 553.0
-offset_top = 721.0
-offset_right = 969.0
-offset_bottom = 744.0
+offset_left = 537.0
+offset_top = 716.0
+offset_right = 976.0
+offset_bottom = 739.0
 theme_type_variation = &"IdleLabel"
 text = "TUS PAPIROS SECRETOS, EN LAS MEJORES GARRAS"
 

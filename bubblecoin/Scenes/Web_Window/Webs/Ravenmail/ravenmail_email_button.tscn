@@ -4,6 +4,7 @@
 [ext_resource type="Script" path="res://Scenes/Web_Window/Webs/Ravenmail/ravenmail_email_button.gd" id="2_32p88"]
 
 [node name="estimadoArkhar" type="Button"]
+modulate = Color(0.827451, 0.827451, 0.827451, 1)
 self_modulate = Color(0.662745, 0.662745, 0.662745, 1)
 custom_minimum_size = Vector2(0, 50)
 offset_right = 217.0
