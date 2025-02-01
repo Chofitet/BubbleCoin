@@ -6,6 +6,7 @@ class_name EmailButton
 	set(value):
 		email_subject = value
 		$Label.text = value
+
 @export var article : int = -1
 
 @export_multiline var email : String :
@@ -17,8 +18,9 @@ class_name EmailButton
 
 func _ready() -> void:
 	if not Engine.is_editor_hint():
-		super._ready()
+		super()
 		$Label.text = email_subject
-
-func TabExit():
-	set_pressed_no_signal(false)
+		modulate_disabled = modulate_pressed
+	
+func _toggled(toggled_on: bool) -> void:
+	disabled = toggled_on

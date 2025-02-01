@@ -2,9 +2,9 @@ extends Button
 class_name ResponsiveButton
 
 
-var modulate_normal := Color.WHITE
-var modulate_pressed := Color.WEB_GRAY
-var modulate_hover_pressed := Color.WEB_GRAY
+var modulate_normal := Color.LIGHT_GRAY
+var modulate_pressed := Color.WHITE
+var modulate_hover_pressed := Color.WHITE
 var modulate_hover := Color.ALICE_BLUE
 var modulate_disabled := Color.DARK_GRAY
 

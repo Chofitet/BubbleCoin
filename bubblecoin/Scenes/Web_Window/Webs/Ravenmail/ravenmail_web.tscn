@@ -50,6 +50,7 @@ size_flags_stretch_ratio = 0.0
 visible = false
 self_modulate = Color(1, 1, 1, 1)
 layout_mode = 2
+toggle_mode = true
 email_subject = "Estimado Arkhar"
 article = 1
 email = "Estimado Arkhar, 
@@ -60,8 +61,10 @@ Sinceramente, tu amigo, Berker"
 
 [node name="amigo1" parent="VBoxContainer" instance=ExtResource("2_hwebp")]
 visible = false
+modulate = Color(0.827451, 0.827451, 0.827451, 1)
 self_modulate = Color(1, 1, 1, 1)
 layout_mode = 2
+toggle_mode = true
 email_subject = "Mi amigo Arkhar"
 email = "Mi amigo Arkhar, 
 He recibido tu carta, y me llena de regocijo saber que te has sumergido en este maravilloso mundo mágico de las Bubble Coins. He oído rumores sobre una sorprendente Bubble Coin que es la más poderosa de todas, esta burbuja fue conjurada por las mismísimas manos del fundador original de las Bubble Coins”. Me entusiasmo de tan solo pensar en el poder que debe contener. Espero noticias de tus avances.
@@ -70,8 +73,10 @@ day = 1
 
 [node name="amigo2" parent="VBoxContainer" instance=ExtResource("2_hwebp")]
 visible = false
+modulate = Color(0.827451, 0.827451, 0.827451, 1)
 self_modulate = Color(1, 1, 1, 1)
 layout_mode = 2
+toggle_mode = true
 email_subject = "Estimadísimo amigo mío"
 email = "Estimadísimo amigo mío,
 Me han llegado rumores de que te has convertido en un Archimago Experto de las Bubble Coins, me invade el orgullo y la emoción. 
@@ -83,8 +88,10 @@ day = 2
 
 [node name="amigo3" parent="VBoxContainer" instance=ExtResource("2_hwebp")]
 visible = false
+modulate = Color(0.827451, 0.827451, 0.827451, 1)
 self_modulate = Color(1, 1, 1, 1)
 layout_mode = 2
+toggle_mode = true
 email_subject = "Arkhar."
 email = "Arkhar,
 Después de esperar ansioso tu respuesta por tanto tiempo, caigo en la cuenta de que para ti, los años que llevamos siendo amigos no valen ni una miseria. Quiero que te enteres que ese dinero era para ayudar a mi madre enferma, la misma que tan alegremente te recibía con una taza de chocolate caliente todas las tardes después del colegio durante nuestra niñez. 
@@ -94,8 +101,10 @@ day = 3
 
 [node name="amigo4" parent="VBoxContainer" instance=ExtResource("2_hwebp")]
 visible = false
+modulate = Color(0.827451, 0.827451, 0.827451, 1)
 self_modulate = Color(1, 1, 1, 1)
 layout_mode = 2
+toggle_mode = true
 email_subject = "Querida Rata Inmunda"
 email = "Me he enterado que lo has perdido TODO en las Bubbles Coins y me alegra haber sido partícipe de tu ruina. 
 Quiero que sepas que mi madre, la querida Pachita, pasó a mejor vida ayer por la noche, todo porque no quisiste prestarme el dinero antes de perderlo como el maldito avaro que eres. 
@@ -105,63 +114,79 @@ day = 4
 
 [node name="Spam0" parent="VBoxContainer" instance=ExtResource("2_hwebp")]
 visible = false
+modulate = Color(0.827451, 0.827451, 0.827451, 1)
 self_modulate = Color(1, 1, 1, 1)
 layout_mode = 2
+toggle_mode = true
 email_subject = "SPAM"
 email = "“Tienda El Warlock Coqueto”: Ya está disponible el nuevo sombrero que todos aman, consíguelo sólo en las tiendas oficiales”"
 
 [node name="Spam1" parent="VBoxContainer" instance=ExtResource("2_hwebp")]
 visible = false
+modulate = Color(0.827451, 0.827451, 0.827451, 1)
 self_modulate = Color(1, 1, 1, 1)
 layout_mode = 2
+toggle_mode = true
 email_subject = "SPAM"
 email = "Mira cómo se ven hoy en día el reparto de la serie “Volver al FuBrujo”, ¡uno se encuentra irreconocible!"
 day = 1
 
 [node name="Spam2" parent="VBoxContainer" instance=ExtResource("2_hwebp")]
 visible = false
+modulate = Color(0.827451, 0.827451, 0.827451, 1)
 self_modulate = Color(1, 1, 1, 1)
 layout_mode = 2
+toggle_mode = true
 email_subject = "Secretos de la Financieromancia"
 email = "Aprende los secretos de la Financieromancia. 50% DE DESCUENTO EN EL CURSO. PROMOCIÓN LIMITADA."
 day = 1
 
 [node name="Spam3" parent="VBoxContainer" instance=ExtResource("2_hwebp")]
 visible = false
+modulate = Color(0.827451, 0.827451, 0.827451, 1)
 self_modulate = Color(1, 1, 1, 1)
 layout_mode = 2
+toggle_mode = true
 email_subject = "SPAM"
 email = "¿Estás cansado de lootear todos los días en el mismo dungeon? INVIERTE YA EN BUBBLE COINS"
 day = 2
 
 [node name="Spam4" parent="VBoxContainer" instance=ExtResource("2_hwebp")]
 visible = false
+modulate = Color(0.827451, 0.827451, 0.827451, 1)
 self_modulate = Color(1, 1, 1, 1)
 layout_mode = 2
+toggle_mode = true
 email_subject = "SPAM"
 email = "¿Sufrís de disfunción mágica? No te preocupes, nosotros te ayudamos."
 day = 2
 
 [node name="Spam5" parent="VBoxContainer" instance=ExtResource("2_hwebp")]
 visible = false
+modulate = Color(0.827451, 0.827451, 0.827451, 1)
 self_modulate = Color(1, 1, 1, 1)
 layout_mode = 2
+toggle_mode = true
 email_subject = "SPAM"
 email = "¿Sos un mago mediocre? Comprá mi curso y te enseño cómo tener mentalidad de leviatán. Convertite en un experto de las Bubble Coins."
 day = 3
 
 [node name="Spam6" parent="VBoxContainer" instance=ExtResource("2_hwebp")]
 visible = false
+modulate = Color(0.827451, 0.827451, 0.827451, 1)
 self_modulate = Color(1, 1, 1, 1)
 layout_mode = 2
+toggle_mode = true
 email_subject = "$$$URGENTE$$$"
 email = "$$$URGENTE$$$: Aparece una nueva moneda en el mercado, las Dragon Coins. No te quedes afuera."
 day = 3
 
 [node name="Spam7" parent="VBoxContainer" instance=ExtResource("2_hwebp")]
 visible = false
+modulate = Color(0.827451, 0.827451, 0.827451, 1)
 self_modulate = Color(1, 1, 1, 1)
 layout_mode = 2
+toggle_mode = true
 email_subject = "SPAM"
 email = "Las Dragon Coins no paran de crecer $$$ NO TE QUEDES AFUERA!!$!!"
 day = 4

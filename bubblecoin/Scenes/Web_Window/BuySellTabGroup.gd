@@ -1,14 +1,17 @@
 extends Control
 
-var tabsArray : Array[Button] =[]
+var tabsArray : Array[Button] = []
 signal OpenTab
 func _ready() -> void:
 	for tab in get_children():
 		if tab is Button:
-			tab.TabPress.connect(tabPressed)
+			tab.toggled.connect(tabPressed.bind(tab))
 			tabsArray.append(tab)
 
-func tabPressed(tab : Button):
+func tabPressed(toggled_on: bool, tab : Button):
+	if not toggled_on:
+		return
+	PlayerVariables.SetActualWeb(tab.nameWeb)
 	OpenTab.emit(tab.Web)
 	for t in tabsArray:
 		if t != tab:
