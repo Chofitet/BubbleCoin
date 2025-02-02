@@ -12,15 +12,8 @@ signal DisableButtons
 
 static func new_bubble(_bubbleData : BubbleData, in_inventory: bool) -> Bubble:
 	var bubble: Bubble = bubbleScene.instantiate()
-	if _bubbleData.bubbleCalidad.name == "":
-		_bubbleData.bubbleCalidad.PicRandomBubble()
-	
-	if not in_inventory:
-		_bubbleData.buy_price = _bubbleData.bubbleCalidad.price
-		_bubbleData.sell_price = _bubbleData.bubbleCalidad.price * 0.5
 	bubble.set_bubble_data(_bubbleData)
 	bubble.set_in_inventory(in_inventory)
-	
 	return bubble
 
 func set_in_inventory(in_inventory: bool) -> void:
@@ -31,26 +24,18 @@ func set_bubble_data(bubbleData : BubbleData) -> void:
 	bubble_data = bubbleData
 	set_buy_price(bubbleData.buy_price)
 	set_sell_price(bubbleData.sell_price)
-	set_name_description(bubbleData.bubbleCalidad.name, bubbleData.bubbleCalidad.modificador.ModifyDescription)
-	Set_Estetica(bubbleData.bubbleCalidad)
-
-func generate_bubble_data(bubbleData : BubbleData) -> void:
-	bubble_data = bubbleData
-	set_buy_price(bubbleData.bubbleCalidad.price)
-	set_sell_price(bubbleData.bubbleCalidad.price)
-	set_name_description(bubbleData.bubbleCalidad.name, bubbleData.bubbleCalidad.modificador.ModifyDescription)
-	Set_Estetica(bubbleData.bubbleCalidad)
-
-
+	set_bubble_name(bubbleData.bubble_name)
+	set_modifier(bubbleData.modifier)
+	Set_Estetica(bubbleData)
 
 static func format_price(price: float) -> String:
 	return "%.2f" % price
 
-func set_buy_price(price) -> void:
+func set_buy_price(price : float) -> void:
 	bubble_data.buy_price = price
 	%BuyButton/Label.text = format_price(bubble_data.buy_price)
 
-func set_sell_price(price) -> void:
+func set_sell_price(price : float) -> void:
 	bubble_data.sell_price = price
 	update_sell_price()
 	
@@ -65,46 +50,33 @@ func _process(_delta: float) -> void:
 func update_sell_price() -> void:
 	%SellButton/Label.text = format_price(bubble_data.sell_price)
 
-func set_name_description(_name : String, description):
-	bubble_data.bubble_name = _name
-	bubble_data.modifier_description = description
-	# this will break with titles that have a space in between
-	var name_parts = _name.split(" ")
-	print(name_parts)
+func set_bubble_name(bubble_name : String) -> void:
+	var name_parts = bubble_data.bubble_name.split("\n")
 	%Name.text = "[p align=left]%s[/p]\n[p align=center]%s[/p]\n[p align=right]%s[/p]" % [name_parts[0], name_parts[1], name_parts[2]]
-	print(%Name.text)
-	var modificador = bubble_data.bubbleCalidad.modificador
-	if (modificador.ModifierType.contains("Idle")):
+
+func set_modifier(modifier: Modificador) -> void:
+	if (modifier.ModifierType.contains("Idle")):
 		%ModifierType.texture = modifier_icon_idle
 	else:
 		%ModifierType.texture = modifier_icon_click
-	%ModifierDescription.text = str(max(modificador.AdicionadorClick, modificador.AdicionadorIdle, modificador.MultiplicadorClick, modificador.MultiplicadorIdle))
+	%ModifierDescription.text = str(max(modifier.AdicionadorClick, modifier.AdicionadorIdle, modifier.MultiplicadorClick, modifier.MultiplicadorIdle))
 
-func Set_Estetica(BubbleEstetica):
-	%Burbuja.texture = BubbleEstetica.BurbujasCuerpo
+func Set_Estetica(BubbleEstetica : BubbleData):
+	%Burbuja.texture = BubbleEstetica.cuerpo
 	%Lente.texture = BubbleEstetica.lente
 	%Gorro.texture = BubbleEstetica.gorro
 	%Barba.texture = BubbleEstetica.barba
 
 func buy() -> void:
-	PlayerVariables.AddBubble(bubble_data)
-	PlayerVariables.SetBubbleLevel(bubble_data.bubbleCalidad.Level)
-	MarketVariables.Remove_Bubble(bubble_data)
-	PlayerVariables.Modifies(bubble_data.bubbleCalidad.modificador)
-	PlayerVariables.addSubCoins(-bubble_data.buy_price)
+	PlayerVariables.BuyBubble(bubble_data)
+	MarketVariables.RemoveBubble(bubble_data)
 	if PlayerVariables.AreInventoryFull(): DisableButtons.emit()
-	await get_tree().create_timer(0.1).timeout
+	#await get_tree().create_timer(0.1).timeout
 	queue_free()
 
 func sell() -> void:
-	PlayerVariables.RemoveBubble(bubble_data)
-	PlayerVariables.RemoveModifies(bubble_data.bubbleCalidad.modificador)
-	PlayerVariables.addSubCoins(bubble_data.sell_price)
+	PlayerVariables.SellBubble(bubble_data)
 	queue_free()
-
-func apply_modifier(counter):
-	counter.multiplier += bubble_data.multiplier
-	counter.addition +=  bubble_data.addition
 
 func DisableEnableBubble(x):
 	%Disable.visible = x

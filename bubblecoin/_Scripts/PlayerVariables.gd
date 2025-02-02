@@ -32,8 +32,18 @@ var final_activo := false
 
 signal ChangedWeb(web: String)
 
+func BuyBubble(bubbleData : BubbleData):
+	AddBubble(bubbleData)
+	addSubCoins(-bubbleData.buy_price)
+	
+func SellBubble(bubbleData: BubbleData):
+	RemoveBubble(bubbleData)
+	addSubCoins(bubbleData.sell_price)
+
 func AddBubble(bubbleData):
 	BubbleInventory.append(bubbleData)
+	UpdateBubbleLevel(bubbleData.bubbleCalidad.Level)
+	UpdateModifier(bubbleData.modifier)
 
 func SetActualWeb(txt):
 	ActualWeb = txt
@@ -46,11 +56,12 @@ func AreInventoryFull() -> bool:
 	
 func RemoveBubble(bubbleData):
 	BubbleInventory.erase(bubbleData)
+	RemoveModifier(bubbleData.modifier)
 
-func SetBubbleLevel(x):
+func UpdateBubbleLevel(x : int):
 	MaxBubbleLevel = max(x,MaxBubbleLevel)
 
-func Modifies(Modi : Modificador):
+func UpdateModifier(Modi : Modificador):
 	MultiplicadorClicker += Modi.MultiplicadorClick
 	MultiplicadorIdle += Modi.MultiplicadorIdle
 	AdicionIdle += Modi.AdicionadorIdle
@@ -58,7 +69,7 @@ func Modifies(Modi : Modificador):
 	
 	print(MultiplicadorClicker + MultiplicadorIdle + MultiplicadorIdle + AdicionIdle)
 
-func RemoveModifies(Modi : Modificador):
+func RemoveModifier(Modi : Modificador):
 	MultiplicadorClicker -= Modi.MultiplicadorClick
 	MultiplicadorIdle -= Modi.MultiplicadorIdle
 	AdicionIdle -= Modi.AdicionadorIdle

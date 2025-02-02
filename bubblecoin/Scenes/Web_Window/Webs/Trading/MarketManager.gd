@@ -25,12 +25,8 @@ func CompleteWithRandomBubbles():
 	MarketVariables.Set_Bubbles_Of_Day(BubblesDay1)
 
 func BubbleResourceCreate(calidad_referencia : int) -> BubbleData:
-	var bubble = BubbleData.new()
-	var calidadData = CalidadesBubble[calcular_calidad(calidad_referencia)].duplicate()
-	calidadData.PicRandomBubble()
-	
-	bubble.bubbleCalidad = calidadData
-	
+	var calidadData = CalidadesBubble[calcular_calidad(calidad_referencia)]
+	var bubble = BubbleData.new(calidadData)
 	return bubble
 
 func _process(delta: float) -> void:
