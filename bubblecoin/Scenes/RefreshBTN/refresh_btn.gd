@@ -8,8 +8,13 @@ signal webResearch
 var incremento = 1.5
 func _ready() -> void:
 	super._ready()
+	PlayerVariables.ChangedWeb.connect(updateVisibility)
+	updateVisibility(PlayerVariables.ActualWeb)
 	pressed.connect(Refresh)
 	label.text = "%.2f" % cost
+
+func updateVisibility(web: String):
+	visible = web == "compra"
 
 func Refresh():
 	PlayerVariables.addSubCoins(-cost)

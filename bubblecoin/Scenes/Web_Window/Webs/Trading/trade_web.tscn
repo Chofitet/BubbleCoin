@@ -8,9 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://c5u82qfxqdit3" path="res://Scenes/Web_Window/Webs/Trading/Sell_web.tscn" id="6_5sw8v"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/Webs/Trading/CoinsCounter.gd" id="7_nfupx"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/WebSpawner.gd" id="8_pc50c"]
-[ext_resource type="LabelSettings" uid="uid://csxcrfeu5xt16" path="res://fonts/Label_GamebubleBlue.tres" id="9_lp05y"]
 [ext_resource type="Script" path="res://Scenes/RefreshBTN/refresh_btn.gd" id="10_6s6sh"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/Webs/Trading/ads.gd" id="11_pjxnx"]
+[ext_resource type="Texture2D" uid="uid://r1djsywg1f2p" path="res://Sprites/UI/SP_BBC_LOGO_SMALL.png" id="11_ybvw4"]
 [ext_resource type="Texture2D" uid="uid://4xxtfst5ufmt" path="res://Sprites/Ads/Saborcitos.png" id="12_bgcru"]
 [ext_resource type="Texture2D" uid="uid://ciu7621gbjhoh" path="res://Sprites/Ads/Wizard Forbes_no text.png" id="13_cqtnf"]
 [ext_resource type="Texture2D" uid="uid://cd5wprb2wco6" path="res://Sprites/Ads/Vote por Rahamaraán Tercero.png" id="14_d7bgq"]
@@ -162,15 +162,6 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.33
 script = ExtResource("8_pc50c")
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 2
-offset_left = 846.0
-offset_top = 177.0
-offset_right = 1006.0
-offset_bottom = 195.0
-text = "REFRESCA TUS BUBBLES"
-label_settings = ExtResource("9_lp05y")
-
 [node name="RefresBtn" type="Button" parent="."]
 layout_mode = 0
 offset_left = 819.0
@@ -181,21 +172,40 @@ theme_type_variation = &"RefreshButton"
 script = ExtResource("10_6s6sh")
 web = ExtResource("5_0man6")
 
+[node name="RefreshDescription" type="Label" parent="RefresBtn"]
+layout_mode = 2
+offset_left = 6.0
+offset_top = -71.0
+offset_right = 234.0
+offset_bottom = -15.0
+theme_type_variation = &"RefreshDescription"
+text = "REFRESCA TUS BUBBLES"
+
 [node name="Label" type="Label" parent="RefresBtn"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 104.0
-offset_top = 25.0
-offset_right = -32.0
-offset_bottom = -22.0
+offset_left = 110.0
+offset_top = 24.0
+offset_right = -28.0
+offset_bottom = -23.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 45
+theme_type_variation = &"PriceLabel"
 text = "10"
 horizontal_alignment = 2
 vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="RefresBtn"]
+modulate = Color(0.815686, 0.988235, 0.0901961, 1)
+offset_left = 79.0
+offset_top = 28.0
+offset_right = 115.0
+offset_bottom = 74.0
+texture = ExtResource("11_ybvw4")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Ads" type="TextureRect" parent="."]
 layout_mode = 2
