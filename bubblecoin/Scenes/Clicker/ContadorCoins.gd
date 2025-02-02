@@ -13,13 +13,11 @@ func hay_suficientes_bubbles(valor : float) -> bool:
 	return valor >= PlayerVariables.BubbleCoins
 
 func click_down() -> void:
-	print("click")
 	var coins_por_click = PlayerVariables.AdicionClicker * PlayerVariables.MultiplicadorClicker
 	obtener_coins(coins_por_click)
 	$TextureRect.texture = btnClick
 
 func click_up() -> void:
-	print("unclick")
 	$TextureRect.texture = btnIdle
 
 func burbujero_timeout() -> void:
