@@ -16,6 +16,7 @@ func updateVisibility(newWeb: String):
 	visible = newWeb == "compra"
 
 func Refresh():
+	SfxManager.newbubble()
 	PlayerVariables.addSubCoins(-PlayerVariables.RefreshCost)
 	PlayerVariables.RefreshCost *= incremento
 	label.text = "%.2f" % PlayerVariables.RefreshCost

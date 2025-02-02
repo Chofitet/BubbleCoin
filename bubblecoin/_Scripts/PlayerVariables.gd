@@ -35,10 +35,12 @@ var final_activo := false
 signal ChangedWeb(web: String)
 
 func BuyBubble(bubbleData : BubbleData):
+	SfxManager.buy()
 	AddBubble(bubbleData)
 	addSubCoins(-bubbleData.buy_price)
 	
 func SellBubble(bubbleData: BubbleData):
+	SfxManager.buy()
 	RemoveBubble(bubbleData)
 	addSubCoins(bubbleData.sell_price)
 

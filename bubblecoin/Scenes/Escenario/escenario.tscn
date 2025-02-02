@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://twbqfw2t33fc"]
+[gd_scene load_steps=24 format=3 uid="uid://twbqfw2t33fc"]
 
 [ext_resource type="Texture2D" uid="uid://pbhlufe76kw1" path="res://Sprites/UI/ESCENARIO/fondo.png" id="1_lg1o1"]
 [ext_resource type="Texture2D" uid="uid://bnfqk8r1ii1ff" path="res://Sprites/UI/TRADER/AnimCompraBackground.tres" id="2_vwgx1"]
@@ -18,7 +18,6 @@
 [ext_resource type="PackedScene" uid="uid://ccle73ewwwxpq" path="res://Scenes/Menus/pantalla_final.tscn" id="12_dsira"]
 [ext_resource type="PackedScene" uid="uid://cao5qu706kxm0" path="res://Scenes/Dormir/Cartel/cartel_dormir.tscn" id="13_ghivl"]
 [ext_resource type="AudioStream" uid="uid://ugq3mviifagn" path="res://AudioAssets/mus_trade.ogg" id="17_usfh4"]
-[ext_resource type="AudioStream" uid="uid://clixo6fgahqtd" path="res://AudioAssets/sfx_click.ogg" id="18_x2y2x"]
 [ext_resource type="Script" path="res://_Scripts/audio_stream_player.gd" id="19_5ttrm"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cl4ty"]
@@ -155,12 +154,9 @@ layout_mode = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("17_usfh4")
-autoplay = true
 bus = &"Music"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AudioStreamPlayer"]
-stream = ExtResource("18_x2y2x")
-volume_db = -6.995
 bus = &"Effects"
 script = ExtResource("19_5ttrm")
 
