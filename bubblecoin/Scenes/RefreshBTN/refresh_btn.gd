@@ -1,7 +1,6 @@
 extends ResponsiveButton
 
 @onready var label = $Label
-var cost = 10
 @export var web : PackedScene
 signal webResearch
 
@@ -11,19 +10,19 @@ func _ready() -> void:
 	PlayerVariables.ChangedWeb.connect(updateVisibility)
 	updateVisibility(PlayerVariables.ActualWeb)
 	pressed.connect(Refresh)
-	label.text = "%.2f" % cost
+	label.text = "%.2f" % PlayerVariables.RefreshCost
 
-func updateVisibility(web: String):
-	visible = web == "compra"
+func updateVisibility(newWeb: String):
+	visible = newWeb == "compra"
 
 func Refresh():
-	PlayerVariables.addSubCoins(-cost)
-	cost *= incremento
-	label.text = "%.2f" % cost
+	PlayerVariables.addSubCoins(-PlayerVariables.RefreshCost)
+	PlayerVariables.RefreshCost *= incremento
+	label.text = "%.2f" % PlayerVariables.RefreshCost
 	webResearch.emit(web)
 
 func _process(_delta: float) -> void:
-	if PlayerVariables.BubbleCoins >= cost:
+	if PlayerVariables.BubbleCoins >= PlayerVariables.RefreshCost:
 		disabled = false
 	else:
 		disabled = true

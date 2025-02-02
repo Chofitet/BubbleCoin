@@ -10,19 +10,21 @@ var MaxBubbleLevel : int = 0
 
 var BubbleInventory: Array[BubbleData] = []
 
-var MultiplicadorClicker = 1
+var RefreshCost : float = 10
 
-var MultiplicadorIdle = 1
+var MultiplicadorClicker : float = 1
 
-var AdicionClicker = 1
+var MultiplicadorIdle : float = 1
 
-var AdicionIdle = 0
+var AdicionClicker : float = 1
+
+var AdicionIdle : float = 0
 
 var unlocked_emails: Array[int] = []
 
 var unlocked_tabs: Array[int] = [0,2,3]
 
-var ActualWeb
+var ActualWeb : String
 
 var dia : int = 0
 
