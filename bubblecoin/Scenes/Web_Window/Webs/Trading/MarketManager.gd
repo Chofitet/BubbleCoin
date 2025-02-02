@@ -11,13 +11,12 @@ func _ready() -> void:
 	PlayerVariables.nuevo_dia.connect(AumentoDeNuevoDia)
 	CompleteWithRandomBubbles()
 
-func AumentoDeNuevoDia():
+func AumentoDeNuevoDia(_dia):
 	for bubble_data in PlayerVariables.BubbleInventory:
 		bubble_data.night_increase_sell_price()
 	pass
 
 func CompleteWithRandomBubbles():
-	var playerBubbleLevel = PlayerVariables.MaxBubbleLevel
 	BubblesDay1.clear()
 	for i in range(0,6):
 		BubblesDay1.append(BubbleResourceCreate(PlayerVariables.MaxBubbleLevel))
@@ -35,12 +34,14 @@ func _process(delta: float) -> void:
 
 func calcular_calidad(calidad_referencia : int):
 	print(str(calidad_referencia) + "refes")
-	var suma_chances : float = 0.0
-	for chances in probabilidades_nueva_calidad.size():
-		suma_chances += probabilidades_nueva_calidad[chances]
-	var resultado = randf_range(0, suma_chances)
-	var n := 0
-	var valor_return = 0
+	
+	var suma_chances := 0.0
+	for chances in probabilidades_nueva_calidad:
+		suma_chances += chances
+		
+	var resultado := randf_range(0, suma_chances)
+	var n := 0.0
+	var valor_return := 0
 	for chances in probabilidades_nueva_calidad.size():
 		if resultado <= probabilidades_nueva_calidad[chances] + n:
 			valor_return = calidad_referencia + chances - 2

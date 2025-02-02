@@ -2,13 +2,13 @@ extends Node
 
 signal nuevo_dia(nuevo_dia : int)
 
-var BubbleCoins : float
+var BubbleCoins : float = 0.0
 
 var fame : float = 0
 
 var MaxBubbleLevel : int = 0
 
-var BubbleInventory: Array[BubbleData]  = []
+var BubbleInventory: Array[BubbleData] = []
 
 var MultiplicadorClicker = 1
 

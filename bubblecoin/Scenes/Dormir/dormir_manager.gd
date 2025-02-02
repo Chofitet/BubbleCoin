@@ -14,7 +14,7 @@ func _ready() -> void:
 	if auto:
 		comenzar_sueño()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if PlayerVariables.final_activo:
 		queue_free()
 	if time_counter:
