@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0ygml7ipbv6n"
-path="res://.godot/imported/TX_TRADER_BASE_F1.png-8d011e1c149b9e0b6e75c6cb1c310b65.ctex"
+uid="uid://c75lhx8vq0ft5"
+path="res://.godot/imported/TX_TRADER_BASE_F2.png-35f735c595f7fcab1fec5543ec96524d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/UI/TX_TRADER_BASE_F1.png"
-dest_files=["res://.godot/imported/TX_TRADER_BASE_F1.png-8d011e1c149b9e0b6e75c6cb1c310b65.ctex"]
+source_file="res://Sprites/UI/TRADER/TX_TRADER_BASE_F2.png"
+dest_files=["res://.godot/imported/TX_TRADER_BASE_F2.png-35f735c595f7fcab1fec5543ec96524d.ctex"]
 
 [params]
 

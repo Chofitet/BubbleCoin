@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvpdrp08b0yh6"
-path="res://.godot/imported/SP_NOTIF_TEDORMIRAS.png-959ecc87acfc3ef22118ac682c824b6e.ctex"
+uid="uid://bbysb2bur0p2k"
+path="res://.godot/imported/SP_TRADER_BOTON_WHITE2.png-057b1befd93c8061723e1121df754dce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/UI/SP_NOTIF_TEDORMIRAS.png"
-dest_files=["res://.godot/imported/SP_NOTIF_TEDORMIRAS.png-959ecc87acfc3ef22118ac682c824b6e.ctex"]
+source_file="res://Sprites/UI/TRADER/SP_TRADER_BOTON_WHITE2.png"
+dest_files=["res://.godot/imported/SP_TRADER_BOTON_WHITE2.png-057b1befd93c8061723e1121df754dce.ctex"]
 
 [params]
 

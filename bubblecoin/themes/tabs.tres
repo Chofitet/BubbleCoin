@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dtdki06f5xtb7" path="res://Sprites/UI/PAUSA/SP_TAB_PAUSA.png" id="4_bsh4f"]
 [ext_resource type="FontVariation" uid="uid://cxywxpv73181t" path="res://fonts/Ravenmail_Font.tres" id="4_hoa4d"]
 [ext_resource type="SystemFont" uid="uid://opgoy385d8of" path="res://fonts/Settings_Font.tres" id="5_362om"]
-[ext_resource type="Texture2D" uid="uid://colupvcvyp804" path="res://Sprites/UI/SP_TAB_TRADER.png" id="6_t0swh"]
+[ext_resource type="Texture2D" uid="uid://colupvcvyp804" path="res://Sprites/UI/TRADER/SP_TAB_TRADER.png" id="7_a1rjk"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mwbuo"]
 texture = ExtResource("1_1cxre")
@@ -19,7 +19,7 @@ texture = ExtResource("1_n7ffq")
 texture = ExtResource("4_bsh4f")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_16i67"]
-texture = ExtResource("6_t0swh")
+texture = ExtResource("7_a1rjk")
 
 [resource]
 default_font = ExtResource("1_4t61k")

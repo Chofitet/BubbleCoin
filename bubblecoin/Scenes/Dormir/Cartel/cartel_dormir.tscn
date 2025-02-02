@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cao5qu706kxm0"]
 
 [ext_resource type="Script" path="res://Scenes/Dormir/Cartel/cartel_dormir.gd" id="1_72x5j"]
-[ext_resource type="Texture2D" uid="uid://bvpdrp08b0yh6" path="res://Sprites/UI/SP_NOTIF_TEDORMIRAS.png" id="2_tn6n8"]
+[ext_resource type="Texture2D" uid="uid://bvpdrp08b0yh6" path="res://Sprites/UI/ESCENARIO/SP_NOTIF_TEDORMIRAS.png" id="2_tn6n8"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_g8xj3"]
 font_size = 70

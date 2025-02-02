@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0oscsn87yjd7"
-path="res://.godot/imported/Button_01.png-b55193cff3aa1a28ebf10214277d94f5.ctex"
+uid="uid://c0ygml7ipbv6n"
+path="res://.godot/imported/TX_TRADER_BASE_F1.png-28d5773b5a83d60c10c5d551e358dbb1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Button_01.png"
-dest_files=["res://.godot/imported/Button_01.png-b55193cff3aa1a28ebf10214277d94f5.ctex"]
+source_file="res://Sprites/UI/TRADER/TX_TRADER_BASE_F1.png"
+dest_files=["res://.godot/imported/TX_TRADER_BASE_F1.png-28d5773b5a83d60c10c5d551e358dbb1.ctex"]
 
 [params]
 

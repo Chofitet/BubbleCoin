@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbysb2bur0p2k"
-path="res://.godot/imported/SP_TRADER_BOTON_WHITE2.png-92d9bf5f149f5797f6d6c01b5c94b70f.ctex"
+uid="uid://1bxus3b5flci"
+path="res://.godot/imported/SP_TRADER_BOTON_WHITE.png-0c95607a3fd492582952bfe156825911.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/UI/SP_TRADER_BOTON_WHITE2.png"
-dest_files=["res://.godot/imported/SP_TRADER_BOTON_WHITE2.png-92d9bf5f149f5797f6d6c01b5c94b70f.ctex"]
+source_file="res://Sprites/UI/TRADER/SP_TRADER_BOTON_WHITE.png"
+dest_files=["res://.godot/imported/SP_TRADER_BOTON_WHITE.png-0c95607a3fd492582952bfe156825911.ctex"]
 
 [params]
 

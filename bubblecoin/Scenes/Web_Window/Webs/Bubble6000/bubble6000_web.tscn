@@ -12,7 +12,7 @@
 [ext_resource type="Theme" uid="uid://csmmltwpfr80g" path="res://themes/bubble6000.tres" id="10_x7pfr"]
 [ext_resource type="Theme" uid="uid://b4r6jyts06wde" path="res://themes/trading.tres" id="11_sbgtm"]
 [ext_resource type="Script" path="res://_Scripts/ResponsiveButton.gd" id="12_7ktr3"]
-[ext_resource type="Texture2D" uid="uid://r1djsywg1f2p" path="res://Sprites/UI/SP_BBC_LOGO_SMALL.png" id="12_vic3c"]
+[ext_resource type="Texture2D" uid="uid://r1djsywg1f2p" path="res://Sprites/UI/TRADER/SP_BBC_LOGO_SMALL.png" id="12_vic3c"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_0qkvu"]
 frames = 5

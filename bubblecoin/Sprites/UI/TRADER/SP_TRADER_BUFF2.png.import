@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1cjh7uapl5ur"
-path="res://.godot/imported/SP_CLICKER_ON.png-c6f5bd05e3989c0a521864c894838d14.ctex"
+uid="uid://d1cc73dviqote"
+path="res://.godot/imported/SP_TRADER_BUFF2.png-fffee1748f3cf06a4f63736647de9de8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/UI/SP_CLICKER_ON.png"
-dest_files=["res://.godot/imported/SP_CLICKER_ON.png-c6f5bd05e3989c0a521864c894838d14.ctex"]
+source_file="res://Sprites/UI/TRADER/SP_TRADER_BUFF2.png"
+dest_files=["res://.godot/imported/SP_TRADER_BUFF2.png-fffee1748f3cf06a4f63736647de9de8.ctex"]
 
 [params]
 

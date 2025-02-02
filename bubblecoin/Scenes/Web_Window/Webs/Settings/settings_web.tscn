@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes/Web_Window/Webs/Settings/Settings_Controller.gd" id="1_e7a3v"]
 [ext_resource type="Theme" uid="uid://blv2a5sjocyq3" path="res://themes/settings.tres" id="1_y4x8u"]
-[ext_resource type="Texture2D" uid="uid://b2u4f484v1fue" path="res://Sprites/UI/SP_TRADER_BOTON.png" id="2_8a174"]
+[ext_resource type="Texture2D" uid="uid://b2u4f484v1fue" path="res://Sprites/UI/TRADER/SP_TRADER_BOTON.png" id="2_8a174"]
 [ext_resource type="Texture2D" uid="uid://ulhxbfxuc2fm" path="res://Sprites/UI/PAUSA/REF_PAUSA.png" id="3_31ec4"]
 [ext_resource type="Script" path="res://_Scripts/ResponsiveButton.gd" id="4_bojhf"]
 [ext_resource type="Texture2D" uid="uid://ckmwq848myxvo" path="res://Sprites/UI/PAUSA/SP_EQUIS.png" id="4_m0eim"]

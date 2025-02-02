@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mpns0lup0370"
-path="res://.godot/imported/SP_TRADER_BLOQUEO.png-deab2e9f753bc08558a5fcf14813d109.ctex"
+uid="uid://b2u4f484v1fue"
+path="res://.godot/imported/SP_TRADER_BOTON.png-fb3e69b6a861693d4b0a43076ad99f51.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/UI/SP_TRADER_BLOQUEO.png"
-dest_files=["res://.godot/imported/SP_TRADER_BLOQUEO.png-deab2e9f753bc08558a5fcf14813d109.ctex"]
+source_file="res://Sprites/UI/TRADER/SP_TRADER_BOTON.png"
+dest_files=["res://.godot/imported/SP_TRADER_BOTON.png-fb3e69b6a861693d4b0a43076ad99f51.ctex"]
 
 [params]
 

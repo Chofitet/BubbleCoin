@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://b43amscl2xy2c"]
 
-[ext_resource type="Script" path="res://Scenes/Clicker/ContadorCoins.gd" id="1_mdkp7"]
-[ext_resource type="Texture2D" uid="uid://d1cjh7uapl5ur" path="res://Sprites/UI/SP_CLICKER_ON.png" id="2_her1w"]
-[ext_resource type="Texture2D" uid="uid://bs6bcyv81hfke" path="res://Sprites/UI/SP_CLICKER_OFF.png" id="4_momo1"]
+[ext_resource type="Script" path="res://Scenes/ClickerBurbujero/ClickerBurbujero.gd" id="1_mdkp7"]
+[ext_resource type="Texture2D" uid="uid://d1cjh7uapl5ur" path="res://Sprites/UI/ESCENARIO/SP_CLICKER_ON.png" id="2_her1w"]
+[ext_resource type="Texture2D" uid="uid://bs6bcyv81hfke" path="res://Sprites/UI/ESCENARIO/SP_CLICKER_OFF.png" id="4_momo1"]
 
 [node name="Clicker" type="Control"]
 layout_mode = 3

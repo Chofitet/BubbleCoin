@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dj2jk0awo6ns7"
-path="res://.godot/imported/REF_TRADER_COMPRA.png-1dfc122ae86c01b77dd8f06f1d8c40bd.ctex"
+uid="uid://ctmpd35783tew"
+path="res://.godot/imported/SP_BBC_LOGO.png-52f42412684130d729dc63af753fe6df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/UI/REF_TRADER_COMPRA.png"
-dest_files=["res://.godot/imported/REF_TRADER_COMPRA.png-1dfc122ae86c01b77dd8f06f1d8c40bd.ctex"]
+source_file="res://Sprites/UI/TRADER/SP_BBC_LOGO.png"
+dest_files=["res://.godot/imported/SP_BBC_LOGO.png-52f42412684130d729dc63af753fe6df.ctex"]
 
 [params]
 

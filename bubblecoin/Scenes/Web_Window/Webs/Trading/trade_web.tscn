@@ -8,9 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://c5u82qfxqdit3" path="res://Scenes/Web_Window/Webs/Trading/Sell_web.tscn" id="6_5sw8v"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/Webs/Trading/CoinsCounter.gd" id="7_nfupx"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/WebSpawner.gd" id="8_pc50c"]
-[ext_resource type="Script" path="res://Scenes/RefreshBTN/refresh_btn.gd" id="10_6s6sh"]
+[ext_resource type="Script" path="res://Scenes/Web_Window/Webs/Trading/refresh_btn.gd" id="10_6s6sh"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/Webs/Trading/ads.gd" id="11_pjxnx"]
-[ext_resource type="Texture2D" uid="uid://r1djsywg1f2p" path="res://Sprites/UI/SP_BBC_LOGO_SMALL.png" id="11_ybvw4"]
+[ext_resource type="Texture2D" uid="uid://r1djsywg1f2p" path="res://Sprites/UI/TRADER/SP_BBC_LOGO_SMALL.png" id="11_ybvw4"]
 [ext_resource type="Texture2D" uid="uid://4xxtfst5ufmt" path="res://Sprites/Ads/Saborcitos.png" id="12_bgcru"]
 [ext_resource type="Texture2D" uid="uid://ciu7621gbjhoh" path="res://Sprites/Ads/Wizard Forbes_no text.png" id="13_cqtnf"]
 [ext_resource type="Texture2D" uid="uid://cd5wprb2wco6" path="res://Sprites/Ads/Vote por Rahamaraán Tercero.png" id="14_d7bgq"]
@@ -35,7 +35,7 @@
 [ext_resource type="Resource" uid="uid://bnl47mcdxki0k" path="res://Resources/calidades/Modificadores/+2Idle.tres" id="33_q7ff5"]
 [ext_resource type="Resource" uid="uid://gv16jq6h4m2m" path="res://Resources/calidades/Modificadores/x2Idle.tres" id="34_338sj"]
 [ext_resource type="Resource" uid="uid://b075xlx1s5hop" path="res://Resources/Nombres Aleatorios/PackNombres.tres" id="35_3n4r4"]
-[ext_resource type="Texture2D" uid="uid://dj2jk0awo6ns7" path="res://Sprites/UI/REF_TRADER_COMPRA.png" id="37_1x4yc"]
+[ext_resource type="Texture2D" uid="uid://dj2jk0awo6ns7" path="res://Sprites/UI/TRADER/REF_TRADER_COMPRA.png" id="37_1x4yc"]
 
 [sub_resource type="Resource" id="Resource_q5fkn"]
 script = ExtResource("18_7eosm")
@@ -199,6 +199,7 @@ vertical_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="RefresBtn"]
 modulate = Color(0.815686, 0.988235, 0.0901961, 1)
+layout_mode = 0
 offset_left = 79.0
 offset_top = 28.0
 offset_right = 115.0
