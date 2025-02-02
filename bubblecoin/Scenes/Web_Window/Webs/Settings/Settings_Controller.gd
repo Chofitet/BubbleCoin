@@ -16,18 +16,8 @@ func set_music_volume(value):
 func set_effects_volume(value):
 	SfxManager.effects_volume = value
 
-
-func pause_game():
-	get_tree().paused = true
-	%PauseMenu.visible = true
-
 func _exit_tree() -> void:
 	SfxManager.save_settings()
-
-func resume_game():
-	print("resume")
-	get_tree().paused = false
-	%PauseMenu.visible = false
 
 func exit_game() -> void:
 	get_tree().root.propagate_notification(NOTIFICATION_WM_CLOSE_REQUEST)
