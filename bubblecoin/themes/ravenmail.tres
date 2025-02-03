@@ -1,10 +1,10 @@
 [gd_resource type="Theme" load_steps=3 format=3 uid="uid://cxqueq3e8hid2"]
 
 [ext_resource type="StyleBox" uid="uid://dy8pdxm27awl6" path="res://BTNStyles/btnMailImportant.tres" id="1_cn8qx"]
-[ext_resource type="FontVariation" uid="uid://cxywxpv73181t" path="res://fonts/Ravenmail_Font.tres" id="2_7vpbe"]
+[ext_resource type="FontFile" uid="uid://dss4g0rbu8x4y" path="res://fonts/Tinos/Tinos-Regular.ttf" id="2_eqj4c"]
 
 [resource]
-default_font = ExtResource("2_7vpbe")
+default_font = ExtResource("2_eqj4c")
 default_font_size = 24
 EmailButton/base_type = &"Button"
 EmailButton/styles/normal = ExtResource("1_cn8qx")

@@ -1,6 +1,0 @@
-[gd_resource type="SystemFont" format=3 uid="uid://8ba1gaw3e5s7"]
-
-[resource]
-font_names = PackedStringArray("cursive")
-font_italic = true
-font_weight = 600

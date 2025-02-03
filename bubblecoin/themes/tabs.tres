@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://d2ghcswe27udn" path="res://Sprites/UI/MAIL/SP_TAB_MAIL.png" id="1_n7ffq"]
 [ext_resource type="FontFile" uid="uid://d18x55xsclad6" path="res://Sprites/UI/BBL6000/AEXIR EXTENDED.otf" id="2_ogd5g"]
 [ext_resource type="Texture2D" uid="uid://dtdki06f5xtb7" path="res://Sprites/UI/PAUSA/SP_TAB_PAUSA.png" id="4_bsh4f"]
-[ext_resource type="FontVariation" uid="uid://cxywxpv73181t" path="res://fonts/Ravenmail_Font.tres" id="4_hoa4d"]
-[ext_resource type="SystemFont" uid="uid://opgoy385d8of" path="res://fonts/Settings_Font.tres" id="5_362om"]
+[ext_resource type="FontFile" uid="uid://dss4g0rbu8x4y" path="res://fonts/Tinos/Tinos-Regular.ttf" id="4_m0mwb"]
+[ext_resource type="FontFile" uid="uid://b52vtb2ta1qsp" path="res://fonts/Comic_Neue/ComicNeue-Bold.ttf" id="6_q2n42"]
 [ext_resource type="Texture2D" uid="uid://colupvcvyp804" path="res://Sprites/UI/TRADER/SP_TAB_TRADER.png" id="7_a1rjk"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mwbuo"]
@@ -34,11 +34,11 @@ RavenmailButton/styles/normal = SubResource("StyleBoxTexture_3dfbe")
 RavenmailLabel/base_type = &"Label"
 RavenmailLabel/colors/font_color = Color(0.631373, 0.145098, 0.145098, 1)
 RavenmailLabel/font_sizes/font_size = 34
-RavenmailLabel/fonts/font = ExtResource("4_hoa4d")
+RavenmailLabel/fonts/font = ExtResource("4_m0mwb")
 SettingsButton/base_type = &"Button"
 SettingsButton/styles/normal = SubResource("StyleBoxTexture_okkfv")
 SettingsLabel/base_type = &"Label"
-SettingsLabel/fonts/font = ExtResource("5_362om")
+SettingsLabel/fonts/font = ExtResource("6_q2n42")
 TradingButton/base_type = &"Button"
 TradingButton/styles/normal = SubResource("StyleBoxTexture_16i67")
 TradingLabel/base_type = &"Label"

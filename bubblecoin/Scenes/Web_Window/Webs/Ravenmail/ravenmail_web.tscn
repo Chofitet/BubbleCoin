@@ -47,7 +47,6 @@ layout_mode = 2
 size_flags_stretch_ratio = 0.0
 
 [node name="amigolorem" parent="VBoxContainer" instance=ExtResource("2_hwebp")]
-visible = false
 self_modulate = Color(1, 1, 1, 1)
 layout_mode = 2
 toggle_mode = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://dg2lbykb8kif3"]
+[gd_scene load_steps=33 format=3 uid="uid://csie2ddqssb6i"]
 
 [ext_resource type="Script" path="res://Scenes/Web_Window/web_window_Controller.gd" id="1_nseh8"]
 [ext_resource type="Script" path="res://Scenes/Web_Window/BuySellTabGroup.gd" id="2_ammik"]
