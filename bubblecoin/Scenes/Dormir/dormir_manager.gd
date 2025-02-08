@@ -14,7 +14,7 @@ func _ready() -> void:
 	if auto:
 		comenzar_sueño()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if PlayerVariables.final_activo:
 		queue_free()
 	if time_counter:
@@ -41,7 +41,7 @@ func _on_delay_dormir_timeout() -> void:
 
 func dormido():
 	# REINICIO DE TODO
-	siguiente_dia()
+	PlayerVariables.siguiente_dia()
 	%CartelDormir.desaparecer()
 	print("Pasó un nuevo día")
 	transition.enter.disconnect(dormido)
@@ -61,11 +61,6 @@ func sueño_completado():
 	else:
 		print("sueño_completado")
 #endregion
-
-func siguiente_dia():
-	PlayerVariables.dia += 1
-	PlayerVariables.unlocked_emails.clear()
-	PlayerVariables.nuevo_dia.emit(PlayerVariables.dia)
 
 func parar_tiempo():
 	delay_advertencia.paused = true

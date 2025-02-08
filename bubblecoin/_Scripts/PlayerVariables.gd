@@ -2,27 +2,29 @@ extends Node
 
 signal nuevo_dia(nuevo_dia : int)
 
-var BubbleCoins : float
+var BubbleCoins : float = 0.0
 
 var fame : float = 0
 
 var MaxBubbleLevel : int = 0
 
-var BubbleInventory: Array[BubbleData]  = []
+var BubbleInventory: Array[BubbleData] = []
 
-var MultiplicadorClicker = 1
+var RefreshCost : float = 10
 
-var MultiplicadorIdle = 1
+var MultiplicadorClicker : float = 1
 
-var AdicionClicker = 1
+var MultiplicadorIdle : float = 1
 
-var AdicionIdle = 0
+var AdicionClicker : float = 1
+
+var AdicionIdle : float = 0
 
 var unlocked_emails: Array[int] = []
 
 var unlocked_tabs: Array[int] = [0,2,3]
 
-var ActualWeb
+var ActualWeb : String
 
 var dia : int = 0
 
@@ -30,11 +32,26 @@ var compro_burbuja_final := false
 
 var final_activo := false
 
+signal ChangedWeb(web: String)
+
+func BuyBubble(bubbleData : BubbleData):
+	SfxManager.buy()
+	AddBubble(bubbleData)
+	addSubCoins(-bubbleData.buy_price)
+	
+func SellBubble(bubbleData: BubbleData):
+	SfxManager.buy()
+	RemoveBubble(bubbleData)
+	addSubCoins(bubbleData.sell_price)
+
 func AddBubble(bubbleData):
 	BubbleInventory.append(bubbleData)
+	UpdateBubbleLevel(bubbleData.bubbleCalidad.Level)
+	UpdateModifier(bubbleData.modifier)
 
 func SetActualWeb(txt):
 	ActualWeb = txt
+	ChangedWeb.emit(txt)
 
 func AreInventoryFull() -> bool:
 	if BubbleInventory.size() == 6:
@@ -43,11 +60,12 @@ func AreInventoryFull() -> bool:
 	
 func RemoveBubble(bubbleData):
 	BubbleInventory.erase(bubbleData)
+	RemoveModifier(bubbleData.modifier)
 
-func SetBubbleLevel(x):
+func UpdateBubbleLevel(x : int):
 	MaxBubbleLevel = max(x,MaxBubbleLevel)
 
-func Modifies(Modi : Modificador):
+func UpdateModifier(Modi : Modificador):
 	MultiplicadorClicker += Modi.MultiplicadorClick
 	MultiplicadorIdle += Modi.MultiplicadorIdle
 	AdicionIdle += Modi.AdicionadorIdle
@@ -55,7 +73,7 @@ func Modifies(Modi : Modificador):
 	
 	print(MultiplicadorClicker + MultiplicadorIdle + MultiplicadorIdle + AdicionIdle)
 
-func RemoveModifies(Modi : Modificador):
+func RemoveModifier(Modi : Modificador):
 	MultiplicadorClicker -= Modi.MultiplicadorClick
 	MultiplicadorIdle -= Modi.MultiplicadorIdle
 	AdicionIdle -= Modi.AdicionadorIdle
@@ -63,3 +81,8 @@ func RemoveModifies(Modi : Modificador):
 
 func addSubCoins(coins):
 	BubbleCoins += coins
+
+func siguiente_dia():
+	dia += 1
+	unlocked_emails.clear()
+	nuevo_dia.emit(PlayerVariables.dia)

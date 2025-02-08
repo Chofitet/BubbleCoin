@@ -1,0 +1,8 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://buyq70ulef54t"]
+
+[ext_resource type="Texture2D" uid="uid://xtnn6jib2r36" path="res://Sprites/UI/PAUSA/SP_BARRASLIDER.png" id="1_1vld6"]
+
+[resource]
+texture = ExtResource("1_1vld6")
+texture_margin_top = 5.0
+texture_margin_bottom = 4.0

@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cao5qu706kxm0"]
 
 [ext_resource type="Script" path="res://Scenes/Dormir/Cartel/cartel_dormir.gd" id="1_72x5j"]
-[ext_resource type="Texture2D" uid="uid://bvpdrp08b0yh6" path="res://Sprites/UI/SP_NOTIF_TEDORMIRAS.png" id="2_tn6n8"]
+[ext_resource type="Texture2D" uid="uid://bvpdrp08b0yh6" path="res://Sprites/UI/ESCENARIO/SP_NOTIF_TEDORMIRAS.png" id="2_tn6n8"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_g8xj3"]
 font_size = 70
@@ -66,48 +66,21 @@ _data = {
 
 [node name="CartelDormir" type="Control"]
 layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.6, 0.6)
+anchors_preset = 0
 script = ExtResource("1_72x5j")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -83.0
-offset_top = -64.0
-offset_right = 83.0
-offset_bottom = 64.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_right = 464.0
+offset_bottom = 150.0
 texture = ExtResource("2_tn6n8")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 96.0
-offset_top = -47.0
-offset_right = 176.0
-offset_bottom = 49.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = 334.0
+offset_top = 28.0
+offset_right = 414.0
+offset_bottom = 124.0
 text = "23"
 label_settings = SubResource("LabelSettings_g8xj3")
 horizontal_alignment = 1

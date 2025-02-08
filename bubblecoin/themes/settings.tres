@@ -1,0 +1,31 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://blv2a5sjocyq3"]
+
+[ext_resource type="Texture2D" uid="uid://sa3qw7tn6c78" path="res://Sprites/UI/PAUSA/SP_SLIDER.png" id="1_6smm6"]
+[ext_resource type="StyleBox" uid="uid://bewhm238vhuka" path="res://BTNStyles/btnExit.tres" id="1_olkj0"]
+[ext_resource type="StyleBox" uid="uid://buyq70ulef54t" path="res://themes/settings_slider.tres" id="2_xh18r"]
+[ext_resource type="FontFile" uid="uid://m23kx83o0wqa" path="res://fonts/Comic_Neue/ComicNeue-BoldItalic.ttf" id="4_ewooq"]
+[ext_resource type="FontFile" uid="uid://b52vtb2ta1qsp" path="res://fonts/Comic_Neue/ComicNeue-Bold.ttf" id="5_t034w"]
+
+[resource]
+default_font = ExtResource("5_t034w")
+Button/font_sizes/font_size = 30
+Button/styles/disabled = ExtResource("1_olkj0")
+Button/styles/normal = ExtResource("1_olkj0")
+Button/styles/pressed = ExtResource("1_olkj0")
+CreditsLabel/base_type = &"Label"
+CreditsLabel/colors/font_color = Color(0.47451, 0.988235, 0.929412, 1)
+CreditsLabel/font_sizes/font_size = 38
+ExitLabel/base_type = &"Label"
+ExitLabel/font_sizes/font_size = 34
+HSlider/icons/grabber = ExtResource("1_6smm6")
+HSlider/styles/slider = ExtResource("2_xh18r")
+JammerArea/base_type = &"Label"
+JammerArea/colors/font_color = Color(0, 0, 0, 1)
+JammerArea/font_sizes/font_size = 34
+JammerName/base_type = &"Label"
+JammerName/colors/font_color = Color(0.47451, 0.988235, 0.929412, 1)
+JammerName/font_sizes/font_size = 54
+SliderLabel/base_type = &"Label"
+SliderLabel/colors/font_color = Color(1, 0.709804, 0.811765, 1)
+SliderLabel/font_sizes/font_size = 38
+SliderLabel/fonts/font = ExtResource("4_ewooq")

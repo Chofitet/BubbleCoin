@@ -1,0 +1,35 @@
+[gd_resource type="AudioStreamInteractive" load_steps=5 format=3 uid="uid://clsres0y5ben6"]
+
+[ext_resource type="AudioStream" uid="uid://dtrk0xu6k7pv5" path="res://AudioAssets/mus_mainmenu.ogg" id="1_5q2nt"]
+[ext_resource type="AudioStream" uid="uid://yk3uf02ijlpl" path="res://AudioAssets/mus_mail.ogg" id="2_ajoao"]
+[ext_resource type="AudioStream" uid="uid://ugq3mviifagn" path="res://AudioAssets/mus_trade.ogg" id="3_rlsi1"]
+[ext_resource type="AudioStream" uid="uid://7ox6kaqosh15" path="res://AudioAssets/mus_articles.ogg" id="4_r5i87"]
+
+[resource]
+clip_count = 4
+clip_0/name = &"MainMenu"
+clip_0/stream = ExtResource("1_5q2nt")
+clip_0/auto_advance = 0
+clip_1/name = &"Mail"
+clip_1/stream = ExtResource("2_ajoao")
+clip_1/auto_advance = 0
+clip_2/name = &"Trade"
+clip_2/stream = ExtResource("3_rlsi1")
+clip_2/auto_advance = 0
+clip_3/name = &"Articles"
+clip_3/stream = ExtResource("4_r5i87")
+clip_3/auto_advance = 0
+_transitions = {
+Vector2i(-1, -1): {
+"fade_beats": 8,
+"fade_mode": 3,
+"from_time": 2,
+"to_time": 0
+},
+Vector2i(0, -1): {
+"fade_beats": 1,
+"fade_mode": 3,
+"from_time": 2,
+"to_time": 1
+}
+}

@@ -1,0 +1,43 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://b4r6jyts06wde"]
+
+[ext_resource type="FontFile" uid="uid://cieyqt2214xaf" path="res://fonts/FONT_GAMEBUBLE.otf" id="1_4otm6"]
+[ext_resource type="FontFile" uid="uid://cjd8dv46xld8k" path="res://fonts/FONT_POWEROFDRAGON.otf" id="1_gj77r"]
+[ext_resource type="StyleBox" uid="uid://dul6amb3g8iri" path="res://BTNStyles/btnVerde.tres" id="3_yxleb"]
+[ext_resource type="StyleBox" uid="uid://c4dq7x0yp4phv" path="res://BTNStyles/btnVerdedISABLE.tres" id="4_m5tbw"]
+[ext_resource type="StyleBox" uid="uid://bfeo3sqrlhulw" path="res://BTNStyles/btnmORADO.tres" id="5_xjs5k"]
+[ext_resource type="StyleBox" uid="uid://bjkb8dpkdorao" path="res://BTNStyles/btnmORADODisable.tres" id="6_ptddq"]
+[ext_resource type="StyleBox" uid="uid://c2s0rwb4myruj" path="res://BTNStyles/btnMarron.tres" id="6_ryp4p"]
+
+[resource]
+BubbleModifierDescription/base_type = &"Label"
+BubbleModifierDescription/colors/font_color = Color(0.47451, 0.988235, 0.929412, 1)
+BubbleName/base_type = &"RichTextLabel"
+BubbleName/colors/default_color = Color(0.47451, 0.988235, 0.929412, 1)
+BubbleName/constants/line_separation = -26
+BubbleName/font_sizes/normal_font_size = 30
+BubbleName/fonts/normal_font = ExtResource("1_gj77r")
+Button/colors/font_color = Color(0.815686, 0.988235, 0.0901961, 1)
+Button/colors/font_disabled_color = Color(0.815686, 0.988235, 0.0901961, 0.823529)
+Button/colors/icon_normal_color = Color(0.815686, 0.988235, 0.0901961, 1)
+Button/constants/icon_max_width = 36
+Button/font_sizes/font_size = 26
+Button/fonts/font = ExtResource("1_4otm6")
+Button/styles/disabled = ExtResource("4_m5tbw")
+Button/styles/normal = ExtResource("3_yxleb")
+Label/colors/font_color = Color(0.815686, 0.988235, 0.0901961, 1)
+Label/font_sizes/font_size = 24
+Label/fonts/font = ExtResource("1_4otm6")
+PriceLabel/base_type = &"Label"
+PriceLabel/font_sizes/font_size = 30
+RefreshButton/base_type = &"Button"
+RefreshButton/styles/disabled = ExtResource("6_ptddq")
+RefreshButton/styles/normal = ExtResource("5_xjs5k")
+RefreshDescription/base_type = &"Label"
+RefreshDescription/colors/font_color = Color(0.47451, 0.988235, 0.929412, 1)
+RefreshDescription/font_sizes/font_size = 32
+RefreshDescription/fonts/font = ExtResource("1_gj77r")
+SellButton/base_type = &"Button"
+SellButton/colors/font_color = Color(0.988235, 0.94902, 0.603922, 1)
+SellButton/styles/normal = ExtResource("6_ryp4p")
+SellLabel/base_type = &"PriceLabel"
+SellLabel/colors/font_color = Color(0.988235, 0.94902, 0.603922, 1)

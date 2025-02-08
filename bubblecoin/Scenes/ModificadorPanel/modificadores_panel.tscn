@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://dxrnrmuqfihgl"]
 
-[ext_resource type="Texture2D" uid="uid://d1cc73dviqote" path="res://Sprites/UI/SP_TRADER_BUFF2.png" id="1_4rr4w"]
+[ext_resource type="Texture2D" uid="uid://d1cc73dviqote" path="res://Sprites/UI/TRADER/SP_TRADER_BUFF2.png" id="1_4rr4w"]
 [ext_resource type="Script" path="res://Scenes/ModificadorPanel/modificadores_panel.gd" id="1_k1nd6"]
 [ext_resource type="LabelSettings" uid="uid://csxcrfeu5xt16" path="res://fonts/Label_GamebubleBlue.tres" id="2_7qxuf"]
-[ext_resource type="Texture2D" uid="uid://b44tlbxvufmxk" path="res://Sprites/UI/SP_TRADER_BUFF1.png" id="3_dofx1"]
+[ext_resource type="Texture2D" uid="uid://b44tlbxvufmxk" path="res://Sprites/UI/TRADER/SP_TRADER_BUFF1.png" id="3_dofx1"]
 
 [node name="ModificadoresPanel" type="Control"]
 layout_mode = 3

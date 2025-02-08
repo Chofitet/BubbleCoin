@@ -1,0 +1,7 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://bawcrax0b2bqk"]
+
+[ext_resource type="Texture2D" uid="uid://b2u4f484v1fue" path="res://Sprites/UI/TRADER/SP_TRADER_BOTON.png" id="1_pv4d0"]
+
+[resource]
+texture = ExtResource("1_pv4d0")
+modulate_color = Color(0.823529, 0.901961, 0.862745, 1)

@@ -1,0 +1,44 @@
+[gd_resource type="Theme" load_steps=13 format=3 uid="uid://cmj2de4hlwo87"]
+
+[ext_resource type="Texture2D" uid="uid://wxubauy1ojeu" path="res://Sprites/UI/BBL6000/SP_TAB_BBL6000.png" id="1_1cxre"]
+[ext_resource type="FontFile" uid="uid://cieyqt2214xaf" path="res://fonts/FONT_GAMEBUBLE.otf" id="1_4t61k"]
+[ext_resource type="Texture2D" uid="uid://d2ghcswe27udn" path="res://Sprites/UI/MAIL/SP_TAB_MAIL.png" id="1_n7ffq"]
+[ext_resource type="FontFile" uid="uid://d18x55xsclad6" path="res://Sprites/UI/BBL6000/AEXIR EXTENDED.otf" id="2_ogd5g"]
+[ext_resource type="Texture2D" uid="uid://dtdki06f5xtb7" path="res://Sprites/UI/PAUSA/SP_TAB_PAUSA.png" id="4_bsh4f"]
+[ext_resource type="FontFile" uid="uid://dss4g0rbu8x4y" path="res://fonts/Tinos/Tinos-Regular.ttf" id="4_m0mwb"]
+[ext_resource type="FontFile" uid="uid://b52vtb2ta1qsp" path="res://fonts/Comic_Neue/ComicNeue-Bold.ttf" id="6_q2n42"]
+[ext_resource type="Texture2D" uid="uid://colupvcvyp804" path="res://Sprites/UI/TRADER/SP_TAB_TRADER.png" id="7_a1rjk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mwbuo"]
+texture = ExtResource("1_1cxre")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3dfbe"]
+texture = ExtResource("1_n7ffq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_okkfv"]
+texture = ExtResource("4_bsh4f")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_16i67"]
+texture = ExtResource("7_a1rjk")
+
+[resource]
+default_font = ExtResource("1_4t61k")
+default_font_size = 40
+BBL6000XButton/base_type = &"Button"
+BBL6000XButton/styles/normal = SubResource("StyleBoxTexture_mwbuo")
+BBL6000XLabel/base_type = &"Label"
+BBL6000XLabel/font_sizes/font_size = 32
+BBL6000XLabel/fonts/font = ExtResource("2_ogd5g")
+RavenmailButton/base_type = &"Button"
+RavenmailButton/styles/normal = SubResource("StyleBoxTexture_3dfbe")
+RavenmailLabel/base_type = &"Label"
+RavenmailLabel/colors/font_color = Color(0.631373, 0.145098, 0.145098, 1)
+RavenmailLabel/font_sizes/font_size = 34
+RavenmailLabel/fonts/font = ExtResource("4_m0mwb")
+SettingsButton/base_type = &"Button"
+SettingsButton/styles/normal = SubResource("StyleBoxTexture_okkfv")
+SettingsLabel/base_type = &"Label"
+SettingsLabel/fonts/font = ExtResource("6_q2n42")
+TradingButton/base_type = &"Button"
+TradingButton/styles/normal = SubResource("StyleBoxTexture_16i67")
+TradingLabel/base_type = &"Label"

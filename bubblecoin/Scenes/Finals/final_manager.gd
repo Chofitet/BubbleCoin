@@ -10,7 +10,7 @@ extends Control
 
 @export var delay_desplome := 10
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if not PlayerVariables.final_activo:
 		if PlayerVariables.compro_burbuja_final:# or Input.is_action_just_pressed('ui_accept'):
 			llamar_final_burbuja()

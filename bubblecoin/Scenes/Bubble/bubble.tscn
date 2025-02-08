@@ -1,231 +1,244 @@
-[gd_scene load_steps=9 format=3 uid="uid://cdnr74tow1gdm"]
+[gd_scene load_steps=12 format=3 uid="uid://cdnr74tow1gdm"]
 
 [ext_resource type="Script" path="res://Scenes/Bubble/bubble.gd" id="1_rmvf7"]
 [ext_resource type="Texture2D" uid="uid://cahqy66xmwj0l" path="res://Sprites/BurbujaCuerpos/Simple Bubble_01.png" id="3_aomck"]
 [ext_resource type="Texture2D" uid="uid://c1p6wad1vabhs" path="res://Sprites/gorros/SP_HAT_1.png" id="3_ipwg0"]
 [ext_resource type="Texture2D" uid="uid://bvykrlbomq7x1" path="res://Sprites/Lentes/SP_OJOS_1.png" id="4_gowgx"]
 [ext_resource type="Texture2D" uid="uid://e20h4r8ojh4w" path="res://Sprites/barbas/SP_BARBA_1.png" id="5_vbyy2"]
-[ext_resource type="StyleBox" uid="uid://dul6amb3g8iri" path="res://BTNStyles/btnVerde.tres" id="6_243fa"]
-[ext_resource type="StyleBox" uid="uid://c4dq7x0yp4phv" path="res://BTNStyles/btnVerdedISABLE.tres" id="6_ejmwm"]
-[ext_resource type="Texture2D" uid="uid://ctmpd35783tew" path="res://Sprites/UI/SP_BBC_LOGO.png" id="8_bk1rj"]
+[ext_resource type="Texture2D" uid="uid://b44tlbxvufmxk" path="res://Sprites/UI/TRADER/SP_TRADER_BUFF1.png" id="7_3i2s7"]
+[ext_resource type="FontFile" uid="uid://cieyqt2214xaf" path="res://fonts/FONT_GAMEBUBLE.otf" id="8_sa4bn"]
+[ext_resource type="Theme" uid="uid://b4r6jyts06wde" path="res://themes/trading.tres" id="9_ap4s4"]
+[ext_resource type="Texture2D" uid="uid://dj2jk0awo6ns7" path="res://Sprites/UI/TRADER/REF_TRADER_COMPRA.png" id="9_tk3eq"]
+[ext_resource type="Script" path="res://_Scripts/ResponsiveButton.gd" id="10_t3so5"]
+[ext_resource type="Texture2D" uid="uid://r1djsywg1f2p" path="res://Sprites/UI/TRADER/SP_BBC_LOGO_SMALL.png" id="10_tslri"]
 
-[node name="Bubble" type="MarginContainer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
+[node name="Bubble" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 380.0
+offset_bottom = 208.0
+theme = ExtResource("9_ap4s4")
 script = ExtResource("1_rmvf7")
+
+[node name="refe" type="TextureRect" parent="."]
+visible = false
+self_modulate = Color(1, 1, 1, 0.262745)
+top_level = true
+layout_mode = 0
+offset_left = -182.0
+offset_top = -304.0
+offset_right = 1738.0
+offset_bottom = 776.0
+texture = ExtResource("9_tk3eq")
+expand_mode = 1
+metadata/_edit_lock_ = true
 
 [node name="Background" type="ColorRect" parent="."]
 visible = false
 layout_mode = 2
-color = Color(0.264698, 0.464787, 1, 1)
+offset_right = 380.0
+offset_bottom = 208.0
+color = Color(0.262745, 0.466667, 1, 0.694118)
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="BubbleTexture" type="Control" parent="."]
 layout_mode = 2
-
-[node name="Panel" type="Panel" parent="HBoxContainer"]
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="PaddingLeft" type="Control" parent="HBoxContainer/Panel/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 5.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Panel/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 90.0
-
-[node name="PaddingTop" type="Control" parent="HBoxContainer/Panel/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 5.0
-
-[node name="BubbleTexture" type="Control" parent="HBoxContainer/Panel/HBoxContainer/VBoxContainer"]
-layout_mode = 2
+anchors_preset = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 193.0
+offset_bottom = 193.0
 size_flags_vertical = 3
 size_flags_stretch_ratio = 90.0
+metadata/_edit_lock_ = true
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Panel/HBoxContainer/VBoxContainer/BubbleTexture"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="Burbuja" type="TextureRect" parent="BubbleTexture"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 32.0
+offset_top = 43.0
+offset_right = 154.0
+offset_bottom = 159.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 90.0
 texture = ExtResource("3_aomck")
-expand_mode = 1
+expand_mode = 2
+stretch_mode = 4
 
-[node name="Cosmetics" type="VBoxContainer" parent="HBoxContainer/Panel/HBoxContainer/VBoxContainer/BubbleTexture"]
+[node name="Cosmetics" type="VBoxContainer" parent="BubbleTexture"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_lock_ = true
 
-[node name="Gorro" type="TextureRect" parent="HBoxContainer/Panel/HBoxContainer/VBoxContainer/BubbleTexture/Cosmetics"]
+[node name="Gorro" type="TextureRect" parent="BubbleTexture/Cosmetics"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 2.0
+size_flags_stretch_ratio = 73.0
 texture = ExtResource("3_ipwg0")
 expand_mode = 1
+stretch_mode = 5
+metadata/_edit_lock_ = true
 
-[node name="Lente" type="TextureRect" parent="HBoxContainer/Panel/HBoxContainer/VBoxContainer/BubbleTexture/Cosmetics"]
+[node name="Lente" type="TextureRect" parent="BubbleTexture/Cosmetics"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
+size_flags_stretch_ratio = 44.0
 texture = ExtResource("4_gowgx")
 expand_mode = 1
+stretch_mode = 5
 
-[node name="Barba" type="TextureRect" parent="HBoxContainer/Panel/HBoxContainer/VBoxContainer/BubbleTexture/Cosmetics"]
+[node name="Barba" type="TextureRect" parent="BubbleTexture/Cosmetics"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 1.8
+size_flags_stretch_ratio = 60.0
 texture = ExtResource("5_vbyy2")
 expand_mode = 1
+stretch_mode = 5
 
-[node name="PaddingBottom" type="Control" parent="HBoxContainer/Panel/HBoxContainer/VBoxContainer"]
-layout_mode = 2
+[node name="Name" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 198.0
+offset_top = -2.0
+offset_right = 356.0
+offset_bottom = 89.0
+theme_type_variation = &"BubbleName"
+bbcode_enabled = true
+text = "[p align=left]Nombre[/p]
+[p align=center]Apellido[/p]
+[p align=right]Apellido[/p]"
+scroll_active = false
+
+[node name="ModifierType" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 216.0
+offset_top = 91.0
+offset_right = 252.0
+offset_bottom = 127.0
+texture = ExtResource("7_3i2s7")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ModifierX" type="Label" parent="."]
+layout_mode = 0
+offset_left = 257.0
+offset_top = 99.0
+offset_right = 272.0
+offset_bottom = 122.0
 size_flags_vertical = 3
-size_flags_stretch_ratio = 5.0
+theme_type_variation = &"BubbleModifierDescription"
+theme_override_fonts/font = ExtResource("8_sa4bn")
+theme_override_font_sizes/font_size = 19
+text = "x
+"
 
-[node name="PaddingRight" type="Control" parent="HBoxContainer/Panel/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 5.0
-
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer"]
-layout_mode = 2
-
-[node name="name" type="Label" parent="HBoxContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
+[node name="ModifierDescription" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 273.0
+offset_top = 94.0
+offset_right = 363.0
+offset_bottom = 123.0
 size_flags_vertical = 3
-size_flags_stretch_ratio = 2.0
-horizontal_alignment = 1
-text_overrun_behavior = 3
-max_lines_visible = 2
+theme = ExtResource("9_ap4s4")
+theme_type_variation = &"BubbleModifierDescription"
+text = "1111111"
 
-[node name="ModifierDescription" type="Label" parent="HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="Control" type="Control" parent="."]
 layout_mode = 2
-size_flags_vertical = 3
-text = "x2 contador"
-horizontal_alignment = 1
-
-[node name="Control" type="Control" parent="HBoxContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
+anchors_preset = 0
+offset_left = 200.0
+offset_top = 126.0
+offset_right = 356.0
+offset_bottom = 195.0
 size_flags_vertical = 3
 size_flags_stretch_ratio = 1.8
 
-[node name="BuyBtn" type="Button" parent="HBoxContainer/MarginContainer/VBoxContainer/Control"]
+[node name="BuyButton" type="Button" parent="Control"]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/disabled = ExtResource("6_ejmwm")
-theme_override_styles/hover = ExtResource("6_243fa")
-theme_override_styles/pressed = ExtResource("6_243fa")
-theme_override_styles/normal = ExtResource("6_243fa")
-disabled = true
+alignment = 2
+script = ExtResource("10_t3so5")
 
-[node name="BuyPrice" type="Label" parent="HBoxContainer/MarginContainer/VBoxContainer/Control/BuyBtn"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -56.0
-offset_top = -11.5
-offset_right = 56.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "1.00"
-horizontal_alignment = 1
+[node name="Label" type="Label" parent="Control/BuyButton"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 16.0
+offset_right = 132.0
+offset_bottom = 51.0
+theme_type_variation = &"PriceLabel"
+text = "99999"
+horizontal_alignment = 2
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer/MarginContainer/VBoxContainer/Control/BuyBtn"]
-self_modulate = Color(0.815686, 0.988235, 0.0901961, 1)
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 60.0
-offset_top = 63.0
-offset_right = -445.0
-offset_bottom = -69.0
-texture = ExtResource("8_bk1rj")
+[node name="TextureRect" type="TextureRect" parent="Control/BuyButton"]
+modulate = Color(0.815686, 0.988235, 0.0901961, 1)
+layout_mode = 0
+offset_left = 13.0
+offset_top = 13.0
+offset_right = 49.0
+offset_bottom = 55.0
+texture = ExtResource("10_tslri")
 expand_mode = 1
+stretch_mode = 5
 
-[node name="SellBtn" type="Button" parent="HBoxContainer/MarginContainer/VBoxContainer/Control"]
+[node name="SellButton" type="Button" parent="Control"]
+unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/disabled = ExtResource("6_ejmwm")
-theme_override_styles/hover = ExtResource("6_243fa")
-theme_override_styles/pressed = ExtResource("6_243fa")
-theme_override_styles/normal = ExtResource("6_243fa")
+theme = ExtResource("9_ap4s4")
+theme_type_variation = &"SellButton"
+alignment = 2
+script = ExtResource("10_t3so5")
 
-[node name="SellPrice" type="Label" parent="HBoxContainer/MarginContainer/VBoxContainer/Control/SellBtn"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -55.0
-offset_top = -11.5
-offset_right = 55.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "25.6"
-horizontal_alignment = 1
+[node name="Label" type="Label" parent="Control/SellButton"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 16.0
+offset_right = 132.0
+offset_bottom = 51.0
+theme_type_variation = &"SellLabel"
+text = "99999"
+horizontal_alignment = 2
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer/MarginContainer/VBoxContainer/Control/SellBtn"]
-self_modulate = Color(0.815686, 0.988235, 0.0901961, 1)
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.97
-anchor_bottom = 0.925
-offset_left = 60.0
-offset_top = 63.0
-offset_right = -428.08
-offset_bottom = -51.525
-texture = ExtResource("8_bk1rj")
+[node name="TextureRect" type="TextureRect" parent="Control/SellButton"]
+modulate = Color(0.988235, 0.94902, 0.603922, 1)
+layout_mode = 0
+offset_left = 13.0
+offset_top = 13.0
+offset_right = 49.0
+offset_bottom = 55.0
+texture = ExtResource("10_tslri")
 expand_mode = 1
+stretch_mode = 5
 
 [node name="Disable" type="Panel" parent="."]
+unique_name_in_owner = true
 visible = false
-layout_mode = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[connection signal="pressed" from="HBoxContainer/MarginContainer/VBoxContainer/Control/BuyBtn" to="." method="buy"]
-[connection signal="pressed" from="HBoxContainer/MarginContainer/VBoxContainer/Control/SellBtn" to="." method="sell"]
+[connection signal="pressed" from="Control/BuyButton" to="." method="buy"]
+[connection signal="pressed" from="Control/SellButton" to="." method="sell"]

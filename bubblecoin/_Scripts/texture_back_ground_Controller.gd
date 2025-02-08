@@ -4,13 +4,15 @@ extends TextureRect
 @export var TextureAnimVenta : AnimatedTexture
 @export var TextureAnimMail : AnimatedTexture
 @export var TextureAnimBubble : AnimatedTexture
-@export var TextureSettingsBubble : AnimatedTexture
+@export var TextureAnimSettings : AnimatedTexture
 
-func _process(delta: float) -> void:
-	var web = PlayerVariables.ActualWeb
+func _ready() -> void:
+	PlayerVariables.ChangedWeb.connect(update_texture)
+
+func update_texture(web : String):
 	if web == "compra":
 		texture = TextureAnimCompra
-	elif  web == "venta":
+	elif web == "venta":
 		texture = TextureAnimVenta
 	elif web == "trade":
 		texture = TextureAnimVenta
@@ -19,4 +21,4 @@ func _process(delta: float) -> void:
 	elif web == "mail":
 		texture = TextureAnimMail
 	elif web == "settings":
-		texture = TextureSettingsBubble
+		texture = TextureAnimSettings
